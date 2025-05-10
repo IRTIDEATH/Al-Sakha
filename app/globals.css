@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+
 
 :root {
   --background: #F2F2F4;
@@ -20,4 +22,8 @@
 
 body {
   background: var(--background);
+}
+
+p {
+  @apply leading-relaxed
 }

@@ -25,9 +25,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistMono.variable} ${robotoMono.variable} antialiased font-normal mx-auto w-full max-w-4xl px-8`}
+        className={`${geistMono.variable} ${robotoMono.variable} antialiased font-normal font-geist text-foreground`}
       >
-        {children}
+        <div className="mx-auto w-full max-w-4xl px-6 sm:px-8">
+          {children}
+        </div>
       </body>
     </html>
   );
