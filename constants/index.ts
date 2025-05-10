@@ -8,6 +8,14 @@ interface IskillBadgeIcon {
     icon: string;
 };
 
+interface Iinternship {
+    company: string;
+    position: string;
+    date: string;
+    technologies: IskillBadgeIcon[];
+    link: string;
+};
+
 export const navigationItems: NavigationItemProps[] = [
     { name: "home", href: "/" },
     { name: "projects", href: "/projects" },
@@ -50,5 +58,72 @@ export const skillBadgeIcon: IskillBadgeIcon[] = [
     {
         name: "Figma",
         icon: "simple-icons:figma"
+    },
+];
+
+export const internships: Iinternship[] = [
+    {
+        company: "INDI Technology",
+        position: "Fullstack Developer",
+        date: "Sep - Nov 2024",
+        technologies: [
+            {
+                name: "Javascript",
+                icon: "simple-icons:javascript"
+            },
+            {
+                name: "React.js",
+                icon: "simple-icons:react"
+            },
+            {
+                name: "Three.js",
+                icon: "simple-icons:threedotjs"
+            },
+            {
+                name: "Tailwind CSS",
+                icon: "simple-icons:tailwindcss"
+            },
+        ],
+        link: "https://web.indi.tech/",
+    },
+    {
+        company: "Hexagon",
+        position: "Frontend Developer",
+        date: "Aug - Nov 2024",
+        technologies: [
+            {
+                name: "Javascript",
+                icon: "simple-icons:javascript"
+            },
+            {
+                name: "Vue.js",
+                icon: "simple-icons:vuedotjs"
+            },
+            {
+                name: "Tailwind CSS",
+                icon: "simple-icons:tailwindcss"
+            },
+        ],
+        link: "#",
+    },
+    {
+        company: "GAMECOMM",
+        position: "Frontend Engineer",
+        date: "Jan - Mar 2025",
+        technologies: [
+            {
+                name: "Typescript",
+                icon: "simple-icons:typescript"
+            },
+            {
+                name: "Vue.js",
+                icon: "simple-icons:vuedotjs"
+            },
+            {
+                name: "Tailwind CSS",
+                icon: "simple-icons:tailwindcss"
+            },
+        ],
+        link: "https://gamecomm.vercel.app/",
     },
 ];
