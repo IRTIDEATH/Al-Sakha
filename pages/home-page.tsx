@@ -1,7 +1,7 @@
 "use client";
 
-import HeroSection from "@/components/home/hero-section";
-import AboutSection from "@/components/home/about-section";
+import HeroSection from "@/components/section/home/hero-section";
+import AboutSection from "@/components/section/home/about-section";
 
 import Divider from "@/components/ui/divider";
 import CardInternship from "@/components/card-internship";
