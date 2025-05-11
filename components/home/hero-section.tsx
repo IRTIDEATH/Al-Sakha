@@ -9,7 +9,7 @@ const HeroSection = () => {
   return (
     <section className="mt-12 flex flex-col md:flex-row items-start md:items-center gap-8 justify-between">
       <div className="space-y-6">
-        <h1 className="text-4xl font-medium">
+        <h1 className="text-3xl sm:text-4xl font-medium">
           <span className="text-zeta">Gray,</span> cozy as a <br /> cat taking a
           nap.
         </h1>
@@ -30,7 +30,7 @@ const HeroSection = () => {
           {skillBadgeIcon.map((item, index) => (
             <Badge key={index}>
               <Icon
-                className="-ms-0.5 text-[12px] sm:text-[16px]"
+                className="-ms-0.5 text-[16px]"
                 icon={item.icon}
               />
               {item.name}
