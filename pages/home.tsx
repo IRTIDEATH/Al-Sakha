@@ -13,7 +13,7 @@ const HomePage = () => {
       <Divider />
       <AboutSection />
       <Divider />
-      <section className="mb-16">
+      <section>
         <h2 className="text-2xl mb-6 font-medium">internship activities</h2>
         <CardInternship />
       </section>

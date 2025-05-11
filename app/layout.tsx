@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Roboto_Mono, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar";
+import Footer from "@/components/footer";
 
 const robotoMono = Roboto_Mono({
   variable: "--font-roboto-mono",
@@ -28,9 +29,10 @@ export default function RootLayout({
       <body
         className={`${geistMono.variable} ${robotoMono.variable} antialiased font-normal font-geist text-foreground`}
       >
-        <div className="mx-auto w-full max-w-4xl px-7">
+        <div className="mx-auto w-full max-w-[926px] px-7">
           <Navbar />
           {children}
+          <Footer />
         </div>
       </body>
     </html>
