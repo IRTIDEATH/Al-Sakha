@@ -42,7 +42,7 @@ const CardInternship = () => {
                   {item.position}
                 </p>
               </div>
-              <span className="text-[10px] sm:text-[14px]">{item.date}</span>
+              <span className="text-[12px] sm:text-[14px]">{item.date}</span>
             </div>
           </div>
 
@@ -59,12 +59,12 @@ const CardInternship = () => {
           {/* techstack button */}
           <button
             onClick={() => toggleBadges(index)}
-            className="flex sm:hidden items-center justify-center z-10"
+            className="flex sm:hidden items-center justify-center z-10 mr-1"
           >
             <Icon
               icon="weui:arrow-filled"
-              className={`text-4xl transition-colors duration-500 ${
-                showBadges === index ? "text-background" : "text-foreground"
+              className={`text-4xl transition-colors duration-500 border-2 w-6 h-6 ${
+                showBadges === index ? "text-background border-background" : "text-foreground border-foreground"
               }`}
             />
           </button>
@@ -95,7 +95,7 @@ const CardInternship = () => {
             }}
           >
             <motion.div
-              className="w-full h-full flex flex-wrap items-center justify-end gap-2 py-2 pr-8"
+              className="w-full h-full flex flex-wrap items-center justify-end gap-2 py-1.5 px-10"
               initial={{ opacity: 0 }}
               animate={{
                 opacity: showBadges === index ? 1 : 0,
