@@ -36,7 +36,7 @@ const Footer = () => {
               </Link>
             </TooltipTrigger>
             <TooltipContent>
-              <p>Follow me</p>
+              <p>follow me</p>
             </TooltipContent>
           </Tooltip>
         </TooltipProvider>
