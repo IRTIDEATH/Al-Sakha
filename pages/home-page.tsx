@@ -4,6 +4,7 @@ import HeroSection from "@/components/section/home/hero-section";
 import AboutSection from "@/components/section/home/about-section";
 import Divider from "@/components/ui/divider";
 import InternshipSection from "@/components/section/home/internship-section";
+import ColorPaletteSection from "@/components/section/home/color-palette-section";
 
 const HomePage = () => {
   return (
@@ -13,6 +14,8 @@ const HomePage = () => {
       <AboutSection />
       <Divider />
       <InternshipSection />
+      <Divider />
+      <ColorPaletteSection />
     </>
   );
 };
