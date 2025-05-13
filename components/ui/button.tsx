@@ -15,6 +15,7 @@ const buttonVariants = cva(
         default:
           "bg-transparent border-[1.5px] border-foreground text-foreground relative z-10 font-roboto font-medium",
         link: "text-primary underline-offset-4 hover:underline",
+        ghost: "hover:text-background",
       },
       size: {
         default: "px-6 py-1",
