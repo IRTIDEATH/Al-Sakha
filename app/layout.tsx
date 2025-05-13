@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import { Toaster } from "@/components/ui/sonner";
+import Banner from "@/components/ui/banner";
 
 const robotoMono = Roboto_Mono({
   variable: "--font-roboto-mono",
@@ -30,7 +31,8 @@ export default function RootLayout({
       <body
         className={`${geistMono.variable} ${robotoMono.variable} antialiased font-normal font-geist text-foreground`}
       >
-        <div className="mx-auto w-full max-w-[926px] px-7">
+        <div className="mx-auto w-full max-w-[1024px] px-7">
+          <Banner />
           <Navbar />
           {children}
           <Footer />
