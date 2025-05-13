@@ -279,4 +279,30 @@ export const projects: Iproject[] = [
             },
         ],
     },
+    {
+        image: "/project/zectimg.webp",
+        name: "Zect Portfolio",
+        description: "a small organization owned by al sakha, colored by the nord theme, and a layout style similar to the nord theme.",
+        view: "https://zect.vercel.app/",
+        github: "https://github.com/IRTIDEATH/Zect",
+        status: "Pending",
+        technologies: [
+            {
+                name: "Javascript",
+                icon: "simple-icons:javascript"
+            },
+            {
+                name: "Next.js",
+                icon: "simple-icons:nextdotjs"
+            },
+            {
+                name: "Tailwind CSS",
+                icon: "simple-icons:tailwindcss"
+            },
+            {
+                name: "Shadcn/ui",
+                icon: "simple-icons:shadcnui"
+            },
+        ],
+    },
 ]
