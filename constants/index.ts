@@ -305,6 +305,44 @@ export const projects: Iproject[] = [
             },
         ],
     },
+    {
+        image: "/project/hadirinimg.webp",
+        name: "Hadirin",
+        description: "simple student attendance app for schools, created at the time of the exam. attendance recorded, learning monitored.",
+        view: "https://zect.vercel.app/",
+        github: "https://github.com/IRTIDEATH/Absensi-Sederhana",
+        status: "Pending",
+        technologies: [
+            {
+                name: "Typescript",
+                icon: "simple-icons:typescript"
+            },
+            {
+                name: "Next.js",
+                icon: "simple-icons:nextdotjs"
+            },
+            {
+                name: "Tanstack Query",
+                icon: "simple-icons:reactquery"
+            },
+            {
+                name: "Tailwind CSS",
+                icon: "simple-icons:tailwindcss"
+            },
+            {
+                name: "Shadcn/ui",
+                icon: "simple-icons:shadcnui"
+            },
+            {
+                name: "PostgreSQL",
+                icon: "simple-icons:postgresql"
+            },
+            {
+                name: "PrismaORM",
+                icon: "simple-icons:prisma"
+            },
+        ],
+    },
 ]
 
 export const techcollections: IskillBadgeIcon[] = [
