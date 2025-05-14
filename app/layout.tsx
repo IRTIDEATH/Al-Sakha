@@ -27,10 +27,13 @@ export const metadata: Metadata = {
     "web development",
     "personal projects",
     "portfolio",
+    "irtideath portfolio",
+    "al sakha portfolio",
+    "irtideath portfolio website",
+    "al sakha portfolio website",
     "npc",
     "al sakha",
     "irtideath",
-    "zect",
   ],
   authors: [
     {
