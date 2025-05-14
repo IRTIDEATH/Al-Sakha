@@ -306,3 +306,34 @@ export const projects: Iproject[] = [
         ],
     },
 ]
+
+export const techcollections: IskillBadgeIcon[] = [
+    {
+        name: "Typescript",
+        icon: "simple-icons:typescript"
+    },
+    {
+        name: "Next.js",
+        icon: "simple-icons:nextdotjs"
+    },
+    {
+        name: "Tailwind CSS",
+        icon: "simple-icons:tailwindcss"
+    },
+    {
+        name: "Shadcn/ui",
+        icon: "simple-icons:shadcnui"
+    },
+    {
+        name: "Tanstack Query",
+        icon: "simple-icons:reactquery"
+    },
+    {
+        name: "PostgreSQL",
+        icon: "simple-icons:postgresql"
+    },
+    {
+        name: "PrismaORM",
+        icon: "simple-icons:prisma"
+    },
+]
