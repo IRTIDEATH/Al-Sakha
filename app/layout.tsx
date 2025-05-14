@@ -59,8 +59,8 @@ export default function RootLayout({
       <body
         className={`${geistMono.variable} ${robotoMono.variable} antialiased font-normal font-geist text-foreground`}
       >
+        <Banner />
         <div className="mx-auto w-full max-w-[1024px] px-7">
-          <Banner />
           <Navbar />
           {children}
           <Footer />

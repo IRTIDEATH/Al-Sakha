@@ -10,7 +10,7 @@ export default function Banner() {
   if (!isVisible) return null;
 
   return (
-    <div className="bg-foreground text-background px-4 py-3 md:py-2 fixed w-full top-0 left-0 z-[9999]">
+    <div className="bg-foreground text-background sticky px-4 py-3 md:py-2 w-full top-0 left-0 z-[9999]">
       <div className="flex gap-2 items-center">
         <div className="flex grow gap-3 items-center justify-center">
           <svg
