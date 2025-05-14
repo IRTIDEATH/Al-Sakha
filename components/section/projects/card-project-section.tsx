@@ -24,7 +24,7 @@ const CardProjectSecton = () => {
   return (
     <>
       {projects.map((item, index) => (
-        <div key={index} className="mt-12">
+        <section key={index}>
           <div className="flex w-full">
             <div className="relative hidden md:block mr-5">
               <MorphingDialog
@@ -137,7 +137,7 @@ const CardProjectSecton = () => {
             </div>
           </div>
           <Divider />
-        </div>
+        </section>
       ))}
     </>
   );

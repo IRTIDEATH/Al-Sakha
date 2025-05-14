@@ -5,7 +5,7 @@ import Link from "next/link";
 const InspirationSection = () => {
   return (
     <>
-      <div>
+      <section>
         <h1 className="text-2xl mb-6 font-medium">inspiration</h1>
         <p className="w-full text-zeta font-medium text-lg text-start">
           This is a <span className="text-coffee">cool</span> portfolio website
@@ -40,7 +40,7 @@ const InspirationSection = () => {
             </Link>
           </li>
         </ul>
-      </div>
+      </section>
     </>
   );
 }
