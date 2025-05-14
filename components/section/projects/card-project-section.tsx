@@ -35,9 +35,10 @@ const CardProjectSecton = () => {
               >
                 <MorphingDialogTrigger>
                   <div className="relative h-40 w-28">
+                    <div className="w-full h-full bg-foreground/50 z-10 absolute hover:bg-transparent transition-colors duration-200"/>
                     <MorphingDialogImage
                       src={item.image}
-                      alt="Sony Style Store in the Sony Center complex - Berlin, Germany (2000)"
+                      alt="Image Project"
                       className="object-cover"
                     />
                   </div>
@@ -47,7 +48,7 @@ const CardProjectSecton = () => {
                     <div className="relative h-[90vh] w-[90vw]">
                       <MorphingDialogImage
                         src={item.image}
-                        alt="Sony Style Store in the Sony Center complex - Berlin, Germany (2000)"
+                        alt="Image Project"
                         className="object-contain"
                       />
                     </div>
