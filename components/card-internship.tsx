@@ -34,6 +34,7 @@ const CardInternship = () => {
               <div className="flex flex-col items-start gap-3.5">
                 <div className="flex flex-col gap-1.5">
                   <Link
+                    aria-label="company link"
                     href={item.link}
                     className="text-lg sm:text-xl font-medium font-roboto hover:underline"
                   >
@@ -59,13 +60,16 @@ const CardInternship = () => {
 
             {/* techstack button */}
             <button
+              aria-label="Slide to see techstack"
               onClick={() => toggleBadges(index)}
               className="flex sm:hidden items-center justify-center z-10 mr-1"
             >
               <Icon
                 icon="weui:arrow-filled"
                 className={`text-4xl transition-colors duration-500 border-2 w-6 h-6 ${
-                  showBadges === index ? "text-background border-background" : "text-foreground border-foreground"
+                  showBadges === index
+                    ? "text-background border-background"
+                    : "text-foreground border-foreground"
                 }`}
               />
             </button>
