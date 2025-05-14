@@ -4,6 +4,7 @@ import { skillBadgeIcon } from "@/constants";
 import { AnimatedButton } from "@/components/ui/button";
 import { Badge } from "@/components/ui/skill-badge";
 import { Icon } from "@iconify/react";
+import CoffeeText from "@/components/ui/coffee-text";
 
 const HeroSection = () => {
   return (
@@ -15,7 +16,7 @@ const HeroSection = () => {
             nap.
           </h1>
           <p className="font-medium text-zeta text-lg">
-            loving cold or hot <span className="text-coffee">coffee</span>
+            loving cold or hot <CoffeeText>coffee</CoffeeText>
             <br />
             while working and study.
           </p>

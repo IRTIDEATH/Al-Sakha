@@ -1,5 +1,6 @@
 "use client";
 
+import CoffeeText from "@/components/ui/coffee-text";
 import { Badge } from "@/components/ui/skill-badge";
 import { techcollections } from "@/constants";
 import { Icon } from "@iconify/react";
@@ -9,7 +10,7 @@ const TechStackSection = () => {
     <>
       <section className="mt-6">
         <p className="w-full text-zeta font-medium text-lg text-start">
-          here are some <span className="text-coffee">tech stacks</span> that i
+          here are some <CoffeeText>tech stacks</CoffeeText> that i
           often use to create personal projects:
         </p>
         <div className="mt-6 flex flex-wrap gap-4">

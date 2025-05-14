@@ -1,5 +1,7 @@
 "use client"
 
+import CoffeeText from "@/components/ui/coffee-text";
+
 const AboutSection = () => {
   return (
     <>
@@ -7,10 +9,10 @@ const AboutSection = () => {
         <h1 className="text-2xl mb-6 font-medium">what about me?</h1>
         <p className="w-full text-zeta font-medium text-lg text-start">
           yea, an ordinary npc and{" "}
-          <span className="text-coffee">weak in math</span>, that{"'"}s me. you can
+          <CoffeeText>weak in math</CoffeeText>, that{"'"}s me. you can
           call me al sakha. sometimes i think about myself, who somehow got into
           programming. focusing on{" "}
-          <span className="text-coffee">web development</span>, and hoping to
+          <CoffeeText>web development</CoffeeText>, and hoping to
           stick with this career in the future.
         </p>
       </section>

@@ -7,15 +7,8 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { toast } from "sonner";
 
-const Footer = () => {
-  const handleCopyEmail = () => {
-    navigator.clipboard.writeText("hanyaakunzs@gmail.com")
-    toast.success("Email copied to clipboard", {
-          duration: 2000,
-        });
-  }
+const Footer = () => { 
   return (
     <>
       <footer className="w-full bg-suram flex items-center justify-between h-12 mb-8 mt-16">
@@ -25,6 +18,7 @@ const Footer = () => {
               <TooltipTrigger asChild>
                 <Link
                   href="https://github.com/IRTIDEATH"
+                  aria-label="IRTIDEATH github pages"
                   className="text-suram bg-foreground h-12 w-12 flex items-center justify-center border border-foreground hover:text-foreground hover:bg-suram transition-colors duration-300"
                 >
                   <svg
@@ -51,8 +45,7 @@ const Footer = () => {
           <TooltipProvider delayDuration={150}>
             <Tooltip>
               <TooltipTrigger
-                className="text-foreground h-12 w-12 cursor-pointer"
-                onClick={handleCopyEmail}
+                className="text-foreground h-12 w-12"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
