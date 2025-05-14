@@ -19,68 +19,72 @@ import {
 } from "@/components/ui/tooltip";
 import Divider from "@/components/ui/divider";
 import { projects } from "@/constants/index";
+import { useReducedMotion } from "motion/react";
 
 const CardProjectSecton = () => {
+  const prefersReducedMotion = useReducedMotion();
   return (
     <>
       {projects.map((item, index) => (
         <section key={index}>
           <div className="flex w-full">
             <div className="relative hidden md:block mr-5">
-              <MorphingDialog
-                transition={{
-                  duration: 0.3,
-                  ease: "easeInOut",
-                }}
-              >
-                <MorphingDialogTrigger>
-                  <div className="relative h-40 w-28">
-                    <div className="w-full h-full bg-foreground/50 z-10 absolute hover:bg-transparent transition-colors duration-200"/>
-                    <MorphingDialogImage
-                      src={item.image}
-                      alt="Image Project"
-                      className="object-cover"
-                    />
-                  </div>
-                </MorphingDialogTrigger>
-                <MorphingDialogContainer>
-                  <MorphingDialogContent className="relative">
-                    <div className="relative h-[90vh] w-[90vw]">
+              {!prefersReducedMotion && (
+                <MorphingDialog
+                  transition={{
+                    duration: 0.3,
+                    ease: "easeInOut",
+                  }}
+                >
+                  <MorphingDialogTrigger>
+                    <div className="relative h-40 w-28">
+                      <div className="w-full h-full bg-foreground/50 z-10 absolute hover:bg-transparent transition-colors duration-200"/>
                       <MorphingDialogImage
                         src={item.image}
                         alt="Image Project"
-                        className="object-contain"
+                        className="object-cover"
                       />
                     </div>
-                  </MorphingDialogContent>
-                  <MorphingDialogClose
-                    className="fixed right-6 top-6 h-fit w-fit rounded-full bg-white p-1"
-                    variants={{
-                      initial: { opacity: 0 },
-                      animate: {
-                        opacity: 1,
-                        transition: { delay: 0.3, duration: 0.1 },
-                      },
-                      exit: { opacity: 0, transition: { duration: 0 } },
-                    }}
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
+                  </MorphingDialogTrigger>
+                  <MorphingDialogContainer>
+                    <MorphingDialogContent className="relative">
+                      <div className="relative h-[90vh] w-[90vw]">
+                        <MorphingDialogImage
+                          src={item.image}
+                          alt="Image Project"
+                          className="object-contain"
+                        />
+                      </div>
+                    </MorphingDialogContent>
+                    <MorphingDialogClose
+                      className="fixed right-6 top-6 h-fit w-fit rounded-full bg-white p-1"
+                      variants={{
+                        initial: { opacity: 0 },
+                        animate: {
+                          opacity: 1,
+                          transition: { delay: 0.3, duration: 0.1 },
+                        },
+                        exit: { opacity: 0, transition: { duration: 0 } },
+                      }}
                     >
-                      <path d="M18 6 6 18" />
-                      <path d="m6 6 12 12" />
-                    </svg>
-                  </MorphingDialogClose>
-                </MorphingDialogContainer>
-              </MorphingDialog>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      >
+                        <path d="M18 6 6 18" />
+                        <path d="m6 6 12 12" />
+                      </svg>
+                    </MorphingDialogClose>
+                  </MorphingDialogContainer>
+                </MorphingDialog>
+              )}
             </div>
             <div>
               <h1 className="mb-2 text-[26px] font-medium">{item.name}</h1>

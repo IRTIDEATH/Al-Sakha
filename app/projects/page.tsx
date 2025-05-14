@@ -1,5 +1,9 @@
-import ProjectPage from '@/pages/project-page'
+import ProjectPage from "@/pages/project-page";
 
-export default function Project() {
-  return <ProjectPage />
-}
+const Projects = () => {
+  return <ProjectPage />;
+};
+
+export default Projects;
+
+export const dynamic = "force-static";
