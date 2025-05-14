@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
 import { Roboto_Mono, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/navbar";
-import Footer from "@/components/footer";
 import { Toaster } from "@/components/ui/sonner";
 import Banner from "@/components/ui/banner";
+import Wrapper from "@/components/ui/wrapper";
 
 const robotoMono = Roboto_Mono({
   variable: "--font-roboto-mono",
@@ -60,11 +59,7 @@ export default function RootLayout({
         className={`${geistMono.variable} ${robotoMono.variable} antialiased font-normal font-geist text-foreground`}
       >
         <Banner />
-        <div className="mx-auto w-full max-w-[1024px] px-7">
-          <Navbar />
-          {children}
-          <Footer />
-        </div>
+        <Wrapper>{children}</Wrapper>
         <Toaster
           richColors
           toastOptions={{
