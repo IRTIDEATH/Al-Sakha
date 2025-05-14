@@ -7,12 +7,19 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import { toast } from "sonner";
 
-const Footer = () => { 
+const Footer = () => {
+  const handleCopyEmail = () => {
+    navigator.clipboard.writeText("hanyaakunzs@gmail.com");
+    toast.success("Email copied to clipboard", {
+      duration: 2000,
+    });
+  }; 
   return (
     <>
       <footer className="w-full bg-suram flex items-center justify-between h-12 mb-8 mt-16">
-        <div className="flex items-center gap-4">
+        <div className="flex items-center">
           <TooltipProvider delayDuration={150}>
             <Tooltip>
               <TooltipTrigger asChild>
@@ -45,8 +52,9 @@ const Footer = () => {
           <TooltipProvider delayDuration={150}>
             <Tooltip>
               <TooltipTrigger asChild>
-                <span
-                  className="w-12 h-12 flex items-center justify-center"
+                <button
+                  onClick={handleCopyEmail}
+                  className="w-12 h-12 flex items-center justify-center cursor-pointer"
                   aria-label="email"
                 >
                   <svg
@@ -63,7 +71,7 @@ const Footer = () => {
                     <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" />
                     <rect x="2" y="4" width="20" height="16" rx="2" />
                   </svg>
-                </span>
+                </button>
               </TooltipTrigger>
               <TooltipContent className="mb-1">
                 <p>hanyaakunzs@gmail.com</p>
