@@ -142,7 +142,7 @@ export const projects: Iproject[] = [
     {
         image: "/project/pancarimaimg.webp",
         name: "Pancarima",
-        description: "Pancarima is a website that provides information related to tourist attractions in Indonesia. Created during the Sagasitas February 2024 competition.",
+        description: "pancarima is a website that provides information related to tourist attractions in indonesia. created during the sagasitas february 2024 competition.",
         view: "https://pancarima.vercel.app/",
         status: "Completed",
         technologies: [
@@ -167,7 +167,7 @@ export const projects: Iproject[] = [
     {
         image: "/project/zabodimg.webp",
         name: "Zabod",
-        description: "Zabod is a keyboard online store platform where buyers can customize the keyboard as desired.",
+        description: "zabod is a keyboard online store platform where buyers can customize the keyboard as desired.",
         status: "Development",
         technologies: [
             {
@@ -203,7 +203,7 @@ export const projects: Iproject[] = [
     {
         image: "/project/inditechimg.webp",
         name: "INDI Technology",
-        description: "INDI Tech is a unique and interactive 3D-based company profile website of PT Indi Technology. Created during pre-internship activities.",
+        description: "indi tech is a unique and interactive 3D-based company profile website of pt indi technology. created during pre-internship activities.",
         view: "https://web.indi.tech/",
         status: "Completed",
         technologies: [
@@ -228,7 +228,7 @@ export const projects: Iproject[] = [
     {
         image: "/project/zentraimg.webp",
         name: "ZentraHealth",
-        description: "ZentraHealth is a website that provides information related to a healthy lifestyle. Created during the Sagasitas August 2024 competition.",
+        description: "zentraHealth is a website that provides information related to a healthy lifestyle. created during the sagasitas august 2024 competition.",
         view: "https://zentrahealth.vercel.app/",
         status: "Completed",
         technologies: [
@@ -257,7 +257,7 @@ export const projects: Iproject[] = [
     {
         image: "/project/geoporimg.webp",
         name: "Geoportal Laut Berkah",
-        description: "An interactive 3D-based platform related to the licensing of marine space utilization letters for Central Kalimantan province. Created during internship activities.",
+        description: "an interactive 3D-based platform related to the licensing of marine space utilization letters for central kalimantan province. created during internship activities.",
         view: "https://web.geoportal-lautberkah.kalteng.go.id/",
         status: "Completed",
         technologies: [
