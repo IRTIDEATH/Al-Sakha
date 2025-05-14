@@ -15,7 +15,7 @@ const ColorPaletteSection = () => {
   const colors: Icolors[] = [
     { name: "Background", class: "bg-[#F2F2F4]", hex: "#F2F2F4" },
     { name: "Foreground", class: "bg-[#2E2E2E]", hex: "#2E2E2E" },
-    { name: "Coffee", class: "bg-coffee", hex: "#A9705E" },
+    { name: "Coffee", class: "bg-coffee", hex: "#8C6053" },
     { name: "Zeta", class: "bg-zeta", hex: "#686C6F" },
     { name: "Suram", class: "bg-suram", hex: "#E6E8ED" },
   ];

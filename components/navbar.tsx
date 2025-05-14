@@ -18,7 +18,7 @@ const Navbar = () => {
         <span className="font-roboto font-medium text-lg">Al Sakha.</span>
         <div className="flex items-center font-geist bg-suram z-50 overflow-hidden ml-auto whitespace-pre group relative transition-all duration-300 ease-out">
           <Drawer>
-            <DrawerTrigger className="cursor-pointer">
+            <DrawerTrigger aria-label="Nav button" className="cursor-pointer">
               <svg
                 className="bg-foreground p-1.5"
                 xmlns="http://www.w3.org/2000/svg"
@@ -26,7 +26,10 @@ const Navbar = () => {
                 height="40"
                 viewBox="0 0 24 24"
               >
-                <path fill="#F2F2F4" d="M16 18v2H5v-2zm5-7v2H3v-2zm-2-7v2H8V4z" />
+                <path
+                  fill="#F2F2F4"
+                  d="M16 18v2H5v-2zm5-7v2H3v-2zm-2-7v2H8V4z"
+                />
               </svg>
             </DrawerTrigger>
             <DrawerContent>
