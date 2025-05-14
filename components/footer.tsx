@@ -69,7 +69,7 @@ const Footer = () => {
           </TooltipProvider>
         </div>
 
-        <div className="text-sm text-zeta mr-4 font-medium">
+        <div className="text-sm text-foreground mr-4 font-medium">
           © 2025 - Present
         </div>
       </footer>
