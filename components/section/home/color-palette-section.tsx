@@ -36,13 +36,10 @@ const ColorPaletteSection = () => {
         <h1 className="text-2xl mb-6 font-medium">color palettes</h1>
         <ul className="w-full max-w-2xl grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
           {colors.map((color, index) => (
-            <li
-              key={index}
-              className="p-2 group"
-              onClick={() => handleCopyColor(color.hex, index)}
-            >
+            <li key={index} className="p-2 group">
               <div className="relative">
                 <div
+                  onClick={() => handleCopyColor(color.hex, index)}
                   className={`${color.class} w-full h-20 mb-2 rounded cursor-pointer transition-all duration-300`}
                 >
                   <div className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
