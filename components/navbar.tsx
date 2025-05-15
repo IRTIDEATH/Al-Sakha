@@ -1,6 +1,6 @@
-"use client"
+"use client";
 
-import Link from "next/link"
+import Link from "next/link";
 import {
   Drawer,
   DrawerContent,
@@ -10,13 +10,13 @@ import {
 } from "@/components/ui/drawer";
 import { navigationItems } from "@/constants";
 
-
 const Navbar = () => {
   return (
     <>
       <nav className="w-full h-24 text-foreground flex items-center justify-between">
         <span className="font-roboto font-medium text-lg">Al Sakha.</span>
         <div className="flex items-center font-geist bg-suram z-50 overflow-hidden ml-auto whitespace-pre group relative transition-all duration-300 ease-out">
+          <h1 className="px-6 text-lg font-medium">unemployed</h1>
           <Drawer>
             <DrawerTrigger aria-label="Nav button" className="cursor-pointer">
               <svg
@@ -49,11 +49,11 @@ const Navbar = () => {
               </div>
             </DrawerContent>
           </Drawer>
-          {/* <span className="absolute right-0 -mt-12 h-32 w-8 translate-x-12 rotate-12 bg-foreground/40 opacity-10 transition-all duration-1000 ease-out group-hover:-translate-x-72" /> */}
+          <span className="absolute right-0 -mt-12 h-32 w-8 translate-x-12 rotate-12 bg-zeta/90 opacity-10 transition-all duration-1000 ease-out group-hover:-translate-x-42" />
         </div>
       </nav>
     </>
   );
-}
+};
 
-export default Navbar
+export default Navbar;
