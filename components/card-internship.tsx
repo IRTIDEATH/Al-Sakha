@@ -74,6 +74,7 @@ const CardInternship = () => {
               />
             </button>
 
+            {/* Hover effect */}
             <motion.div
               className="absolute inset-0 bg-transparent sm:bg-suram -z-10"
               initial={{ width: 0 }}
@@ -86,7 +87,8 @@ const CardInternship = () => {
                 originX: 0,
               }}
             />
-
+            
+            {/* slide effect */}
             <motion.div
               className="absolute inset-0 bg-foreground overflow-hidden"
               initial={{ width: 0 }}
