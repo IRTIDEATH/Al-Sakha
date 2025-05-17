@@ -123,8 +123,8 @@ const CardProjectSecton = () => {
                   {item.technologies.map((items, index) => (
                     <TooltipProvider delayDuration={100} key={index}>
                       <Tooltip>
-                        <TooltipTrigger>
-                          <Badge>
+                        <TooltipTrigger asChild>
+                          <Badge aria-label="technology badge">
                             <Icon
                               className="-ms-0.5 text-[16px]"
                               icon={items.icon}
