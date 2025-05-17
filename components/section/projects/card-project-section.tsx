@@ -38,7 +38,7 @@ const CardProjectSecton = () => {
                 >
                   <MorphingDialogTrigger>
                     <div className="relative h-40 w-28">
-                      <div className="w-full h-full bg-foreground/50 z-10 absolute hover:bg-transparent transition-colors duration-200"/>
+                      <div className="w-full h-full bg-foreground/50 z-10 absolute hover:bg-transparent transition-colors duration-200" />
                       <MorphingDialogImage
                         src={item.image}
                         alt="Image Project"
@@ -124,12 +124,14 @@ const CardProjectSecton = () => {
                     <TooltipProvider delayDuration={100} key={index}>
                       <Tooltip>
                         <TooltipTrigger asChild>
-                          <Badge aria-label="technology badge">
-                            <Icon
-                              className="-ms-0.5 text-[16px]"
-                              icon={items.icon}
-                            />
-                          </Badge>
+                          <span aria-label="tech badge">
+                            <Badge>
+                              <Icon
+                                className="-ms-0.5 text-[16px]"
+                                icon={items.icon}
+                              />
+                            </Badge>
+                          </span>
                         </TooltipTrigger>
                         <TooltipContent>
                           <p>{items.name}</p>
