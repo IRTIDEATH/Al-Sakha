@@ -16,7 +16,7 @@ const Navbar = () => {
       <nav className="w-full h-24 text-foreground flex items-center justify-between">
         <span className="font-roboto font-medium text-lg">Al Sakha.</span>
         <div className="flex items-center font-geist bg-suram z-50 overflow-hidden ml-auto whitespace-pre group relative transition-all duration-300 ease-out">
-          <h1 className="px-6 text-lg font-medium">unemployed</h1>
+          <h1 className="px-4 text-lg font-medium">unemployed</h1>
           <Drawer>
             <DrawerTrigger aria-label="Nav button" className="cursor-pointer">
               <svg

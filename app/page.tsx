@@ -4,6 +4,7 @@ import Divider from "@/components/ui/divider";
 import ColorPaletteSection from "@/components/section/home/color-palette-section";
 import InspirationSection from "@/components/section/home/inspiration-section";
 import dynamic from "next/dynamic";
+import ChatmeSection from "@/components/section/home/chatme-section";
 
 const InternshipSection = dynamic(() => import("@/components/section/home/internship-section"));
 
@@ -20,6 +21,8 @@ const Page = () => {
       <ColorPaletteSection />
       <Divider />
       <InspirationSection />
+      <Divider />
+      <ChatmeSection />
     </>
   );
 };

@@ -10,7 +10,7 @@ import Image from "next/image";
 import ZetaText from "@/components/ui/zeta-text";
 import dynamic from "next/dynamic";
 
-const Cursor = dynamic(() => import("@/components/ui/animate-cursor"));
+const Cursor = dynamic(() => import("@/components/ui/animate-cursor"), {ssr: false});
 
 const HeroSection = () => {
   const prefersReducedMotion = useReducedMotion();

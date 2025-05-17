@@ -7,15 +7,16 @@ const InspirationSection = () => {
   return (
     <>
       <section>
-        <h1 className="text-2xl mb-6 font-medium">inspiration</h1>
+        <h1 className="text-2xl mb-6 font-medium">reference & inspiration</h1>
         <p className="w-full text-zeta font-medium text-lg text-start">
-          This is a <CoffeeText>cool</CoffeeText> portfolio website
-          that i use as my reference and inspiration.
+          this is a <CoffeeText>cool</CoffeeText> portfolio website that i use
+          as my reference and inspiration.
         </p>
         <ul className="w-full text-zeta font-medium text-lg text-start mt-4">
           <li className="flex items-center gap-2">
             <span className="text-2xl text-foreground">{"-->"}</span>
             <Link
+              aria-label="Portfolio pow"
               href="https://pow.kim/"
               className="hover:underline decoration-2"
             >
@@ -25,6 +26,7 @@ const InspirationSection = () => {
           <li className="flex items-center gap-2">
             <span className="text-2xl text-foreground">{"-->"}</span>
             <Link
+              aria-label="Portfolio byanrkh"
               href="https://www.byanrkh.my.id/"
               className="hover:underline decoration-2"
             >
@@ -34,6 +36,7 @@ const InspirationSection = () => {
           <li className="flex items-center gap-2">
             <span className="text-2xl text-foreground">{"-->"}</span>
             <Link
+              aria-label="Portfolio edqe"
               href="https://edqe.me/"
               className="hover:underline decoration-2"
             >
