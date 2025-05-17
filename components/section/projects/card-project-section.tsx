@@ -124,7 +124,7 @@ const CardProjectSecton = () => {
                     <TooltipProvider delayDuration={100} key={index}>
                       <Tooltip>
                         <TooltipTrigger asChild>
-                          <span aria-label="tech badge">
+                          <span role="img" aria-label={items.name}>
                             <Badge>
                               <Icon
                                 className="-ms-0.5 text-[16px]"
