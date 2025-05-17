@@ -5,10 +5,12 @@ import { AnimatedButton } from "@/components/ui/button";
 import { Badge } from "@/components/ui/skill-badge";
 import { Icon } from "@iconify/react";
 import CoffeeText from "@/components/ui/coffee-text";
-import { Cursor } from "@/components/ui/animate-cursor";
 import { useReducedMotion } from "motion/react";
 import Image from "next/image";
+import ZetaText from "@/components/ui/zeta-text";
+import dynamic from "next/dynamic";
 
+const Cursor = dynamic(() => import("@/components/ui/animate-cursor"));
 
 const HeroSection = () => {
   const prefersReducedMotion = useReducedMotion();
@@ -17,7 +19,7 @@ const HeroSection = () => {
       <section className="mt-12 flex flex-col md:flex-row items-start md:items-center gap-8 justify-between">
         <div className="space-y-6">
           <h1 className="text-3xl sm:text-4xl font-medium">
-            <span className="text-zeta">
+            <ZetaText>
               {!prefersReducedMotion && (
                 <Cursor
                   attachToParent
@@ -46,7 +48,7 @@ const HeroSection = () => {
                 </Cursor>
               )}
               Gray,
-            </span>{" "}
+            </ZetaText>{" "}
             cozy as a <br /> cat taking a nap.
           </h1>
           <p className="font-medium text-zeta text-lg">

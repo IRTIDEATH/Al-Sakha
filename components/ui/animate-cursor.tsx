@@ -25,7 +25,7 @@ export type CursorProps = {
   onPositionChange?: (x: number, y: number) => void;
 };
 
-export function Cursor({
+export default function Cursor({
   children,
   className,
   springConfig,
