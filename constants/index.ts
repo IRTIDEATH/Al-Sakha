@@ -97,26 +97,6 @@ export const internships: Iinternship[] = [
         link: "https://web.indi.tech/",
     },
     {
-        company: "Hexagon",
-        position: "Frontend Developer",
-        date: "Aug - Nov 2024",
-        technologies: [
-            {
-                name: "Javascript",
-                icon: "simple-icons:javascript"
-            },
-            {
-                name: "Vue.js",
-                icon: "simple-icons:vuedotjs"
-            },
-            {
-                name: "Tailwind CSS",
-                icon: "simple-icons:tailwindcss"
-            },
-        ],
-        link: "#",
-    },
-    {
         company: "GAMECOMM",
         position: "Frontend Engineer",
         date: "Jan - Mar 2025",

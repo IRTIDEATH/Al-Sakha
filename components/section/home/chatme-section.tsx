@@ -7,7 +7,7 @@ const ChatmeSection = () => {
     <>
       <section>
         <h1 className="text-2xl mb-6 font-medium">wanna talk?</h1>
-        <p className="w-full text-zeta font-medium text-lg text-start">need help or to talk about random stuff?</p>
+        <p className="w-full text-zeta font-medium text-lg text-start">need help or talk about random things</p>
         <ul className="w-full text-zeta font-medium text-lg text-start mt-4">
           <li className="flex items-center gap-2">
             <span className="text-2xl text-foreground">{"-->"}</span>
