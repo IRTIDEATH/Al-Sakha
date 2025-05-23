@@ -11,7 +11,7 @@ const InternshipSection = dynamic(() => import("@/components/section/home/intern
 const Page = () => {
 
   return (
-    <>
+    <main>
       <HeroSection />
       <Divider />
       <AboutSection />
@@ -23,7 +23,7 @@ const Page = () => {
       <InspirationSection />
       <Divider />
       <ChatmeSection />
-    </>
+    </main>
   );
 };
 

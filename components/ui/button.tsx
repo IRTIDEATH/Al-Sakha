@@ -16,12 +16,15 @@ const buttonVariants = cva(
           "bg-transparent border-[1.5px] border-foreground text-foreground relative z-10 font-roboto font-medium",
         link: "text-primary underline-offset-4 hover:underline",
         ghost: "hover:text-background",
+        classic:
+          "w-full bg-foreground border border-foreground transition-colors duration-500 hover:bg-transparent hover:text-foreground text-center text-background",
       },
       size: {
         default: "px-6 py-1",
         sm: "h-8 rounded-md px-3 text-xs",
         lg: "h-10 rounded-md px-8",
         icon: "h-9 w-9",
+        classic: "text-xl py-2.5",
       },
     },
     defaultVariants: {

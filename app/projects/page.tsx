@@ -4,11 +4,11 @@ import Divider from "@/components/ui/divider";
 
 const Page = () => {
   return (
-    <>
+    <main>
       <TitleSection />
       <Divider />
       <CardProjectSecton />
-    </>
+    </main>
   );
 };
 
