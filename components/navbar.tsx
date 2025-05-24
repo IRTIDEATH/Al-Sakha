@@ -20,7 +20,11 @@ const Navbar = () => {
           <h1 className="px-4 text-lg font-medium">menu</h1>
           <span className="-z-10 absolute right-0 -mt-12 h-32 w-8 translate-x-12 rotate-12 bg-zeta/90 opacity-10 transition-all duration-1000 ease-out group-hover:-translate-x-24" />
           <Drawer>
-            <DrawerTrigger aria-label="Menu button" className="cursor-pointer" asChild>
+            <DrawerTrigger
+              aria-label="Menu button"
+              className="cursor-pointer"
+              asChild
+            >
               <svg
                 className="bg-foreground p-1.5"
                 xmlns="http://www.w3.org/2000/svg"
@@ -39,10 +43,14 @@ const Navbar = () => {
               <div className="mx-auto w-[300px]">
                 <DrawerFooter className="flex flex-col items-center w-full gap-2">
                   {navigationItems.map((item, index) => (
-                    <Button aria-label="Nav button" variant={"classic"} size={"classic"} key={index} asChild>
-                      <Link
-                        href={item.href}
-                      >
+                    <Button
+                      aria-label="Nav button"
+                      variant={"classic"}
+                      size={"classic"}
+                      key={index}
+                      asChild
+                    >
+                      <Link href={item.href} aria-label="Nav link">
                         {item.name}
                       </Link>
                     </Button>

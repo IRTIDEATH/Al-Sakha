@@ -208,7 +208,7 @@ export const projects: Iproject[] = [
     {
         image: "/project/zentraimg.webp",
         name: "ZentraHealth",
-        description: "zentraHealth is a website that provides information related to a healthy lifestyle. created during the sagasitas august 2024 competition.",
+        description: "zentrahealth is a website that provides information related to a healthy lifestyle. created during the sagasitas august 2024 competition.",
         view: "https://zentrahealth.vercel.app/",
         status: "Completed",
         technologies: [
