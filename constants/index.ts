@@ -148,7 +148,7 @@ export const projects: Iproject[] = [
         image: "/project/zabodimg.webp",
         name: "Zabod",
         description: "zabod is a keyboard online store platform where buyers can customize the keyboard as desired.",
-        status: "Development",
+        status: "Pending",
         technologies: [
             {
                 name: "Typescript",
@@ -265,7 +265,7 @@ export const projects: Iproject[] = [
         description: "a small organization owned by al sakha, colored by the nord theme, and a layout style similar to the nord theme.",
         view: "https://zect.vercel.app/",
         github: "https://github.com/IRTIDEATH/Zect",
-        status: "Pending",
+        status: "Completed",
         technologies: [
             {
                 name: "Javascript",

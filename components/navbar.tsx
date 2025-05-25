@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/drawer";
 import { navigationItems } from "@/constants";
 import { Button } from "./ui/button";
+import { motion } from "motion/react";
 
 const Navbar = () => {
   return (
@@ -21,7 +22,8 @@ const Navbar = () => {
           <span className="-z-10 absolute right-0 -mt-12 h-32 w-8 translate-x-12 rotate-12 bg-zeta/90 opacity-10 transition-all duration-1000 ease-out group-hover:-translate-x-24" />
           <Drawer>
             <DrawerTrigger
-              aria-label="Menu button"
+              aria-label="Menu toggle"
+              role="Menu toggle"
               className="cursor-pointer"
               asChild
             >
@@ -43,17 +45,28 @@ const Navbar = () => {
               <div className="mx-auto w-[300px]">
                 <DrawerFooter className="flex flex-col items-center w-full gap-2">
                   {navigationItems.map((item, index) => (
-                    <Button
-                      aria-label="Nav button"
-                      variant={"classic"}
-                      size={"classic"}
+                    <motion.div
+                      className="w-full"
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{
+                        duration: 0.4,
+                        delay: index * 0.1,
+                        ease: "easeOut",
+                      }}
                       key={index}
-                      asChild
                     >
-                      <Link href={item.href} aria-label="Nav link">
-                        {item.name}
-                      </Link>
-                    </Button>
+                      <Button
+                        aria-label="Nav button"
+                        variant={"classic"}
+                        size={"classic"}
+                        asChild
+                      >
+                        <Link href={item.href} aria-label="Nav link">
+                          {item.name}
+                        </Link>
+                      </Button>
+                    </motion.div>
                   ))}
                 </DrawerFooter>
               </div>
