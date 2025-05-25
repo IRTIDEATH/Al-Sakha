@@ -40,7 +40,8 @@ const HeroSection = () => {
                 >
                   <Image
                     src="/zetaagent.png"
-                    priority
+                    priority={true}
+                    sizes="(max-width: 768px) 260px, 260px"
                     alt="Vestia Zeta"
                     width={260}
                     height={260}

@@ -106,7 +106,7 @@ export default function Cursor({
   }, [attachToParent]);
 
   return (
-    <motion.div
+    <motion.span
       ref={cursorRef}
       className={cn('pointer-events-none fixed left-0 top-0 z-50', className)}
       style={{
@@ -129,6 +129,6 @@ export default function Cursor({
           </motion.div>
         )}
       </AnimatePresence>
-    </motion.div>
+    </motion.span>
   );
 }
