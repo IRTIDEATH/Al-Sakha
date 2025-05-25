@@ -40,10 +40,10 @@ const HeroSection = () => {
                 >
                   <Image
                     src="/zetaagent.png"
+                    priority
                     alt="Vestia Zeta"
-                    width={240}
-                    height={240}
-                    className="h-40 w-60 object-cover"
+                    width={260}
+                    height={260}
                   />
                 </Cursor>
               )}
