@@ -210,6 +210,7 @@ export const projects: Iproject[] = [
         name: "ZentraHealth",
         description: "zentrahealth is a website that provides information related to a healthy lifestyle. created during the sagasitas august 2024 competition.",
         view: "https://zentrahealth.vercel.app/",
+        github: "https://github.com/IRTIDEATH/ZentraHealth",
         status: "Completed",
         technologies: [
             {
