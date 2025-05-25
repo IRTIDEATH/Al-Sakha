@@ -4,6 +4,7 @@ import Link from "next/link";
 import {
   Drawer,
   DrawerContent,
+  DrawerDescription,
   DrawerFooter,
   DrawerTitle,
   DrawerTrigger,
@@ -22,8 +23,8 @@ const Navbar = () => {
           <span className="-z-10 absolute right-0 -mt-12 h-32 w-8 translate-x-12 rotate-12 bg-zeta/90 opacity-10 transition-all duration-1000 ease-out group-hover:-translate-x-24" />
           <Drawer>
             <DrawerTrigger
-              aria-label="Menu toggle"
-              role="Menu toggle"
+              aria-label="Menu button"
+              role="button"
               className="cursor-pointer"
               asChild
             >
@@ -41,7 +42,10 @@ const Navbar = () => {
               </svg>
             </DrawerTrigger>
             <DrawerContent>
-              <DrawerTitle className="sr-only">menu</DrawerTitle>
+              <DrawerTitle className="sr-only">Menu</DrawerTitle>
+              <DrawerDescription className="sr-only">
+                Navigation menu with links to different pages
+              </DrawerDescription>
               <div className="mx-auto w-[300px]">
                 <DrawerFooter className="flex flex-col items-center w-full gap-2">
                   {navigationItems.map((item, index) => (
@@ -49,12 +53,13 @@ const Navbar = () => {
                       className="w-full"
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
+                      key={index}
                       transition={{
-                        duration: 0.4,
-                        delay: index * 0.1,
+                        times: [0.4],
+                        duration: 0.5,
+                        delay: index * 0.12,
                         ease: "easeOut",
                       }}
-                      key={index}
                     >
                       <Button
                         aria-label="Nav button"

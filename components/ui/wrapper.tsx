@@ -4,11 +4,12 @@ import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import { ReactLenis } from "lenis/react";
 import type { LenisRef } from "lenis/react";
-import { cancelFrame, frame } from "motion/react";
+import { cancelFrame, frame, useReducedMotion } from "motion/react";
 import { PropsWithChildren, useEffect, useRef } from "react";
 
 const Wrapper = ({ children }: PropsWithChildren) => {
   const lenisRef = useRef<LenisRef>(null);
+  const prefersReducedMotion = useReducedMotion();
 
   useEffect(() => {
     function update(data: { timestamp: number }) {
@@ -24,7 +25,7 @@ const Wrapper = ({ children }: PropsWithChildren) => {
   return (
     <ReactLenis options={{ autoRaf: false }} ref={lenisRef} root>
       <div className="mx-auto w-full max-w-[1024px] px-7">
-        <Navbar />
+        {!prefersReducedMotion && <Navbar />}
         {children}
         <Footer />
       </div>
