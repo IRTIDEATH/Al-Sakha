@@ -1,7 +1,6 @@
 "use client";
 
 import { skillBadgeIcon } from "@/constants";
-import { AnimatedButton } from "@/components/ui/button";
 import { Badge } from "@/components/ui/skill-badge";
 import { Icon } from "@iconify/react";
 import CoffeeText from "@/components/ui/coffee-text";
@@ -9,10 +8,10 @@ import { useReducedMotion } from "motion/react";
 import Image from "next/image";
 import ZetaText from "@/components/ui/zeta-text";
 import dynamic from "next/dynamic";
-import { SlidingNumber } from "@/components/ui/sliding-number";
 import { useEffect, useState } from "react";
 
 const Cursor = dynamic(() => import("@/components/ui/animate-cursor"), {ssr: false});
+const SlidingNumber = dynamic(() => import("@/components/ui/sliding-number"), {ssr: false})
 
 const HeroSection = () => {
   const prefersReducedMotion = useReducedMotion();

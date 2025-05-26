@@ -80,7 +80,7 @@ type SlidingNumberProps = {
   decimalSeparator?: string;
 };
 
-export function SlidingNumber({
+export default function SlidingNumber({
   value,
   padStart = false,
   decimalSeparator = ".",
