@@ -17,10 +17,27 @@ const Navbar = () => {
   return (
     <>
       <nav className="w-full h-24 text-foreground flex items-center justify-between">
-        <span className="font-roboto font-medium text-lg">Al Sakha.</span>
-        <div className="flex items-center font-geist bg-suram z-50 overflow-hidden ml-auto whitespace-pre group relative transition-all duration-300 ease-out">
+        <span className="font-roboto font-medium text-xl">Al Sakha.</span>
+        <div className="hidden md:flex items-center bg-suram">
+          <ul className="flex items-center gap-8 font-roboto font-medium px-4 text-lg">
+            {navigationItems.map((item, index) => (
+              <li key={index}>
+                <Link
+                  aria-label="Nav link"
+                  className="hover:underline decoration-2"
+                  href={item.href}
+                >
+                  {item.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+          <span className="px-1.5 py-[4px] bg-foreground text-suram inline-flex text-2xl font-bold">
+            {"<--"}
+          </span>
+        </div>
+        <div className="md:hidden flex items-center font-geist bg-suram">
           <h1 className="px-4 text-lg font-medium">menu</h1>
-          <span className="-z-10 absolute right-0 -mt-12 h-32 w-8 translate-x-12 rotate-12 bg-zeta/90 opacity-10 transition-all duration-1000 ease-out group-hover:-translate-x-24" />
           <Drawer>
             <DrawerTrigger
               aria-label="Menu button"
