@@ -25,6 +25,7 @@
     "next-mdx-remote": "^5.0.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-use-measure": "^2.1.7",
     "sharp": "^0.34.1",
     "sonner": "^2.0.3",
     "tailwind-merge": "^3.2.0",
