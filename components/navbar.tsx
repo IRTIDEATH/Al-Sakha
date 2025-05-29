@@ -32,11 +32,11 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
-          <span className="px-1.5 py-[4px] bg-foreground text-suram inline-flex text-2xl font-bold">
+          <span className="px-2 py-[4px] bg-foreground text-suram inline-flex text-lg font-bold">
             {"<--"}
           </span>
         </div>
-        <div className="md:hidden flex items-center font-geist bg-suram">
+        <div className="md:hidden flex items-center font-roboto bg-suram">
           <h1 className="px-4 text-lg font-medium">menu</h1>
           <Drawer>
             <DrawerTrigger
