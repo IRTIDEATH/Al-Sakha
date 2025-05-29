@@ -6,12 +6,14 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const badgeVariants = cva(
-  "inline-flex items-center px-4 py-1.5 font-medium font-geist gap-1.5",
+  "inline-flex items-center font-medium font-geist gap-1.5",
   {
     variants: {
       variant: {
-        default: "bg-suram text-foreground text-[10px] sm:text-[12px]",
-        secondary: "bg-suram text-foreground text-[10px] px-3 py-1",
+        default:
+          "bg-suram text-foreground text-[10px] sm:text-[12px] px-3 py-1",
+        secondary:
+          "bg-suram text-foreground text-[12px] sm:px-4 sm:py-1.5",
       },
     },
     defaultVariants: {
