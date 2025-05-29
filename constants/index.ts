@@ -42,6 +42,10 @@ export const skillBadgeIcon: IskillBadgeIcon[] = [
         icon: "simple-icons:nodedotjs"
     },
     {
+        name: "Nest.js",
+        icon: "simple-icons:nestjs"
+    },
+    {
         name: "PostgreSQL",
         icon: "simple-icons:postgresql"
     },
