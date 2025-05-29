@@ -6,7 +6,7 @@ const AboutSection = () => {
   return (
     <section className="w-full mx-auto">
       <h1 className="text-2xl mb-6 font-medium">
-        <span className="inline-block">what about me?</span>
+        what about me?
       </h1>
       <p
         className="w-full text-zeta font-medium text-lg text-start"
