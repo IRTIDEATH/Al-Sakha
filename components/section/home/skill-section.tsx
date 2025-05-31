@@ -8,10 +8,7 @@ const SkillSection = () => {
   return (
     <>
       <section className="w-full mx-auto">
-        <h1 className="text-2xl font-medium">
-          skill & tools
-        </h1>
-        <div className="bg-foreground p-5 flex flex-col mt-6">
+        <div className="bg-foreground p-5 flex flex-col">
           <div className="w-full flex items-center justify-between">
             <ul className="flex mb-6 gap-2">
               <li className="w-3 h-3 bg-background"></li>
