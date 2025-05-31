@@ -67,7 +67,7 @@ const CardInternship = () => {
                     <Link
                       aria-label="company link"
                       href={item.link}
-                      className="text-lg sm:text-xl font-medium font-roboto hover:underline"
+                      className="text-lg sm:text-xl font-medium font-roboto hover:underline decoration-2"
                     >
                       {item.company}
                     </Link>

@@ -97,7 +97,7 @@ const CardProjectSecton = () => {
                     <>
                       <Link
                         href={item.view ?? ""}
-                        className="text-sm font-medium text-foreground hover:underline"
+                        className="text-sm font-medium text-foreground hover:underline decoration-2"
                       >
                         view
                       </Link>
@@ -108,7 +108,7 @@ const CardProjectSecton = () => {
                     <>
                       <Link
                         href={item.github ?? ""}
-                        className="text-sm font-medium text-foreground hover:underline"
+                        className="text-sm font-medium text-foreground hover:underline decoration-2"
                       >
                         github
                       </Link>

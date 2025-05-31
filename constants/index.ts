@@ -98,7 +98,7 @@ export const internships: Iinternship[] = [
                 icon: "simple-icons:tailwindcss"
             },
         ],
-        link: "https://web.indi.tech/",
+        link: "https://www.linkedin.com/company/inditechno/",
     },
     {
         company: "GAMECOMM",
@@ -118,7 +118,7 @@ export const internships: Iinternship[] = [
                 icon: "simple-icons:tailwindcss"
             },
         ],
-        link: "https://gamecomm.vercel.app/",
+        link: "https://www.linkedin.com/company/gamecomm/",
     },
 ];
 
