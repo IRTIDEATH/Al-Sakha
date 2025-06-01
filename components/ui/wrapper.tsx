@@ -6,6 +6,15 @@ import { ReactLenis } from "lenis/react";
 import type { LenisRef } from "lenis/react";
 import { cancelFrame, frame, useReducedMotion } from "motion/react";
 import { PropsWithChildren, useEffect, useRef } from "react";
+import dynamic from "next/dynamic";
+
+const CursorFollower = dynamic(
+  () => import("@/components/ui/cursor-follower"),
+  {
+    ssr: false,
+  }
+);
+
 
 const Wrapper = ({ children }: PropsWithChildren) => {
   const lenisRef = useRef<LenisRef>(null);
@@ -28,6 +37,7 @@ const Wrapper = ({ children }: PropsWithChildren) => {
         {!prefersReducedMotion && <Navbar />}
         {children}
         <Footer />
+        {!prefersReducedMotion && <CursorFollower />}
       </div>
     </ReactLenis>
   );
