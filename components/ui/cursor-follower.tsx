@@ -115,12 +115,6 @@ const CursorFollower: React.FC = () => {
     }
   }, [mouseX, mouseY, targetX, targetY, magnetTarget, isVisible])
 
-  const getScale = () => {
-    if (!magnetTarget) return 1
-    const targetSize = Math.max(magnetTarget.bounds.width, magnetTarget.bounds.height)
-    return Math.max(1, targetSize / 24)
-  }
-
   return (
     <motion.canvas
       className="hidden lg:flex fixed left-0 top-0 mix-blend-difference bg-white rounded-full pointer-events-none"
