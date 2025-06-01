@@ -54,7 +54,7 @@ const CursorFollower: React.FC = () => {
       for (const element of magneticElements) {
         const htmlElement = element as HTMLElement
         const bounds = htmlElement.getBoundingClientRect()
-        const padding = 6
+        const padding = 20
         
         if (
           e.clientX >= bounds.left - padding &&
@@ -123,7 +123,7 @@ const CursorFollower: React.FC = () => {
 
   return (
     <motion.canvas
-      className="fixed left-0 top-0 mix-blend-difference bg-white rounded-full pointer-events-none"
+      className="hidden lg:flex fixed left-0 top-0 mix-blend-difference bg-white rounded-full pointer-events-none"
       style={{
         x: springX,
         y: springY,
@@ -135,8 +135,8 @@ const CursorFollower: React.FC = () => {
       animate={{
         opacity: isVisible ? (magnetTarget ? 0.9 : 1) : 0,
         scale: isVisible ? 1 : 0,
-        width: magnetTarget ? `${magnetTarget.bounds.width + 34}px` : "12px",
-        height: magnetTarget ? `${magnetTarget.bounds.height + 34}px` : "12px",
+        width: magnetTarget ? `${magnetTarget.bounds.width + 66}px` : "12px",
+        height: magnetTarget ? `${magnetTarget.bounds.height + 66}px` : "12px",
       }}
       transition={{
         opacity: { duration: 0.3, ease: "easeOut" },
