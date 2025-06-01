@@ -83,7 +83,7 @@ const CardInternship = () => {
 
               <div className="hidden sm:flex flex-wrap w-[300px] items-center justify-end gap-2 h-full">
                 {item.technologies.map((items, i) => (
-                  <Badge key={i} className="">
+                  <Badge key={i} variant={"secondary"}>
                     <Icon className="-ms-0.5 text-[16px]" icon={items.icon} />
                     {items.name}
                   </Badge>

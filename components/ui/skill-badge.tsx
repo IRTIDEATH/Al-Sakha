@@ -13,7 +13,7 @@ const badgeVariants = cva(
         default:
           "bg-suram text-foreground text-[10px] sm:text-[12px] px-3 py-1",
         secondary:
-          "bg-suram text-foreground text-[12px] sm:px-4 sm:py-1.5",
+          "bg-suram text-foreground text-[12px] px-3 py-1 sm:px-4 sm:py-1.5",
       },
     },
     defaultVariants: {
