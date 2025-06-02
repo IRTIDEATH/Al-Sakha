@@ -1,7 +1,12 @@
-"use client"
+"use client";
 
-const Divider = () => {
-  return <div className="bg-suram py-[1.5px] w-full my-12"/>
-}
+import React from "react";
+import { cn } from "@/lib/utils";
 
-export default Divider
+export interface DividerProps extends React.HTMLAttributes<HTMLDivElement> {}
+
+const Divider = ({ className }: DividerProps) => {
+  return <div className={cn("bg-suram py-[1.5px] w-full my-12", className)} />;
+};
+
+export default Divider;

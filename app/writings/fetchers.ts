@@ -11,6 +11,7 @@ export async function getBlogBySlug(slug: string) {
     const { frontmatter, content } = await compileMDX<{
         thumbnail: string
         title: string
+        description: string
         slug: string
         category: string
         date: string
