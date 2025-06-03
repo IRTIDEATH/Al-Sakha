@@ -17,7 +17,23 @@ const Navbar = () => {
   return (
     <>
       <nav className="w-full h-24 text-foreground flex items-center justify-between">
-        <span className="font-roboto font-medium text-xl">Al Sakha.</span>
+        <svg
+          width="831"
+          height="590"
+          viewBox="0 0 831 590"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className="w-12 h-full"
+        >
+          <path
+            d="M495.4 589.24V0H594V497.92H735.93V403.93H830.06V588.92H825.72L495.4 589.24Z"
+            fill="#2E2E2E"
+          />
+          <path
+            d="M0 589.07L306.08 0.109863H453.98V589.12H356.99V494.99H349.63H233.39C233.39 494.99 230.18 495.31 233.54 489.2C236.9 483.09 280.6 403.96 280.6 403.96H284.73H356.98V127.49H355.1L113.62 589.07H0Z"
+            fill="#2E2E2E"
+          />
+        </svg>
         <div className="hidden md:flex items-center bg-suram">
           <ul className="flex items-center gap-8 font-roboto font-medium px-4 text-lg">
             {navigationItems.map((item, index) => (
