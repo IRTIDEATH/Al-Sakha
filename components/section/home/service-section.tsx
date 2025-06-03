@@ -9,7 +9,7 @@ const ServiceSection = () => {
       <section className="w-full mx-auto">
         <h1 className="text-2xl mb-6 font-medium">service</h1>
         <p className="w-full text-zeta font-medium text-lg text-start">
-          i offer services that match my current capabilities. through this
+          i offer services that match with my current capabilities. through this
           service, i strive to provide the best solution. you can also see my
           project here:{" "}
           <CoffeeText className="underline decoration-2">
