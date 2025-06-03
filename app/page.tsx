@@ -6,6 +6,7 @@ import InspirationSection from "@/components/section/home/inspiration-section";
 import dynamic from "next/dynamic";
 import ChatmeSection from "@/components/section/home/chatme-section";
 import SkillSection from "@/components/section/home/skill-section";
+import ServiceSection from "@/components/section/home/service-section";
 
 const InternshipSection = dynamic(() => import("@/components/section/home/internship-section"));
 
@@ -20,6 +21,8 @@ const Page = () => {
       <SkillSection />
       <Divider />
       <InternshipSection />
+      <Divider />
+      <ServiceSection />
       <Divider />
       <ColorPaletteSection />
       <Divider />

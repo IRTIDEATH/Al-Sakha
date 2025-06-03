@@ -17,11 +17,11 @@ export default async function BlogsPage() {
             <article>
               <Link
                 href={`/writings/${item.slug}`}
-                className="text-xl font-medium hover:underline decoration-2"
+                className="text-xl font-medium underline decoration-2"
               >
                 {item.frontmatter.title}
               </Link>
-              <p className="text-sm text-zeta mt-2">
+              <p className="text-sm text-zeta mt-2.5">
                 {item.frontmatter.description}
               </p>
               <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center font-medium mt-4 gap-2">
