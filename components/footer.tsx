@@ -11,7 +11,7 @@ import { toast } from "sonner";
 
 const Footer = () => {
   const handleCopyEmail = () => {
-    navigator.clipboard.writeText("hanyaakunzs@gmail.com");
+    navigator.clipboard.writeText("alsakhafatthariq@gmail.com");
     toast.success("Email copied to clipboard", {
       duration: 2000,
     });
@@ -74,7 +74,7 @@ const Footer = () => {
                 </button>
               </TooltipTrigger>
               <TooltipContent className="mb-1">
-                <p>hanyaakunzs@gmail.com</p>
+                <p>alsakhafatthariq@gmail.com</p>
               </TooltipContent>
             </Tooltip>
           </TooltipProvider>

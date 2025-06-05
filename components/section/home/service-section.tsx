@@ -10,7 +10,7 @@ const ServiceSection = () => {
         <h1 className="text-2xl mb-6 font-medium">service</h1>
         <p className="w-full text-zeta font-medium text-lg text-start">
           i provide services that reflect my current capabilities, with a focus
-          on delivering effective and thoughtful solutions. Feel free to view my
+          on delivering effective and thoughtful solutions. feel free to view my
           work on the{" "}
           <CoffeeText className="underline decoration-2">
             <Link aria-label="Navigate to projects page" href={"/projects"}>
