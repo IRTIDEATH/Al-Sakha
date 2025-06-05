@@ -6,9 +6,9 @@ export default async function BlogsPage() {
   const blogs = await getBlogs();
   return (
     <main className="mt-12">
-      <h2 className="text-2xl mb-6 font-medium">writing in spare time</h2>
+      <h2 className="text-2xl mb-6 font-medium">writing in my spare time</h2>
       <p className="text-zeta font-medium text-lg text-start mb-6">
-        whatever story it is, the article i made, and researching something.
+        whether it's storytelling, crafting articles, or diving into research.
       </p>
       <Divider className="mt-12 mb-6" />
       <div className="w-full">

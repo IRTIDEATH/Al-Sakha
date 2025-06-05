@@ -22,9 +22,9 @@ const SkillSection = () => {
           </div>
           <div className="space-x-[4px] space-y-[4px]">
             {skillBadgeIcon.map((item, index) => (
-              <Badge key={index}>
+              <Badge className="text-[10px] sm:text-[12px] 2xl:text-[13px]" key={index}>
                 <Icon
-                  className="-ms-0.5 text-[12px] sm:text-[14px]"
+                  className="-ms-0.5 text-[12px] sm:text-[14px] 2xl:text-[15px]"
                   icon={item.icon}
                 />
                 {item.name}

@@ -11,11 +11,9 @@ const TitleSection = () => {
       <section className="mt-12">
         <h2 className="text-2xl mb-6 font-medium">coding result</h2>
         <p className="w-full text-zeta font-medium text-lg text-start mb-6">
-          these are some of my coding projects. some are{" "}
-          <CoffeeText>completed</CoffeeText>, still being{" "}
-          <CoffeeText>development</CoffeeText>, and also{" "}
-          <CoffeeText>pending</CoffeeText>. when i was unemployed, i would
-          usually make a lot of projects.
+          these are some of my coding projects completed, development, and pending. i
+          often used my free time, especially when unemployed, to build things,
+          learn new skills, and stay productive.
         </p>
 
         <p className="w-full text-zeta font-medium text-lg text-start mb-6">

@@ -294,7 +294,6 @@ export const projects: Iproject[] = [
         image: "/project/hadirinimg.webp",
         name: "Hadirin",
         description: "simple student attendance app for schools, created at the time of the exam. attendance recorded, learning monitored.",
-        view: "https://zect.vercel.app/",
         github: "https://github.com/IRTIDEATH/Absensi-Sederhana",
         status: "Pending",
         technologies: [

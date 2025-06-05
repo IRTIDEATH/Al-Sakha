@@ -9,14 +9,15 @@ const ServiceSection = () => {
       <section className="w-full mx-auto">
         <h1 className="text-2xl mb-6 font-medium">service</h1>
         <p className="w-full text-zeta font-medium text-lg text-start">
-          i offer services that match with my current capabilities. through this
-          service, i strive to provide the best solution. you can also see my
-          project here:{" "}
+          i provide services that reflect my current capabilities, with a focus
+          on delivering effective and thoughtful solutions. Feel free to view my
+          work on the{" "}
           <CoffeeText className="underline decoration-2">
             <Link aria-label="Navigate to projects page" href={"/projects"}>
               projects.
             </Link>
-          </CoffeeText>
+          </CoffeeText>{" "}
+          page.
         </p>
         <div className="mt-8 flex flex-col gap-12">
           <div className="flex flex-row-reverse items-start justify-between gap-4">
