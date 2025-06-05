@@ -102,7 +102,7 @@ export const internships: Iinternship[] = [
     },
     {
         company: "GAMECOMM",
-        position: "Frontend Engineer",
+        position: "Frontend Developer",
         date: "Jan - Mar 2025",
         technologies: [
             {
