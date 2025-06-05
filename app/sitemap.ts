@@ -1,4 +1,4 @@
-import { statSync } from "fs";
+import { existsSync, statSync } from "fs";
 import { getAllBlogSlug } from "./writings/fetchers";
 import { join } from 'path';
 
@@ -26,15 +26,17 @@ export default async function sitemap(): Promise<SitemapEntry[]> {
             changeFrequency: 'daily',
             priority: 1.0
         },
-        ...writings.map(({ slug }) => {
-            const filePath = join(process.cwd(), "writings", `${slug}.md`);
-            return {
-                url: `${BASE_URL}/writings/${slug}`,
-                lastModified: getLastModified(filePath),
-                changeFrequency: 'daily' as const,
-                priority: 0.9,
-            }
-        })
+        ...writings
+            .filter(({ slug }) => existsSync(join(process.cwd(), "writings", `${slug}.mdx`)))
+            .map(({ slug }) => {
+                const filePath = join(process.cwd(), "writings", `${slug}.mdx`);
+                return {
+                    url: `${BASE_URL}/writings/${slug}`,
+                    lastModified: getLastModified(filePath),
+                    changeFrequency: 'daily' as const,
+                    priority: 0.9,
+                }
+            })
     ];
 
     return [...staticRoutes].map((entry) => ({
