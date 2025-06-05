@@ -19,7 +19,7 @@ const AboutSection = () => {
         not in college. i hope to stick with this career in the future.
         <br />
         <br />
-        i'm also learning editing, graphic design, and writing. anyway, that's
+        i{"'"}m also learning editing, graphic design, and writing. anyway, that{"'"}s
         all the yapping from me and thank you.
       </p>
     </section>
