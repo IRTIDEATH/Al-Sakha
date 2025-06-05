@@ -1,0 +1,4 @@
+User-Agent: *
+Allow: /
+
+Sitemap: https://irtideath.vercel.app/sitemap.xml
