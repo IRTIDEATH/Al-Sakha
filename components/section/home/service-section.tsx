@@ -59,10 +59,9 @@ const ServiceSection = () => {
               <h2 className="text-lg font-medium">Backend</h2>
               <p className="text-zeta">
                 i built a secure API that allows seamless integration,
-                increasing functionality and scalability across the system. with
-                a focus on efficiency and reliability, ensuring clean and
-                well-structured code, making future development and maintenance
-                easy.
+                scalability across the system. with a focus on efficiency and
+                reliability, ensuring clean and well-structured code, making
+                future development easy.
               </p>
             </div>
             <div>
