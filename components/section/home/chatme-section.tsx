@@ -35,7 +35,7 @@ const ChatmeSection = () => {
             <span className="text-2xl text-foreground">{"-->"}</span>
             <Link
               aria-label="Talk with me on Linkedin"
-              href="https://www.linkedin.com/in/al-sakha-1214ba366/"
+              href="https://www.linkedin.com/in/al-sakha/"
               className="hover:underline decoration-2"
             >
               Linkedin
