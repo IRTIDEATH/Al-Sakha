@@ -14,7 +14,7 @@ const ServiceSection = () => {
           work on the{" "}
           <CoffeeText className="underline decoration-2">
             <Link aria-label="Navigate to projects page" href={"/projects"}>
-              projects.
+              projects
             </Link>
           </CoffeeText>{" "}
           page.

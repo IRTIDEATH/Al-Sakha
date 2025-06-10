@@ -23,10 +23,10 @@ const ColorPaletteSection = () => {
   const handleCopyColor = (hex: string, index: number) => {
     navigator.clipboard.writeText(hex);
     setCopiedIndex(index);
-    setTimeout(() => setCopiedIndex(null), 2000);
+    setTimeout(() => setCopiedIndex(null), 3000);
     toast.success("Color copied to clipboard", {
       description: `Color ${hex} copied to clipboard`,
-      duration: 2000,
+      duration: 3000,
     });
   };
 
@@ -45,26 +45,34 @@ const ColorPaletteSection = () => {
                   <div className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
                     {copiedIndex === index ? (
                       <svg
+                        className="h-5 w-5 text-background"
                         xmlns="http://www.w3.org/2000/svg"
-                        className="h-5 w-5 text-background drop-shadow-lg"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
                       >
-                        <path
-                          fillRule="evenodd"
-                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                          clipRule="evenodd"
-                        />
+                        <path d="M20 6 9 17l-5-5" />
                       </svg>
                     ) : (
                       <svg
+                        className="h-5 w-5 text-background"
                         xmlns="http://www.w3.org/2000/svg"
-                        className="h-5 w-5 text-white drop-shadow-lg"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
                       >
-                        <path d="M8 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z" />
-                        <path d="M6 3a2 2 0 00-2 2v11a2 2 0 002 2h8a2 2 0 002-2V5a2 2 0 00-2-2 3 3 0 01-3 3H9a3 3 0 01-3-3z" />
+                        <rect width="8" height="4" x="8" y="2" rx="1" ry="1" />
+                        <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
                       </svg>
                     )}
                   </div>

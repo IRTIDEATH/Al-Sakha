@@ -5,13 +5,8 @@ import { useReducedMotion } from "motion/react";
 import Image from "next/image";
 import ZetaText from "@/components/ui/zeta-text";
 import dynamic from "next/dynamic";
-import { useEffect, useState } from "react";
 
 const Cursor = dynamic(() => import("@/components/ui/animate-cursor"), {
-  ssr: false,
-});
-
-const SlidingNumber = dynamic(() => import("@/components/ui/sliding-number"), {
   ssr: false,
 });
 
@@ -20,21 +15,8 @@ const TextLoop = dynamic(() => import("@/components/ui/text-loop"), {
 });
 
 
-
 const HeroSection = () => {
   const prefersReducedMotion = useReducedMotion();
-  const [hours, setHours] = useState(new Date().getHours());
-  const [minutes, setMinutes] = useState(new Date().getMinutes());
-  const [seconds, setSeconds] = useState(new Date().getSeconds());
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setHours(new Date().getHours());
-      setMinutes(new Date().getMinutes());
-      setSeconds(new Date().getSeconds());
-    }, 1000);
-    return () => clearInterval(interval);
-  }, []);
 
   return (
     <>
@@ -79,15 +61,6 @@ const HeroSection = () => {
             <br />
             while working and study.
           </p>
-          <div className="px-3 py-1 border-2 border-zeta">
-            <div className="flex items-center gap-0.5 font-roboto text-zeta">
-              <SlidingNumber value={hours} padStart={true} />
-              <span>:</span>
-              <SlidingNumber value={minutes} padStart={true} />
-              <span>:</span>
-              <SlidingNumber value={seconds} padStart={true} />
-            </div>
-          </div>
         </div>
         <TextLoop className="absolute right-0 font-bold text-2xl sm:text-3xl rotate-90">
           <span>{"-->"}</span>
