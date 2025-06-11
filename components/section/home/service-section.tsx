@@ -1,29 +1,20 @@
 "use client";
 
-import CoffeeText from "@/components/ui/coffee-text";
-import Link from "next/link";
 
 const ServiceSection = () => {
   return (
     <>
       <section className="w-full mx-auto">
         <h1 className="text-2xl mb-6 font-medium">service</h1>
-        <p className="w-full text-zeta font-medium text-lg text-start">
+        <p className="w-full text-zeta font-medium text-[16px] text-start">
           i provide services that reflect my current capabilities, with a focus
-          on delivering effective and thoughtful solutions. feel free to view my
-          work on the{" "}
-          <CoffeeText className="underline decoration-2">
-            <Link aria-label="Navigate to projects page" href={"/projects"}>
-              projects
-            </Link>
-          </CoffeeText>{" "}
-          page.
+          on delivering effective and thoughtful solutions.
         </p>
         <div className="mt-8 flex flex-col gap-12">
           <div className="flex flex-row-reverse items-start justify-between gap-4">
-            <div className="space-y-2.5">
+            <div className="space-y-2">
               <h2 className="text-lg font-medium">Frontend</h2>
-              <p className="text-zeta">
+              <p className="text-zeta text-[15px]">
                 transforming designs into functional and responsive user
                 interfaces. i create web experiences that are interactive, fast
                 to load, seo friendly and optimized across multiple devices,
@@ -55,9 +46,9 @@ const ServiceSection = () => {
             </div>
           </div>
           <div className="flex flex-row-reverse items-start justify-between gap-4">
-            <div className="space-y-2.5">
+            <div className="space-y-2">
               <h2 className="text-lg font-medium">Backend</h2>
-              <p className="text-zeta">
+              <p className="text-zeta text-[15px]">
                 i built a secure API that allows seamless integration,
                 scalability across the system. with a focus on efficiency and
                 reliability, ensuring clean and well-structured code, making

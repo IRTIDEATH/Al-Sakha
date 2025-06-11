@@ -7,8 +7,8 @@ const InspirationSection = () => {
   return (
     <>
       <section>
-        <h1 className="text-2xl mb-6 font-medium">reference & inspiration</h1>
-        <p className="w-full text-zeta font-medium text-lg text-start">
+        <h1 className="text-2xl mb-4 font-medium">reference & inspiration</h1>
+        <p className="w-full text-zeta font-medium text-[16px] text-start">
           this is a <CoffeeText>cool</CoffeeText> portfolio website that i use
           as my reference and inspiration.
         </p>

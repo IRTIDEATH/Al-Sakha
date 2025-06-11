@@ -33,7 +33,7 @@ const Wrapper = ({ children }: PropsWithChildren) => {
   
   return (
     <ReactLenis options={{ autoRaf: false }} ref={lenisRef} root>
-      <div className="mx-auto w-full max-w-[1024px] px-7">
+      <div className="mx-auto w-full max-w-[900px] px-7">
         {!prefersReducedMotion && <Navbar />}
         {children}
         <Footer />

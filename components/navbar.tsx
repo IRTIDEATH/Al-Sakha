@@ -23,7 +23,7 @@ const Navbar = () => {
           viewBox="0 0 831 590"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className="w-12 h-full"
+          className="w-9 h-full"
         >
           <path
             d="M495.4 589.24V0H594V497.92H735.93V403.93H830.06V588.92H825.72L495.4 589.24Z"
@@ -34,8 +34,8 @@ const Navbar = () => {
             fill="#2E2E2E"
           />
         </svg>
-        <div className="hidden md:flex items-center bg-suram">
-          <ul className="flex items-center gap-8 font-roboto font-medium px-4 text-lg">
+        <div className="hidden md:flex items-center">
+          <ul className="flex items-center gap-8 font-roboto font-medium px-4 text-lg text-zeta">
             {navigationItems.map((item, index) => (
               <li key={index}>
                 <Link

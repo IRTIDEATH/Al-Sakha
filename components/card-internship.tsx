@@ -1,25 +1,14 @@
 "use client";
 
-import { Badge } from "@/components/ui/skill-badge";
 import { internships } from "@/constants";
-import { Icon } from "@iconify/react";
 import { motion } from "motion/react";
 import Link from "next/link";
 import { useState } from "react";
 
 const CardInternship = () => {
-  const [showBadges, setShowBadges] = useState<number | null>(null);
   const [animationStates, setAnimationStates] = useState<
     Record<number, "none" | "entering" | "exiting">
   >({});
-
-  const toggleBadges = (index: number) => {
-    if (showBadges === index) {
-      setShowBadges(null);
-    } else {
-      setShowBadges(index);
-    }
-  };
 
   const handleMouseEnter = (index: number) => {
     setAnimationStates((prev) => ({
@@ -58,52 +47,28 @@ const CardInternship = () => {
               key={index}
               onMouseEnter={() => handleMouseEnter(index)}
               onMouseLeave={() => handleMouseLeave(index)}
-              className={`w-full flex-row items-center justify-between h-28 relative inline-flex overflow-hidden`}
+              className={`w-full flex-row items-center justify-between h-22 sm:h-18 relative inline-flex overflow-hidden`}
             >
-              <div className="flex flex-row items-center gap-4 h-full">
+              <div className="flex flex-row items-center gap-4 h-full w-full">
                 <div className="h-full w-8 bg-foreground" />
-                <div className="flex flex-col items-start gap-3.5">
-                  <div className="flex flex-col gap-1.5">
+                <div className="flex flex-col items-start sm:flex-row sm:justify-between w-full sm:items-end">
+                  <div className="flex flex-col gap-0.5">
                     <Link
                       aria-label="company link"
                       href={item.link}
-                      className="text-lg sm:text-xl font-medium font-roboto hover:underline decoration-2"
+                      className="text-xl font-medium font-roboto hover:underline decoration-2"
                     >
                       {item.company}
                     </Link>
-                    <p className="text-base sm:text-lg font-medium text-zeta">
+                    <p className="text-lg font-medium text-zeta">
                       {item.position}
                     </p>
                   </div>
-                  <span className="text-[12px] sm:text-[14px]">
+                  <span className="text-[14px] font-medium text-zeta mt-2">
                     {item.date}
                   </span>
                 </div>
               </div>
-
-              <div className="hidden sm:flex flex-wrap w-[300px] items-center justify-end gap-2 h-full">
-                {item.technologies.map((items, i) => (
-                  <Badge key={i} variant={"secondary"}>
-                    <Icon className="-ms-0.5 text-[16px]" icon={items.icon} />
-                    {items.name}
-                  </Badge>
-                ))}
-              </div>
-
-              <button
-                aria-label="Slide to see techstack"
-                onClick={() => toggleBadges(index)}
-                className="flex sm:hidden items-center justify-center z-10 mr-1"
-              >
-                <Icon
-                  icon="weui:arrow-filled"
-                  className={`text-4xl transition-colors duration-500 border-2 w-6 h-6 ${
-                    showBadges === index
-                      ? "text-background border-background"
-                      : "text-foreground border-foreground"
-                  }`}
-                />
-              </button>
 
               {cardState === "entering" && (
                 <motion.div
@@ -111,7 +76,7 @@ const CardInternship = () => {
                   className="absolute inset-0 bg-transparent sm:bg-suram -z-10"
                   initial={{ left: "-100%", right: "100%" }}
                   animate={{ left: "0%", right: "0%" }}
-                  transition={{ duration: 0.3, ease: "easeInOut" }}
+                  transition={{ duration: 0.35, ease: "easeInOut" }}
                   onAnimationComplete={() =>
                     handleAnimationComplete(index, "entering")
                   }
@@ -124,49 +89,12 @@ const CardInternship = () => {
                   className="absolute inset-0 bg-transparent sm:bg-suram -z-10"
                   initial={{ left: "0%", right: "0%" }}
                   animate={{ left: "100%", right: "-100%" }}
-                  transition={{ duration: 0.3, ease: "easeInOut" }}
+                  transition={{ duration: 0.35, ease: "easeInOut" }}
                   onAnimationComplete={() =>
                     handleAnimationComplete(index, "exiting")
                   }
                 />
-              )}
-
-              <motion.div
-                className="absolute inset-0 bg-foreground overflow-hidden"
-                initial={{ width: 0 }}
-                animate={{ width: showBadges === index ? "100%" : 0 }}
-                transition={{ duration: 0.3, ease: "easeInOut" }}
-                style={{
-                  top: 0,
-                  left: 0,
-                  bottom: 0,
-                  originX: 0,
-                }}
-              >
-                <motion.div
-                  className="w-full h-full flex flex-wrap items-center justify-end gap-2 py-1.5 px-10"
-                  initial={{ opacity: 0 }}
-                  animate={{
-                    opacity: showBadges === index ? 1 : 0,
-                  }}
-                  transition={{
-                    duration: 0.2,
-                    ease: "easeOut",
-                    delay: showBadges === index ? 0.3 : 0,
-                  }}
-                >
-                  {showBadges === index &&
-                    item.technologies.map((tech, techIndex) => (
-                      <Badge variant="secondary" key={techIndex}>
-                        <Icon
-                          className="-ms-0.5 text-[14px]"
-                          icon={tech.icon}
-                        />
-                        {tech.name}
-                      </Badge>
-                    ))}
-                </motion.div>
-              </motion.div>
+              )}              
             </div>
           );
         })}

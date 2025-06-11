@@ -6,8 +6,8 @@ const ChatmeSection = () => {
   return (
     <>
       <section>
-        <h1 className="text-2xl mb-6 font-medium">wanna talk?</h1>
-        <p className="w-full text-zeta font-medium text-lg text-start">
+        <h1 className="text-2xl mb-4 font-medium">wanna talk?</h1>
+        <p className="w-full text-zeta font-medium text-[16px] text-start">
           need help, talk about random things, and connect with me.
         </p>
         <ul className="w-full text-zeta font-medium text-lg text-start mt-4">
