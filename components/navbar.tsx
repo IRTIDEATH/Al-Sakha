@@ -55,12 +55,7 @@ const Navbar = () => {
         <div className="md:hidden flex items-center font-roboto bg-suram">
           <h1 className="px-4 text-lg font-medium">menu</h1>
           <Drawer>
-            <DrawerTrigger
-              aria-label="Menu button"
-              role="button"
-              className="cursor-pointer"
-              asChild
-            >
+            <DrawerTrigger aria-label="Menu button" role="button" asChild>
               <svg
                 className="bg-foreground p-1.5"
                 xmlns="http://www.w3.org/2000/svg"

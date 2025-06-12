@@ -17,7 +17,7 @@ const buttonVariants = cva(
         link: "text-primary underline-offset-4 hover:underline",
         ghost: "hover:text-background",
         classic:
-          "w-full bg-foreground border border-foreground transition-colors duration-500 focus:bg-transparent focus:text-foreground text-center text-background",
+          "w-full bg-foreground border border-foreground transition-colors duration-500 active:bg-transparent active:text-foreground text-center text-background",
       },
       size: {
         default: "px-6 py-1",
