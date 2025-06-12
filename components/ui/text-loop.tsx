@@ -54,8 +54,7 @@ export default function TextLoop({
   };
 
   return (
-    <div 
-    data-magnetic="true"
+    <div
     className={cn("relative inline-block whitespace-nowrap", className)}>
       <AnimatePresence mode={mode} initial={false}>
         <motion.div
