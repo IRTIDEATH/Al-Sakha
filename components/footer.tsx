@@ -13,7 +13,7 @@ const Footer = () => {
   const handleCopyEmail = () => {
     navigator.clipboard.writeText("alsakhafatthariq@gmail.com");
     toast.success("Email copied to clipboard", {
-      duration: 2000,
+      duration: 3000,
     });
   }; 
   return (

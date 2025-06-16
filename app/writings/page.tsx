@@ -10,7 +10,7 @@ export default async function BlogsPage() {
       <p className="text-zeta font-medium text-[16px] text-start mb-6">
         whether it{"'"}s storytelling, crafting articles, or diving into research.
       </p>
-      <Divider className="mt-12 mb-6" />
+      <Divider className="mt-8 mb-6" />
       <div className="w-full">
         {blogs.map((item, i) => (
           <div key={i}>

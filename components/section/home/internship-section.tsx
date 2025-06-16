@@ -1,12 +1,8 @@
 "use client";
 
-import dynamic from 'next/dynamic';
-
-const CardInternship = dynamic(() => import("@/components/card-internship"));
-import { useReducedMotion } from 'motion/react';
+import CardInternship from '@/components/card-internship';
 
 const InternshipSection = () => {
-  const prefersReducedMotion = useReducedMotion();
   return (
     <>
       <section>
@@ -16,7 +12,7 @@ const InternshipSection = () => {
           successfully completed two professional internships, each spanning
           three months, at two different companies.
         </p>
-        {!prefersReducedMotion && <CardInternship />}
+        <CardInternship />
       </section>
     </>
   );

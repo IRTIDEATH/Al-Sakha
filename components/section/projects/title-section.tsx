@@ -6,7 +6,7 @@ const TitleSection = () => {
   return (
     <>
       <section className="mt-12">
-        <h2 className="text-2xl mb-6 font-medium">coding result</h2>
+        <h2 className="text-3xl mb-6 font-medium">coding result</h2>
         <p className="w-full text-zeta font-medium text-[16px] text-start mb-6">
           these are some of my coding projects completed, development, and
           pending. i often used my free time, especially when unemployed, to

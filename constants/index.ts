@@ -6,6 +6,7 @@ interface NavigationItemProps {
 interface IskillBadgeIcon {
     name: string;
     icon: string;
+    link?: string;
 };
 
 interface Iinternship {
@@ -35,43 +36,38 @@ export const navigationItems: NavigationItemProps[] = [
 export const skillBadgeIcon: IskillBadgeIcon[] = [
     {
         name: "Typescript",
-        icon: "simple-icons:typescript"
+        icon: "simple-icons:typescript",
+        link: "https://www.typescriptlang.org"
     },
     {
         name: "Node.js",
-        icon: "simple-icons:nodedotjs"
+        icon: "simple-icons:nodedotjs",
+        link: "https://nodejs.org/en"
     },
     {
-        name: "Nest.js",
-        icon: "simple-icons:nestjs"
-    },
-    {
-        name: "PostgreSQL",
-        icon: "simple-icons:postgresql"
-    },
-    {
-        name: "Next.js",
-        icon: "simple-icons:nextdotjs"
-    },
-    {
-        name: "Vue.js",
-        icon: "simple-icons:vuedotjs"
+        name: "Vite",
+        icon: "simple-icons:vite",
+        link: "https://vite.dev"
     },
     {
         name: "Three.js",
-        icon: "simple-icons:threedotjs"
+        icon: "simple-icons:threedotjs",
+        link: "https://threejs.org"
     },
     {
         name: "Tailwind CSS",
-        icon: "simple-icons:tailwindcss"
+        icon: "simple-icons:tailwindcss",
+        link: "https://tailwindcss.com"
     },
     {
         name: "Notion",
-        icon: "simple-icons:notion"
+        icon: "simple-icons:notion",
+        link: "https://www.notion.com"
     },
     {
         name: "Figma",
-        icon: "simple-icons:figma"
+        icon: "simple-icons:figma",
+        link: "https://www.figma.com"
     },
 ];
 

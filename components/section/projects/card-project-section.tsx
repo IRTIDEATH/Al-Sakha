@@ -27,8 +27,8 @@ const CardProjectSecton = () => {
     <>
       {projects.map((item, index) => (
         <section key={index}>
-          <div className="flex w-full">
-            <div className="relative hidden md:block mr-5">
+          <div className="flex w-full items-start gap-0 md:gap-5">
+            <div className="relative hidden md:block">
               {!prefersReducedMotion && (
                 <MorphingDialog
                   transition={{
@@ -38,7 +38,7 @@ const CardProjectSecton = () => {
                 >
                   <MorphingDialogTrigger>
                     <div className="relative h-40 w-28">
-                      <div className="w-full h-full bg-foreground/50 z-10 absolute hover:bg-transparent transition-colors duration-200" />
+                      <div className="w-full h-full bg-foreground z-10 absolute hover:bg-transparent ease-in-out transition-colors duration-500" />                      
                       <MorphingDialogImage
                         src={item.image}
                         alt="Image Project"
@@ -87,7 +87,7 @@ const CardProjectSecton = () => {
               )}
             </div>
             <div>
-              <h1 className="mb-2 text-[26px] font-medium">{item.name}</h1>
+              <h1 className="mb-2 text-[24px] font-medium">{item.name}</h1>
               <p className="mb-6 text-zeta text-[16px] font-medium">
                 {item.description}
               </p>
@@ -115,7 +115,7 @@ const CardProjectSecton = () => {
                       <span className="text-zeta">|</span>
                     </>
                   ) : null}
-                  <span className="bg-foreground px-3.5 py-1 text-sm text-background">
+                  <span className="bg-foreground px-3.5 py-1 text-[13px] text-background">
                     {item.status}
                   </span>
                 </div>

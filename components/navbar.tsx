@@ -48,7 +48,7 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
-          <span className="px-2 py-[4px] bg-foreground text-suram inline-flex text-lg font-bold">
+          <span className="px-2 bg-foreground text-background text-lg font-bold">
             {"<--"}
           </span>
         </div>
