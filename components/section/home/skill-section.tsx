@@ -8,7 +8,7 @@ const SkillSection = () => {
   return (
     <>
       <section className="w-full mx-auto">
-        <div className="divide-y-2 divide-suram mb-4 sm:mb-0">
+        <article className="divide-y-2 divide-suram mb-4 sm:mb-0">
           {skillBadgeIcon.map((item, index) => (
             <Link
               aria-label="Navigate icon"
@@ -23,9 +23,9 @@ const SkillSection = () => {
                     icon={item.icon}
                   />
 
-                  <h3 className="font-medium text-lg text-zeta group-hover:text-foreground tracking-tight">
+                  <span className="font-medium text-lg text-zeta group-hover:text-foreground tracking-tight">
                     {item.name}
-                  </h3>
+                  </span>
                 </div>
 
                 <span className="font-bold text-xl text-zeta group-hover:text-foreground">
@@ -34,7 +34,7 @@ const SkillSection = () => {
               </div>
             </Link>
           ))}
-        </div>
+        </article>
       </section>
     </>
   );

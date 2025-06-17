@@ -45,6 +45,11 @@ export const skillBadgeIcon: IskillBadgeIcon[] = [
         link: "https://nodejs.org/en"
     },
     {
+        name: "Git",
+        icon: "simple-icons:git",
+        link: "https://git-scm.com/"
+    },
+    {
         name: "Vite",
         icon: "simple-icons:vite",
         link: "https://vite.dev"
