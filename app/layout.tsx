@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Al Sakha | just random npc",
-  description: "Portfolio website of Al Sakha, an npc and software engineer",
+  title: "Irtideath",
+  description: "Portfolio website of Al Sakha, npc and software engineer",
   keywords: [
     "software engineer",
     "web developer",
