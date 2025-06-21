@@ -8,7 +8,8 @@ export default async function BlogsPage() {
     <main className="mt-12">
       <h2 className="text-2xl mb-6 font-medium">writing in my spare time</h2>
       <p className="text-zeta font-medium text-[16px] text-start mb-6">
-        whether it{"'"}s storytelling, crafting articles, or diving into research.
+        whether it{"'"}s storytelling, crafting articles, or diving into
+        research.
       </p>
       <Divider className="mt-8 mb-6" />
       <div className="w-full">
@@ -26,9 +27,12 @@ export default async function BlogsPage() {
               </p>
               <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center font-medium mt-4 gap-2">
                 <p className="text-[12px]">{item.frontmatter.category}</p>
-                <span className="text-[12px] text-nowrap text-zeta">
+                <time
+                  className="text-[12px] text-nowrap text-zeta"
+                  dateTime={item.frontmatter.date}
+                >
                   {item.frontmatter.date}
-                </span>
+                </time>
               </div>
             </article>
             <Divider className="my-6" />

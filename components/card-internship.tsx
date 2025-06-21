@@ -19,6 +19,8 @@ const CardInternship = () => {
                   <div className="flex flex-col gap-0.5">
                     <Link
                       aria-label="company link"
+                      rel="noopener noreferrer"
+                      target="_blank"
                       href={item.link}
                       className="text-xl font-medium font-roboto hover:underline decoration-2"
                     >
@@ -32,7 +34,7 @@ const CardInternship = () => {
                     {item.date}
                   </span>
                 </div>
-              </div>           
+              </div>
             </div>
           );
         })}

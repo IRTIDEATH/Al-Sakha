@@ -38,7 +38,7 @@ const CardProjectSecton = () => {
                 >
                   <MorphingDialogTrigger>
                     <div className="relative h-40 w-28">
-                      <div className="w-full h-full bg-foreground z-10 absolute hover:bg-transparent ease-in-out transition-colors duration-500" />                      
+                      <div className="w-full h-full bg-foreground z-10 absolute hover:bg-transparent ease-in-out transition-colors duration-500" />
                       <MorphingDialogImage
                         src={item.image}
                         alt="Image Project"
@@ -107,6 +107,8 @@ const CardProjectSecton = () => {
                   {item.github ? (
                     <>
                       <Link
+                        rel="noopener noreferrer"
+                        target="_blank"
                         href={item.github ?? ""}
                         className="text-sm font-medium text-foreground hover:underline decoration-2"
                       >
@@ -115,7 +117,7 @@ const CardProjectSecton = () => {
                       <span className="text-zeta">|</span>
                     </>
                   ) : null}
-                  <span className="bg-foreground px-3.5 py-1 text-[13px] text-background">
+                  <span className="bg-foreground px-3 py-1 text-[13px] text-background">
                     {item.status}
                   </span>
                 </div>

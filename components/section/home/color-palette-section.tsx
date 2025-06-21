@@ -35,7 +35,9 @@ const ColorPaletteSection = () => {
         <ul className="w-full text-zeta font-medium text-lg text-start mt-4">
           {colors.map((item, index) => (
             <li className="flex items-center gap-2" key={index}>
-              <span className={`text-2xl ${item.class}`}>{"-->"}</span>
+              <span className={`text-2xl ${item.class}`}>
+                {"-->"}
+              </span>
               <p
                 onClick={() => handleCopyColor(item.hex)}
                 className="hover:underline decoration-2 cursor-pointer"

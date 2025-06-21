@@ -13,6 +13,8 @@ const SkillSection = () => {
             <Link
               aria-label="Navigate icon"
               href={`${item.link}`}
+              rel="noopener noreferrer"
+              target="_blank"
               className="block"
               key={index}
             >

@@ -15,6 +15,8 @@ const ChatmeSection = () => {
             <span className="text-2xl text-foreground">{"-->"}</span>
             <Link
               aria-label="Talk with me on Discord"
+              rel="noopener noreferrer"
+              target="_blank"
               href="https://discord.com/users/yasudahlah"
               className="hover:underline decoration-2"
             >
@@ -25,6 +27,8 @@ const ChatmeSection = () => {
             <span className="text-2xl text-foreground">{"-->"}</span>
             <Link
               aria-label="Talk with me on Instagram"
+              rel="noopener noreferrer"
+              target="_blank"
               href="https://www.instagram.com/enderjhass/"
               className="hover:underline decoration-2"
             >
@@ -35,6 +39,8 @@ const ChatmeSection = () => {
             <span className="text-2xl text-foreground">{"-->"}</span>
             <Link
               aria-label="Talk with me on Linkedin"
+              rel="noopener noreferrer"
+              target="_blank"
               href="https://www.linkedin.com/in/al-sakha/"
               className="hover:underline decoration-2"
             >
