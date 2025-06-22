@@ -19,6 +19,8 @@ function getLastModified(filePath: string): string {
 export default async function sitemap(): Promise<SitemapEntry[]> {
     const writings = getAllBlogSlug();
 
+    const contentDir = join(process.cwd(), "app/writings/_mdx-content")
+
     const staticRoutes: SitemapEntry[] = [
         {
             url: BASE_URL,
@@ -27,9 +29,9 @@ export default async function sitemap(): Promise<SitemapEntry[]> {
             priority: 1.0
         },
         ...writings
-            .filter(({ slug }) => existsSync(join(process.cwd(), "writings", `${slug}.mdx`)))
+            .filter(({ slug }) => existsSync(join(contentDir, `${slug}.mdx`)))
             .map(({ slug }) => {
-                const filePath = join(process.cwd(), "writings", `${slug}.mdx`);
+                const filePath = join(contentDir, `${slug}.mdx`);
                 return {
                     url: `${BASE_URL}/writings/${slug}`,
                     lastModified: getLastModified(filePath),
