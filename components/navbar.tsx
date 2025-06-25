@@ -17,7 +17,7 @@ const Navbar = () => {
   return (
     <>
       <nav className="w-full h-24 text-foreground flex items-center justify-between">
-        <svg
+        {/* <svg
           width="831"
           height="590"
           viewBox="0 0 831 590"
@@ -33,14 +33,15 @@ const Navbar = () => {
             d="M0 589.07L306.08 0.109863H453.98V589.12H356.99V494.99H349.63H233.39C233.39 494.99 230.18 495.31 233.54 489.2C236.9 483.09 280.6 403.96 280.6 403.96H284.73H356.98V127.49H355.1L113.62 589.07H0Z"
             fill="#2E2E2E"
           />
-        </svg>
+        </svg> */}
+        <span className="font-medium text-[16px]">IrtiDeath</span>
         <div className="hidden md:flex items-center">
-          <ul className="flex items-center gap-8 font-roboto font-medium px-4 text-lg text-zeta">
+          <ul className="flex items-center gap-8 font-roboto font-medium text-[16px] pr-4">
             {navigationItems.map((item, index) => (
               <li key={index}>
                 <Link
                   aria-label="Nav link"
-                  className="hover:underline decoration-2"
+                  className="hover:underline decoration-2 text-zeta inline-block align-middle"
                   href={item.href}
                 >
                   {item.name}
@@ -48,7 +49,7 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
-          <span className="px-2 bg-foreground text-background text-lg font-bold">
+          <span className="px-2 bg-foreground text-background text-xl font-bold shadow-shadow">
             {"<--"}
           </span>
         </div>

@@ -10,6 +10,7 @@
   --coffee: #8C6053;
   --zeta: #686C6F;
   --suram: #E6E8ED;
+  --shadow: 4px 4px 0px 0px var(--foreground);
 }
 
 @theme inline {
@@ -20,6 +21,7 @@
   --color-suram: var(--suram);
   --font-roboto: var(--font-roboto-mono);
   --font-geist: var(--font-geist-mono);
+  --shadow-shadow: var(--shadow);
 }
 
 body {
