@@ -87,10 +87,10 @@ const SparkleGroup = () => {
     // Interval untuk menambah sparkle baru setiap 200ms
     const interval = setInterval(() => {
       sparkleId.current += 1;
-      setSparkles((prev) => [
-        ...prev,
-        randomSparkle(Date.now() + sparkleId.current),
-      ]);
+      setSparkles((prev) => {
+        const next = [...prev, randomSparkle(Date.now() + sparkleId.current)];
+        return next.length > 20 ? next.slice(next.length - 20) : next;
+      });
     }, 200);
 
     return () => clearInterval(interval);
