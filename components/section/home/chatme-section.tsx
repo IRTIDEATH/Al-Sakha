@@ -38,6 +38,18 @@ const ChatmeSection = () => {
           <li className="flex items-center gap-2">
             <span className="text-2xl text-foreground">{"-->"}</span>
             <Link
+              aria-label="Talk with me on Threads"
+              rel="noopener noreferrer"
+              target="_blank"
+              href="https://www.threads.com/@enderjhass"
+              className="hover:underline decoration-2"
+            >
+              Threads
+            </Link>
+          </li>
+          <li className="flex items-center gap-2">
+            <span className="text-2xl text-foreground">{"-->"}</span>
+            <Link
               aria-label="Talk with me on Linkedin"
               rel="noopener noreferrer"
               target="_blank"

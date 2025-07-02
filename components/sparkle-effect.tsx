@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { useEffect, useRef, useState } from "react";
 import { motion } from "motion/react";
@@ -20,11 +20,11 @@ function randomSparkle(id: number): SparkleProps {
   const area = { width: 90, height: 20 };
   return {
     x: Math.random() * area.width - 8,
-    y: Math.random() * area.height - -16,
+    y: 26,
     rotate: Math.random() * 360,
     size: 12,
     opacity: 1,
-    duration: 1,
+    duration: 1.5,
     svgIndex: Math.floor(Math.random() * sparkleSvgs.length),
     id,
   };
@@ -44,18 +44,16 @@ export const Sparkle = ({
     initial={{
       opacity: 0,
       y: 0,
-      scale: 0.7,
       rotate: rotate,
     }}
     animate={{
-      opacity: [0, opacity, 0],
-      y: -30 - Math.random() * 30,
-      // scale: [0.7, 1, 0.5],
+      opacity: [0, opacity, 0.4, 0],
+      y: -44,
       rotate: rotate + 360,
     }}
     transition={{
-      opacity: { duration: 1},
-      y: { duration: 1,} ,
+      opacity: { duration: duration },
+      y: { duration: duration },
       duration: duration,
       ease: "easeInOut",
     }}
@@ -82,21 +80,22 @@ export const Sparkle = ({
 const SparkleGroup = () => {
   const [sparkles, setSparkles] = useState<SparkleProps[]>([]);
   const sparkleId = useRef(0);
+  const componentId = useRef(Math.floor(Math.random() * 1000));
 
   useEffect(() => {
-    // Interval untuk menambah sparkle baru setiap 200ms
     const interval = setInterval(() => {
-      sparkleId.current += 1;
       setSparkles((prev) => {
-        const next = [...prev, randomSparkle(Date.now() + sparkleId.current)];
-        return next.length > 20 ? next.slice(next.length - 20) : next;
+        sparkleId.current += 1;
+        const uniqueId = componentId.current * 1000 + sparkleId.current;
+        const newSparkle = randomSparkle(uniqueId);
+        const next = [...prev, newSparkle];
+        return next.length > 20 ? next.slice(-20) : next;
       });
-    }, 200);
+    }, 324);
 
     return () => clearInterval(interval);
   }, []);
 
-  // Hapus sparkle setelah animasi selesai
   const handleComplete = (id: number) => {
     setSparkles((prev) => prev.filter((s) => s.id !== id));
   };

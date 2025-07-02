@@ -46,7 +46,7 @@ const InspirationSection = () => {
           <li className="flex items-center gap-2">
             <span className="text-2xl text-foreground">{"-->"}</span>
             <Link
-              aria-label="Portfolio edqe"
+              aria-label="Zetamin art"
               href="https://www.pixiv.net/en/artworks/112555482"
               className="hover:underline decoration-2"
             >
@@ -56,7 +56,9 @@ const InspirationSection = () => {
           <li className="flex items-center gap-2">
             <span className="text-2xl text-foreground">{"-->"}</span>
             <Link
-              aria-label="Portfolio edqe"
+              aria-label="Growtopia fandom wiki samille's"
+              rel="noopener noreferrer"
+              target="_blank"
               href="https://growtopia.fandom.com/wiki/Samille%27s_Soul_Abductor"
               className="hover:underline decoration-2"
             >
