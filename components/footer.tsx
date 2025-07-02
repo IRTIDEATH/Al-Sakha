@@ -28,7 +28,7 @@ const Footer = () => {
                   rel="noopener noreferrer"
                   target="_blank"
                   aria-label="IRTIDEATH github pages"
-                  className="text-suram bg-foreground h-12 w-12 flex items-center justify-center border border-foreground hover:text-foreground hover:bg-suram transition-colors duration-300"
+                  className="text-suram bg-foreground h-12 w-12 flex items-center justify-center border border-foreground hover:text-foreground hover:bg-suram transition-colors duration-400"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

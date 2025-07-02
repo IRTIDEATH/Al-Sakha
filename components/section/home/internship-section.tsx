@@ -1,5 +1,3 @@
-"use client";
-
 import CardInternship from '@/components/card-internship';
 
 const InternshipSection = () => {

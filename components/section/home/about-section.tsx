@@ -1,5 +1,3 @@
-"use client";
-
 import CoffeeText from "@/components/ui/coffee-text";
 
 const AboutSection = () => {

@@ -1,5 +1,3 @@
-"use client";
-
 import { internships } from "@/constants";
 import Link from "next/link";
 

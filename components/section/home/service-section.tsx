@@ -1,6 +1,3 @@
-"use client";
-
-
 const ServiceSection = () => {
   return (
     <>
