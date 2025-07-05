@@ -18,7 +18,7 @@ const MoreOnGtihubSection = () => {
         contribute in any of my repositories. give a star if there is a repo you
         like.
       </p>
-      <div className="w-full pt-6 flex flex-col-reverse md:flex-row gap-4 md:gap-0 items-start md:items-center justify-between">
+      <div className="w-full mt-6 flex flex-col-reverse md:flex-row gap-4 md:gap-0 items-start md:items-center justify-between">
         <div className="flex items-center gap-3">
           <Link
             rel="noopener noreferrer"
@@ -33,7 +33,7 @@ const MoreOnGtihubSection = () => {
             List
           </span>
         </div>
-        <div className="flex flex-wrap items-center gap-2">
+        <div className="flex flex-wrap justify-end gap-2">
           <TooltipProvider delayDuration={100}>
             <Tooltip>
               <TooltipTrigger asChild>

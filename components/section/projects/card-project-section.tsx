@@ -121,7 +121,7 @@ const CardProjectSecton = () => {
                     {item.status}
                   </span>
                 </div>
-                <div className="flex flex-wrap items-center justify-end gap-2 h-full">
+                <div className="flex flex-wrap justify-end gap-2">
                   {item.technologies.map((items, index) => (
                     <TooltipProvider delayDuration={100} key={index}>
                       <Tooltip>
