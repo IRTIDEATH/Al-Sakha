@@ -7,8 +7,8 @@ const InspirationSection = () => {
       <section>
         <h1 className="text-2xl mb-4 font-medium">reference & inspiration</h1>
         <p className="w-full text-zeta font-medium text-[16px] text-start">
-          this is a <CoffeeText>cool</CoffeeText> portfolio and stuff that i use
-          as my reference and inspiration.
+          these are <CoffeeText>cool</CoffeeText> portfolios and stuff that i
+          use as references and inspiration.
         </p>
         <ul className="w-full text-zeta font-medium text-lg text-start mt-4">
           <li className="flex items-center gap-2">
@@ -67,6 +67,6 @@ const InspirationSection = () => {
       </section>
     </>
   );
-}
+};
 
-export default InspirationSection
+export default InspirationSection;

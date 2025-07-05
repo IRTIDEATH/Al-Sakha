@@ -243,7 +243,7 @@ export const projects: Iproject[] = [
     {
         image: "/project/geoporimg.webp",
         name: "Geoportal Laut Berkah",
-        description: "an interactive 3D-based platform related to the licensing of marine space utilization letters for central kalimantan province. created during internship activities.",
+        description: "an interactive 3D-based platform related to the licensing of marine space utilization in central kalimantan province. created during internship activities.",
         view: "https://web.geoportal-lautberkah.kalteng.go.id/",
         status: "Completed",
         technologies: [
@@ -296,7 +296,7 @@ export const projects: Iproject[] = [
         name: "Hadirin",
         description: "simple student attendance app for schools, created at the time of the exam. attendance recorded, learning monitored.",
         github: "https://github.com/IRTIDEATH/Absensi-Sederhana",
-        status: "Pending",
+        status: "Completed",
         technologies: [
             {
                 name: "Typescript",

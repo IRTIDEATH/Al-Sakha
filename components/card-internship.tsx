@@ -11,8 +11,7 @@ const CardInternship = () => {
               key={index}
               className={`w-full flex-row items-center justify-between h-22 sm:h-18 relative inline-flex overflow-hidden`}
             >
-              <div className="flex flex-row items-center gap-4 h-full w-full">
-                <div className="h-full w-8 bg-foreground" />
+              <div className="flex flex-row items-start h-full w-full">
                 <div className="flex flex-col items-start sm:flex-row sm:justify-between w-full sm:items-end">
                   <div className="flex flex-col gap-0.5">
                     <Link
@@ -20,7 +19,7 @@ const CardInternship = () => {
                       rel="noopener noreferrer"
                       target="_blank"
                       href={item.link}
-                      className="text-xl font-medium font-roboto hover:underline decoration-2"
+                      className="text-xl font-medium font-roboto underline decoration-2"
                     >
                       {item.company}
                     </Link>
