@@ -11,7 +11,7 @@ const badgeVariants = cva(
     variants: {
       variant: {
         default:
-          "bg-suram text-foreground text-[10px] sm:text-[12px] px-3 py-1",
+          "bg-suram text-foreground text-[10px] sm:text-[12px] px-3 h-full",
         secondary:
           "bg-suram text-foreground text-[12px] px-3 py-1 sm:px-4 sm:py-1.5",
       },

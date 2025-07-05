@@ -91,7 +91,7 @@ const CardProjectSecton = () => {
               <p className="mb-6 text-zeta text-[16px] font-medium">
                 {item.description}
               </p>
-              <div className="w-full flex flex-col-reverse md:flex-row gap-4 md:gap-0 items-start justify-between">
+              <div className="w-full flex flex-col-reverse md:flex-row gap-4 md:gap-0 items-start md:items-center justify-between">
                 <div className="flex items-center gap-3">
                   {item.view ? (
                     <>
