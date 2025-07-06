@@ -14,6 +14,7 @@ import { Button } from "./ui/button";
 import { motion } from "motion/react";
 import dynamic from "next/dynamic";
 import { useReducedMotion } from "motion/react";
+import { usePathname } from "next/navigation";
 
 const SparkleGroup = dynamic(() => import("./sparkle-effect"), {
   ssr: false,
@@ -21,6 +22,7 @@ const SparkleGroup = dynamic(() => import("./sparkle-effect"), {
 
 const Navbar = () => {
   const prefersReducedMotion = useReducedMotion();
+  const pathname = usePathname();
   return (
     <>
       <nav className="w-full h-24 text-foreground flex items-center justify-between">
@@ -68,11 +70,12 @@ const Navbar = () => {
               <DrawerDescription className="sr-only">
                 Navigation menu with links to different pages
               </DrawerDescription>
-              <div className="mx-auto w-[300px]">
-                <DrawerFooter className="flex flex-col items-center w-full gap-2">
-                  {navigationItems.map((item, index) => (
+              <DrawerFooter className="flex flex-col items-center w-full gap-2">
+                {navigationItems.map((item, index) => {
+                  const isActive = pathname === item.href;
+                  return (
                     <motion.div
-                      className="w-full"
+                      className="w-full max-w-[300px]"
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       key={index}
@@ -85,7 +88,7 @@ const Navbar = () => {
                     >
                       <Button
                         aria-label="Nav button"
-                        variant={"classic"}
+                        variant={ isActive ? "active" : "classic"}
                         size={"classic"}
                         asChild
                       >
@@ -94,9 +97,9 @@ const Navbar = () => {
                         </Link>
                       </Button>
                     </motion.div>
-                  ))}
-                </DrawerFooter>
-              </div>
+                  );
+                })}
+              </DrawerFooter>
             </DrawerContent>
           </Drawer>
         </div>

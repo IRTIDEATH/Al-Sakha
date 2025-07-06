@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import * as React from "react";
 import { Slot } from "@radix-ui/react-slot";
@@ -18,6 +18,8 @@ const buttonVariants = cva(
         ghost: "hover:text-background",
         classic:
           "w-full bg-foreground border border-foreground focus:bg-transparent focus:text-foreground text-center text-background",
+        active:
+          "w-full border border-foreground bg-transparent text-foreground text-center",
       },
       size: {
         default: "px-6 py-1",
@@ -90,6 +92,5 @@ const AnimatedButton = React.forwardRef<
   );
 });
 AnimatedButton.displayName = "AnimatedButton";
-
 
 export { Button, buttonVariants, AnimatedButton };
