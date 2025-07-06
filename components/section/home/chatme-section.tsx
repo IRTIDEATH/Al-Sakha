@@ -1,6 +1,15 @@
+"use client"
+
 import Link from "next/link";
+import { toast } from "sonner";
 
 const ChatmeSection = () => {
+  const handleCopyEmail = () => {
+    navigator.clipboard.writeText("alsakhafatthariq@gmail.com");
+    toast.success("Email copied to clipboard", {
+      duration: 3000,
+    });
+  };
   return (
     <>
       <section>
@@ -56,6 +65,20 @@ const ChatmeSection = () => {
             >
               Linkedin
             </Link>
+          </li>
+          <li className="flex items-start gap-2">
+            <span className="text-2xl text-foreground text-nowrap">
+              {"-->"}
+            </span>
+            <button
+              onClick={handleCopyEmail}
+              aria-label="Copy gmail"
+              className="hover:underline decoration-2 text-start cursor-pointer"
+            >
+              alsakhafatthariq
+              <br />
+              @gmail.com
+            </button>
           </li>
         </ul>
       </section>

@@ -7,15 +7,8 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { toast } from "sonner";
 
 const Footer = () => {
-  const handleCopyEmail = () => {
-    navigator.clipboard.writeText("alsakhafatthariq@gmail.com");
-    toast.success("Email copied to clipboard", {
-      duration: 3000,
-    });
-  }; 
   return (
     <>
       <footer className="w-full bg-suram flex items-center justify-between h-12 mb-8 mt-16">
@@ -51,39 +44,10 @@ const Footer = () => {
               </TooltipContent>
             </Tooltip>
           </TooltipProvider>
-          <TooltipProvider delayDuration={150}>
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <button
-                  onClick={handleCopyEmail}
-                  className="w-12 h-12 flex items-center justify-center cursor-pointer"
-                  aria-label="email"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="#2E2E2E"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" />
-                    <rect x="2" y="4" width="20" height="16" rx="2" />
-                  </svg>
-                </button>
-              </TooltipTrigger>
-              <TooltipContent className="mb-1">
-                <p>alsakhafatthariq@gmail.com</p>
-              </TooltipContent>
-            </Tooltip>
-          </TooltipProvider>
         </div>
 
-        <div className="text-sm text-foreground mr-4 font-medium">
-          © 2025 - Present
+        <div className="text-sm text-foreground px-4 font-medium">
+          © 2025 - IrtiDeath. All rights reserved
         </div>
       </footer>
     </>
