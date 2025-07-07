@@ -1,5 +1,6 @@
-"use client"
+"use client";
 
+import { chatLink } from "@/constants";
 import Link from "next/link";
 import { toast } from "sonner";
 
@@ -18,69 +19,35 @@ const ChatmeSection = () => {
           need help, talk about random things, and connect with me.
         </p>
         <ul className="w-full text-zeta font-medium text-lg text-start mt-4">
-          <li className="flex items-center gap-2">
-            <span className="text-2xl text-foreground">{"-->"}</span>
-            <Link
-              aria-label="Talk with me on Discord"
-              rel="noopener noreferrer"
-              target="_blank"
-              href="https://discord.com/users/yasudahlah"
-              className="hover:underline decoration-2"
-            >
-              Discord
-            </Link>
-          </li>
-          <li className="flex items-center gap-2">
-            <span className="text-2xl text-foreground">{"-->"}</span>
-            <Link
-              aria-label="Talk with me on Instagram"
-              rel="noopener noreferrer"
-              target="_blank"
-              href="https://www.instagram.com/enderjhass/"
-              className="hover:underline decoration-2"
-            >
-              Instagram
-            </Link>
-          </li>
-          <li className="flex items-center gap-2">
-            <span className="text-2xl text-foreground">{"-->"}</span>
-            <Link
-              aria-label="Talk with me on Threads"
-              rel="noopener noreferrer"
-              target="_blank"
-              href="https://www.threads.com/@enderjhass"
-              className="hover:underline decoration-2"
-            >
-              Threads
-            </Link>
-          </li>
-          <li className="flex items-center gap-2">
-            <span className="text-2xl text-foreground">{"-->"}</span>
-            <Link
-              aria-label="Talk with me on Linkedin"
-              rel="noopener noreferrer"
-              target="_blank"
-              href="https://www.linkedin.com/in/al-sakha/"
-              className="hover:underline decoration-2"
-            >
-              Linkedin
-            </Link>
-          </li>
-          <li className="flex items-start gap-2">
-            <span className="text-2xl text-foreground text-nowrap">
-              {"-->"}
-            </span>
-            <button
-              onClick={handleCopyEmail}
-              aria-label="Copy gmail"
-              className="hover:underline decoration-2 text-start cursor-pointer"
-            >
-              alsakhafatthariq
-              <br />
-              @gmail.com
-            </button>
-          </li>
+          {chatLink.map((item, index) => (
+            <li className="flex items-center gap-2" key={index}>
+              <span className="text-2xl text-foreground">{"-->"}</span>
+              <Link
+                aria-label={item.label}
+                rel="noopener noreferrer"
+                target="_blank"
+                href={item.href}
+                className="hover:underline decoration-2"
+              >
+                {item.title}
+              </Link>
+            </li>
+          ))}
         </ul>
+        <div className="text-zeta font-medium text-lg flex items-start gap-2">
+          <span className="text-2xl text-foreground">
+            {"-->"}
+          </span>
+          <button
+            onClick={handleCopyEmail}
+            aria-label="Copy gmail"
+            className="hover:underline decoration-2 text-start cursor-pointer"
+          >
+            alsakhafatthariq
+            <br />
+            @gmail.com
+          </button>
+        </div>
       </section>
     </>
   );

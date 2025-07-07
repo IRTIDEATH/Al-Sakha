@@ -1,39 +1,12 @@
-interface NavigationItemProps {
-    name: string;
-    href: string;
-};
+import { TchatLink, TinspirationLink, Tinternship, TnavigationItem, Tproject, TskillBadgeIcon } from "./type";
 
-interface IskillBadgeIcon {
-    name: string;
-    icon: string;
-    link?: string;
-};
-
-interface Iinternship {
-    company: string;
-    position: string;
-    date: string;
-    technologies: IskillBadgeIcon[];
-    link: string;
-};
-
-interface Iproject {
-    image: string;
-    name: string;
-    description: string;
-    view?: string;
-    github?: string;
-    status: string;
-    technologies: IskillBadgeIcon[];
-}
-
-export const navigationItems: NavigationItemProps[] = [
+export const navigationItems: TnavigationItem[] = [
     { name: "home", href: "/" },
     { name: "projects", href: "/projects" },
     { name: "writings", href: "/writings" },
 ];
 
-export const skillBadgeIcon: IskillBadgeIcon[] = [
+export const skillBadgeIcon: TskillBadgeIcon[] = [
     {
         name: "Typescript",
         icon: "simple-icons:typescript",
@@ -76,7 +49,7 @@ export const skillBadgeIcon: IskillBadgeIcon[] = [
     },
 ];
 
-export const internships: Iinternship[] = [
+export const internships: Tinternship[] = [
     {
         company: "INDI Technology",
         position: "Fullstack Developer",
@@ -123,7 +96,7 @@ export const internships: Iinternship[] = [
     },
 ];
 
-export const projects: Iproject[] = [
+export const projects: Tproject[] = [
     {
         image: "/project/pancarimaimg.webp",
         name: "Pancarima",
@@ -330,7 +303,7 @@ export const projects: Iproject[] = [
     },
 ]
 
-export const techcollections: IskillBadgeIcon[] = [
+export const techcollections: TskillBadgeIcon[] = [
     {
         name: "Typescript",
         icon: "simple-icons:typescript"
@@ -359,4 +332,55 @@ export const techcollections: IskillBadgeIcon[] = [
         name: "PrismaORM",
         icon: "simple-icons:prisma"
     },
+]
+
+export const chatLink: TchatLink[] = [
+    {
+        label: "Talk with me on Discord",
+        href: "https://discord.com/users/yasudahlah",
+        title: "Discord",
+    },
+    {
+        label: "Talk with me on Instagram",
+        href: "https://www.instagram.com/enderjhass",
+        title: "Instagram",
+    },
+    {
+        label: "Talk with me on Threads",
+        href: "https://www.threads.com/@enderjhass",
+        title: "Threads",
+    },
+    {
+        label: "Talk with me on Linkedin",
+        href: "https://www.linkedin.com/in/al-sakha",
+        title: "Linkedin",
+    }
+]
+
+export const inspirationLink: TinspirationLink[] = [
+    {
+        label: "Portfolio pow",
+        href: "https://pow.kim",
+        title: "pow.kim",
+    },
+    {
+        label: "Portfolio byanrkh",
+        href: "https://www.byanrkh.my.id",
+        title: "byanrkh.my.id",
+    },
+    {
+        label: "Portfolio edqe",
+        href: "https://edqe.me",
+        title: "edqe.me",
+    },
+    {
+        label: "Zetamin art",
+        href: "https://www.pixiv.net/en/artworks/112555482",
+        title: "Zetamin",
+    },
+    {
+        label: "Growtopia fandom wiki samille's soul",
+        href: "https://growtopia.fandom.com/wiki/Samille%27s_Soul_Abductor",
+        title: "Samille's Soul",
+    }
 ]

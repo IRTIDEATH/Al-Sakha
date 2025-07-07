@@ -47,7 +47,7 @@ const Footer = () => {
         </div>
 
         <div className="text-sm text-foreground px-4 font-medium">
-          © 2025 - IrtiDeath. All rights reserved
+          © 2025 - IrtiDeath
         </div>
       </footer>
     </>
