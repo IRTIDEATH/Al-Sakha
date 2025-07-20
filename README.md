@@ -1,36 +1,52 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Documentation
 
-## Getting Started
+## Overview
 
-First, run the development server:
+This documentation provides information about my personal web portfolio, which showcases my skills, experience, and services as a web developer.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Live Demo
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The portfolio is live at: https://irtideath.vercel.app/
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Design Philosophy
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The *Irtideath* website embraces a philosophy of **warm minimalism**, inspired by the quiet comfort of a cat taking a nap. Its calm color palette—soft grays with coffee-toned accents—creates a soothing, welcoming atmosphere.
 
-## Learn More
+Simple typography and generous white space offer visual breathing room, reflecting clarity and peace. The casual, honest writing style builds a sincere connection between the creator and the visitor.
 
-To learn more about Next.js, take a look at the following resources:
+Every element—from color to layout to words—embodies a personality that is humble, open, and introspective. This isn’t just a portfolio—it’s an invitation to quietly get to know someone through design that speaks without shouting.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Features
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **About Me Section:** Provides personal background and professional interests.
+- **Skills Showcase:** A collection of technologies that I used for development.
+- **Professional Experience:** Highlights internship activities.
+- **Services:** Details the web development services I offer.
+- **Color Palette:** Interactive color scheme section with copyable color codes.
+- **Inspirations:** References to portfolios that influenced my design.
+- **Contact Information:** Ways to connect with me.
+- **Writings**: A literacy corner.
 
-## Deploy on Vercel
+## Tech Stack
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Typescript
+- Next.js
+- Tailwind CSS & Shadcn/ui
+- Motion
+- MDX
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Thanks to
+- [pow.kim](https://pow.kim/)
+- [byranrkh.my.id](https://www.byanrkh.my.id/)
+- [edqe.me](https://edqe.me/)
+- [Zetamin](https://www.pixiv.net/en/artworks/112555482)
+- [Samille's Soul Abductor](https://growtopia.fandom.com/wiki/Samille%27s_Soul_Abductor)
+
+## Future Enhancements
+
+- [ ]  Search bar on the writing page
+- [ ]  Pagination on the writing page
+
+## License
+
+The project is licensed under the MIT License - see the license file for more details.
