@@ -31,6 +31,7 @@ export async function getBlogs() {
     const blogs = await Promise.all(
         files.map(async (file) => await getBlogBySlug(path.parse(file).name))
     )
+    blogs.sort((a, b) => new Date(b.frontmatter.date).getTime() - new Date(a.frontmatter.date).getTime())
     return blogs
 }
 
