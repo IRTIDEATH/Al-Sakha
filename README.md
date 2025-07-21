@@ -4,10 +4,6 @@
 
 This documentation provides information about my personal web portfolio, which showcases my skills, experience, and services as a web developer.
 
-## Live Demo
-
-The portfolio is live at: https://irtideath.vercel.app/
-
 ## Design Philosophy
 
 The *Irtideath* website embraces a philosophy of **warm minimalism**, inspired by the quiet comfort of a cat taking a nap. Its calm color palette—soft grays with coffee-toned accents—creates a soothing, welcoming atmosphere.
@@ -44,8 +40,8 @@ Every element—from color to layout to words—embodies a personality that is h
 
 ## Future Enhancements
 
-- [ ]  Search bar on the writing page
-- [ ]  Pagination on the writing page
+- [ ]  Up button on the writing page
+- [x]  Pagination on the writing page
 
 ## License
 
