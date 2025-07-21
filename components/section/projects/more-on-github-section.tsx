@@ -29,8 +29,8 @@ const MoreOnGtihubSection = () => {
             view
           </Link>
           <span className="text-zeta">|</span>
-          <span className="bg-foreground px-2.5 py-0.5 text-[13px] text-background">
-            List
+          <span className="bg-foreground px-2.5 py-0.5 text-[13px] text-background font-roboto">
+            list
           </span>
         </div>
         <div className="flex flex-wrap justify-end gap-2">

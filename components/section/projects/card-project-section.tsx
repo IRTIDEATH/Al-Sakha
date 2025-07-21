@@ -86,12 +86,12 @@ const CardProjectSecton = () => {
                 </MorphingDialog>
               )}
             </div>
-            <div>
+            <article className="w-full">
               <h1 className="mb-2 text-[24px] font-medium">{item.name}</h1>
               <p className="mb-6 text-zeta text-[16px] font-medium">
                 {item.description}
               </p>
-              <div className="w-full flex flex-col-reverse md:flex-row gap-4 md:gap-0 items-start md:items-center justify-between">
+              <div className="w-full mt-6 flex flex-col-reverse md:flex-row gap-4 md:gap-0 items-start md:items-center justify-between">
                 <div className="flex items-center gap-3">
                   {item.view ? (
                     <>
@@ -117,7 +117,7 @@ const CardProjectSecton = () => {
                       <span className="text-zeta">|</span>
                     </>
                   ) : null}
-                  <span className="bg-foreground px-2.5 py-0.5 text-[13px] text-background">
+                  <span className="bg-foreground px-2.5 py-0.5 text-[13px] text-background font-roboto">
                     {item.status}
                   </span>
                 </div>
@@ -143,7 +143,7 @@ const CardProjectSecton = () => {
                   ))}
                 </div>
               </div>
-            </div>
+            </article>
           </div>
           <Divider />
         </section>

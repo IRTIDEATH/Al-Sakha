@@ -15,7 +15,6 @@ export default async function BlogPage({
   );
   const index = allSlugs.findIndex((item) => item.slug === slug);
 
-  // Dapatkan slug dan title sebelumnya dan berikutnya
   const prevBlog = index > 0 ? allBlogs[index - 1] : null;
   const nextBlog = index < allBlogs.length - 1 ? allBlogs[index + 1] : null;
   return (
@@ -30,10 +29,10 @@ export default async function BlogPage({
         {prevBlog ? (
           <Link
             href={`/writings/${prevBlog.slug}`}
-            className="flex flex-col items-start w-full border border-foreground p-4 no-underline group hover:bg-foreground duration-300 transition-colors"
+            className="flex flex-col items-start w-full border border-foreground p-4 no-underline group hover:bg-foreground active:bg-foreground duration-300 transition-colors"
           >
             <span className="text-xs text-zeta">{"<-"} Previous</span>
-            <span className="text-lg mt-1 duration-300 transition-colors group-hover:text-background">
+            <span className="text-lg mt-1 duration-300 transition-colors group-hover:text-background active:text-background">
               {prevBlog.frontmatter.title}
             </span>
           </Link>
@@ -43,10 +42,10 @@ export default async function BlogPage({
         {nextBlog ? (
           <Link
             href={`/writings/${nextBlog.slug}`}
-            className="flex flex-col items-end w-full border border-foreground p-4 no-underline group hover:bg-foreground duration-300 transition-colors"
+            className="flex flex-col items-end w-full border border-foreground p-4 no-underline group hover:bg-foreground active:bg-foreground duration-300 transition-colors"
           >
-            <span className="text-xs text-zeta">{"->"} Next</span>
-            <span className="text-lg mt-1 duration-300 transition-colors group-hover:text-background">
+            <span className="text-xs text-zeta">Next {"->"}</span>
+            <span className="text-lg mt-1 duration-300 transition-colors group-hover:text-background active:text-background">
               {nextBlog.frontmatter.title}
             </span>
           </Link>

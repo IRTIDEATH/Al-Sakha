@@ -1,4 +1,4 @@
-import { TchatLink, TinspirationLink, Tinternship, TnavigationItem, Tproject, TskillBadgeIcon } from "./type";
+import { TchatLink, TinspirationLink, Tinternship, TnavigationItem, Tproject, TskillBadgeIcon } from "@/lib/type";
 
 export const navigationItems: TnavigationItem[] = [
     { name: "home", href: "/" },
@@ -102,7 +102,7 @@ export const projects: Tproject[] = [
         name: "Pancarima",
         description: "pancarima is a website that provides information related to tourist attractions in indonesia. created during the sagasitas february 2024 competition.",
         view: "https://pancarima.vercel.app/",
-        status: "Completed",
+        status: "completed",
         technologies: [
             {
                 name: "Javascript",
@@ -126,7 +126,7 @@ export const projects: Tproject[] = [
         image: "/project/zabodimg.webp",
         name: "Zabod",
         description: "zabod is a keyboard online store platform where buyers can customize the keyboard as desired.",
-        status: "Pending",
+        status: "pending",
         technologies: [
             {
                 name: "Typescript",
@@ -163,7 +163,7 @@ export const projects: Tproject[] = [
         name: "INDI Technology",
         description: "indi tech is a unique and interactive 3D-based company profile website of pt indi technology. created during pre-internship activities.",
         view: "https://web.indi.tech/",
-        status: "Completed",
+        status: "completed",
         technologies: [
             {
                 name: "Javascript",
@@ -189,7 +189,7 @@ export const projects: Tproject[] = [
         description: "zentrahealth is a website that provides information related to a healthy lifestyle. created during the sagasitas august 2024 competition.",
         view: "https://zentrahealth.vercel.app/",
         github: "https://github.com/IRTIDEATH/ZentraHealth",
-        status: "Completed",
+        status: "completed",
         technologies: [
             {
                 name: "Javascript",
@@ -218,7 +218,7 @@ export const projects: Tproject[] = [
         name: "Geoportal Laut Berkah",
         description: "an interactive 3D-based platform related to the licensing of marine space utilization in central kalimantan province. created during internship activities.",
         view: "https://web.geoportal-lautberkah.kalteng.go.id/",
-        status: "Completed",
+        status: "completed",
         technologies: [
             {
                 name: "Javascript",
@@ -244,7 +244,7 @@ export const projects: Tproject[] = [
         description: "a small organization owned by al sakha, colored by the nord theme, and a layout style similar to the nord theme.",
         view: "https://zect.vercel.app/",
         github: "https://github.com/IRTIDEATH/Zect",
-        status: "Completed",
+        status: "completed",
         technologies: [
             {
                 name: "Javascript",
@@ -269,7 +269,7 @@ export const projects: Tproject[] = [
         name: "Hadirin",
         description: "simple student attendance app for schools, created at the time of the exam. attendance recorded, learning monitored.",
         github: "https://github.com/IRTIDEATH/Absensi-Sederhana",
-        status: "Completed",
+        status: "completed",
         technologies: [
             {
                 name: "Typescript",
