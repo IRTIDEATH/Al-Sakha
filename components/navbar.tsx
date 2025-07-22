@@ -50,15 +50,26 @@ const Navbar = () => {
       <div className="md:hidden flex items-center font-roboto bg-suram">
         <h1 className="px-4 text-lg font-medium">menu</h1>
         <Drawer>
-          <DrawerTrigger aria-label="Menu button" role="button" asChild>
+          <DrawerTrigger
+            aria-label="Menu button"
+            role="button"
+            asChild
+          >
             <svg
-              className="bg-foreground p-1.5"
               xmlns="http://www.w3.org/2000/svg"
               width="40"
               height="40"
               viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="bg-foreground border border-foreground p-1.5 text-background active:bg-background active:text-foreground"
             >
-              <path fill="#F2F2F4" d="M16 18v2H5v-2zm5-7v2H3v-2zm-2-7v2H8V4z" />
+              <path d="M4 12h16" />
+              <path d="M4 18h16" />
+              <path d="M4 6h16" />
             </svg>
           </DrawerTrigger>
           <DrawerContent>
