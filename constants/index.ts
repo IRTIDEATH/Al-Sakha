@@ -341,11 +341,6 @@ export const chatLink: TchatLink[] = [
         title: "Discord",
     },
     {
-        label: "Talk with me on Instagram",
-        href: "https://www.instagram.com/enderjhass",
-        title: "Instagram",
-    },
-    {
         label: "Talk with me on Threads",
         href: "https://www.threads.com/@enderjhass",
         title: "Threads",
