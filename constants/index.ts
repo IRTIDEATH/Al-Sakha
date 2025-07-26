@@ -384,3 +384,22 @@ export const inspirationLink: TinspirationLink[] = [
         title: "Samille's Soul",
     }
 ]
+
+export const ongithub: TskillBadgeIcon[] = [
+    {
+        name: "Git",
+        icon: "simple-icons:git"
+    },
+    {
+        name: "Github Actions",
+        icon: "simple-icons:githubactions"
+    },
+    {
+        name: "Github Copilot",
+        icon: "simple-icons:githubcopilot"
+    },
+    {
+        name: "Markdown",
+        icon: "simple-icons:markdown"
+    },
+]

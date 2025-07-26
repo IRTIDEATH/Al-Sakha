@@ -8,6 +8,7 @@ import {
 import Link from "next/link";
 import React from "react";
 import { Icon } from "@iconify/react";
+import { ongithub } from "@/constants";
 
 const MoreOnGtihubSection = () => {
   return (
@@ -34,23 +35,22 @@ const MoreOnGtihubSection = () => {
           </span>
         </div>
         <div className="flex flex-wrap justify-end gap-2">
-          <TooltipProvider delayDuration={100}>
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <span role="img">
-                  <Badge>
-                    <Icon
-                      className="-ms-0.5 text-[16px]"
-                      icon="simple-icons:git"
-                    />
-                  </Badge>
-                </span>
-              </TooltipTrigger>
-              <TooltipContent>
-                <p>Git</p>
-              </TooltipContent>
-            </Tooltip>
-          </TooltipProvider>
+          {ongithub.map((items, index) => (
+            <TooltipProvider delayDuration={100} key={index}>
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <span role="img" aria-label={items.name}>
+                    <Badge>
+                      <Icon className="-ms-0.5 text-[16px]" icon={items.icon} />
+                    </Badge>
+                  </span>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>{items.name}</p>
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
+          ))}
         </div>
       </div>
     </section>
