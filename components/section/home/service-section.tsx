@@ -8,7 +8,7 @@ const ServiceSection = () => {
       </p>
       <div className="mt-8 flex flex-col gap-12">
         <div className="flex flex-row-reverse items-start justify-between gap-4">
-          <div className="space-y-2">
+          <article className="space-y-2">
             <h2 className="text-lg font-medium">Frontend</h2>
             <p className="text-zeta text-[15px]">
               transforming designs into functional and responsive user
@@ -16,7 +16,7 @@ const ServiceSection = () => {
               load, seo friendly and optimized across multiple devices, from
               desktop to mobile.
             </p>
-          </div>
+          </article>
           <div>
             <svg
               width="196"
@@ -24,7 +24,7 @@ const ServiceSection = () => {
               viewBox="0 0 196 218"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              className="w-12 h-full"
+              className="w-10 h-full"
             >
               <path
                 d="M32.626 1L32.9189 1.29297L166.384 134.757L167.091 135.464L158.492 144.062L157.785 143.355L27.5898 13.1592H13.1592V169.391H122.083V181.55H1V1H32.626Z"
@@ -42,7 +42,7 @@ const ServiceSection = () => {
           </div>
         </div>
         <div className="flex flex-row-reverse items-start justify-between gap-4">
-          <div className="space-y-2">
+          <article className="space-y-2">
             <h2 className="text-lg font-medium">Backend</h2>
             <p className="text-zeta text-[15px]">
               i built a secure API that allows seamless integration, scalability
@@ -50,7 +50,7 @@ const ServiceSection = () => {
               ensuring clean and well-structured code, making future development
               easy.
             </p>
-          </div>
+          </article>
           <div>
             <svg
               width="165"
@@ -58,7 +58,7 @@ const ServiceSection = () => {
               viewBox="0 0 165 221"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              className="w-12 h-full"
+              className="w-10 h-full"
             >
               <path
                 d="M3 177.834L4.01178 175.875L66.6433 57.9231L38.8114 5.69451C36.4985 1.38295 30.6245 2.48227 29.8655 7.30877L3 177.834Z"

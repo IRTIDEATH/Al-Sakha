@@ -316,6 +316,12 @@ export const chatLink: TchatLink[] = [
         icon: "ion:social-linkedin",
         href: "https://www.linkedin.com/in/al-sakha",
         title: "Linkedin",
+    },
+    {
+        label: "Talk with me on Email",
+        icon: "lucide:mail",
+        href: "mailto:alsakhafatthariq@gmail.com",
+        title: "Email",
     }
 ]
 

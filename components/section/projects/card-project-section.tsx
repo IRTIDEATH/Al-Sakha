@@ -38,7 +38,7 @@ const CardProjectSecton = () => {
                 >
                   <MorphingDialogTrigger>
                     <div className="relative h-40 w-28">
-                      <div className="w-full h-full bg-foreground hover:shadow-shadow z-10 absolute hover:bg-transparent ease-in-out transition-all duration-500" />
+                      <div className="w-full h-full bg-foreground hover:shadow-shadow z-10 absolute hover:bg-transparent ease-in-out transition-all duration-400" />
                       <MorphingDialogImage
                         src={item.image}
                         alt="Image Project"

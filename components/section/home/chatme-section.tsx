@@ -23,7 +23,7 @@ const ChatmeSection = () => {
               href={item.href}
               className="py-1.5 px-4 border border-foreground hover:bg-foreground hover:text-background transition-colors ease-in-out"
             >
-              <Icon className="text-2xl" icon={item.icon} />
+              <Icon className="text-[22px]" icon={item.icon} />
             </Link>
           </li>
         ))}
