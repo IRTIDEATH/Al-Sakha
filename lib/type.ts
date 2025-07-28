@@ -29,6 +29,7 @@ export type Tproject = {
 
 export type TchatLink = {
     label: string;
+    icon: string;
     href: string;
     title: string;
 }

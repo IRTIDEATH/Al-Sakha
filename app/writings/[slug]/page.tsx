@@ -32,7 +32,7 @@ export default async function BlogPage({
             className="flex flex-col items-start w-full border border-foreground p-4 no-underline group hover:bg-foreground active:bg-foreground duration-300 transition-colors"
           >
             <span className="text-xs text-zeta">{"<-"} Previous</span>
-            <span className="text-lg mt-1 duration-300 transition-colors group-hover:text-background active:text-background">
+            <span className="text-lg mt-1 ease-in-out transition-colors group-hover:text-background active:text-background">
               {prevBlog.frontmatter.title}
             </span>
           </Link>
@@ -45,7 +45,7 @@ export default async function BlogPage({
             className="flex flex-col items-end w-full border border-foreground p-4 no-underline group hover:bg-foreground active:bg-foreground duration-300 transition-colors"
           >
             <span className="text-xs text-zeta">Next {"->"}</span>
-            <span className="text-lg mt-1 duration-300 transition-colors group-hover:text-background active:text-background">
+            <span className="text-lg mt-1 ease-in-out transition-colors group-hover:text-background active:text-background">
               {nextBlog.frontmatter.title}
             </span>
           </Link>

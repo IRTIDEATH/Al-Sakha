@@ -10,7 +10,7 @@ const Footer = () => {
   return (
     <footer className="w-full bg-suram flex items-center justify-between h-12 mb-8 mt-16">
       <div className="flex items-center">
-        <TooltipProvider delayDuration={150}>
+        <TooltipProvider delayDuration={140}>
           <Tooltip>
             <TooltipTrigger asChild>
               <Link

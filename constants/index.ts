@@ -123,42 +123,6 @@ export const projects: Tproject[] = [
         ],
     },
     {
-        image: "/project/zabodimg.webp",
-        name: "Zabod",
-        description: "zabod is a keyboard online store platform where buyers can customize the keyboard as desired.",
-        status: "pending",
-        technologies: [
-            {
-                name: "Typescript",
-                icon: "simple-icons:typescript"
-            },
-            {
-                name: "Next.js",
-                icon: "simple-icons:nextdotjs"
-            },
-            {
-                name: "Tanstack Query",
-                icon: "simple-icons:reactquery"
-            },
-            {
-                name: "Tailwind CSS",
-                icon: "simple-icons:tailwindcss"
-            },
-            {
-                name: "Shadcn/ui",
-                icon: "simple-icons:shadcnui"
-            },
-            {
-                name: "PostgreSQL",
-                icon: "simple-icons:postgresql"
-            },
-            {
-                name: "PrismaORM",
-                icon: "simple-icons:prisma"
-            },
-        ],
-    },
-    {
         image: "/project/inditechimg.webp",
         name: "INDI Technology",
         description: "indi tech is a unique and interactive 3D-based company profile website of pt indi technology. created during pre-internship activities.",
@@ -337,16 +301,19 @@ export const techcollections: TskillBadgeIcon[] = [
 export const chatLink: TchatLink[] = [
     {
         label: "Talk with me on Discord",
+        icon: "simple-icons:discord",
         href: "https://discord.com/users/yasudahlah",
         title: "Discord",
     },
     {
         label: "Talk with me on Threads",
+        icon: "simple-icons:threads",
         href: "https://www.threads.com/@enderjhass",
         title: "Threads",
     },
     {
         label: "Talk with me on Linkedin",
+        icon: "ion:social-linkedin",
         href: "https://www.linkedin.com/in/al-sakha",
         title: "Linkedin",
     }

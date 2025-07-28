@@ -2,49 +2,32 @@
 
 import { chatLink } from "@/constants";
 import Link from "next/link";
-import { toast } from "sonner";
+import { Icon } from "@iconify/react";
 
-const ChatmeSection = () => {
-  const handleCopyEmail = () => {
-    navigator.clipboard.writeText("alsakhafatthariq@gmail.com");
-    toast.success("Email copied to clipboard", {
-      duration: 3000,
-    });
-  };
+const ChatmeSection = () => {  
   return (
-    <section>
-      <h1 className="text-2xl mb-4 font-medium">wanna talk?</h1>
-      <p className="w-full text-zeta font-medium text-[16px] text-start">
-        need help, talk about random things, and connect with me.
-      </p>
-      <ul className="w-full text-zeta font-medium text-lg text-start mt-4">
+    <section className="flex flex-col gap-4 md:gap-8 md:flex-row w-full justify-between md:items-end">
+      <div>
+        <h1 className="text-2xl mb-4 font-medium">wanna talk?</h1>
+        <p className="w-full text-zeta font-medium text-[16px] text-start">
+          need help, consultation, talk about random things, playing games, and connect with me.
+        </p>
+      </div>
+      <ul className="flex flex-row gap-3 font-medium text-lg">
         {chatLink.map((item, index) => (
-          <li className="flex items-center gap-2" key={index}>
-            <span className="text-2xl text-foreground">{"-->"}</span>
+          <li className="flex" key={index}>
             <Link
               aria-label={item.label}
               rel="noopener noreferrer"
               target="_blank"
               href={item.href}
-              className="hover:underline decoration-2"
+              className="py-1.5 px-4 border border-foreground hover:bg-foreground hover:text-background transition-colors ease-in-out"
             >
-              {item.title}
+              <Icon className="text-2xl" icon={item.icon} />
             </Link>
           </li>
         ))}
-      </ul>
-      <div className="text-zeta font-medium text-lg flex items-start gap-2">
-        <span className="text-2xl text-foreground">{"-->"}</span>
-        <button
-          onClick={handleCopyEmail}
-          aria-label="Copy gmail"
-          className="hover:underline decoration-2 text-start cursor-pointer"
-        >
-          alsakhafatthariq
-          <br />
-          @gmail.com
-        </button>
-      </div>
+      </ul>      
     </section>
   );
 };

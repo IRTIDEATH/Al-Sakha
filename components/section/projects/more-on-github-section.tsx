@@ -1,4 +1,3 @@
-import { Badge } from "@/components/ui/skill-badge";
 import {
   Tooltip,
   TooltipContent,
@@ -9,6 +8,7 @@ import Link from "next/link";
 import React from "react";
 import { Icon } from "@iconify/react";
 import { ongithub } from "@/constants";
+import { Badge } from "@/components/ui/badge";
 
 const MoreOnGtihubSection = () => {
   return (
@@ -30,20 +30,18 @@ const MoreOnGtihubSection = () => {
             view
           </Link>
           <span className="text-zeta">|</span>
-          <span className="bg-foreground px-2.5 py-0.5 text-[13px] text-background font-roboto">
+          <Badge>
             list
-          </span>
+          </Badge>
         </div>
         <div className="flex flex-wrap justify-end gap-2">
           {ongithub.map((items, index) => (
             <TooltipProvider delayDuration={100} key={index}>
               <Tooltip>
                 <TooltipTrigger asChild>
-                  <span role="img" aria-label={items.name}>
-                    <Badge>
-                      <Icon className="-ms-0.5 text-[16px]" icon={items.icon} />
-                    </Badge>
-                  </span>
+                  <Badge variant={"skill"} role="img" aria-label={items.name}>
+                    <Icon icon={items.icon} />
+                  </Badge>
                 </TooltipTrigger>
                 <TooltipContent>
                   <p>{items.name}</p>

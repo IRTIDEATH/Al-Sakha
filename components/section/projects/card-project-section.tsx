@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Badge } from "@/components/ui/skill-badge";
+import { Badge } from "@/components/ui/badge";
 import { Icon } from "@iconify/react";
 import {
   MorphingDialog,
@@ -117,23 +117,18 @@ const CardProjectSecton = () => {
                       <span className="text-zeta">|</span>
                     </>
                   ) : null}
-                  <span className="bg-foreground px-2.5 py-0.5 text-[13px] text-background font-roboto">
+                  <Badge>
                     {item.status}
-                  </span>
+                  </Badge>
                 </div>
                 <div className="flex flex-wrap justify-end gap-2">
                   {item.technologies.map((items, index) => (
                     <TooltipProvider delayDuration={100} key={index}>
                       <Tooltip>
                         <TooltipTrigger asChild>
-                          <span role="img" aria-label={items.name}>
-                            <Badge>
-                              <Icon
-                                className="-ms-0.5 text-[16px]"
-                                icon={items.icon}
-                              />
-                            </Badge>
-                          </span>
+                          <Badge variant={"skill"} role="img" aria-label={items.name}>
+                            <Icon icon={items.icon} />
+                          </Badge>
                         </TooltipTrigger>
                         <TooltipContent>
                           <p>{items.name}</p>
