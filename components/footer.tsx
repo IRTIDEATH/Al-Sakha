@@ -42,9 +42,8 @@ const Footer = () => {
           </Tooltip>
         </TooltipProvider>
       </div>
-
       <div className="text-sm text-foreground px-4 font-medium">
-        © 2025 - IrtiDeath
+        © 2025 - Irtideath
       </div>
     </footer>
   );

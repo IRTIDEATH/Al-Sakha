@@ -91,7 +91,7 @@ const CardProjectSecton = () => {
               <p className="mb-6 text-zeta text-[16px] font-medium">
                 {item.description}
               </p>
-              <div className="w-full mt-6 flex flex-col-reverse md:flex-row gap-4 md:gap-0 items-start md:items-center justify-between">
+              <div className="w-full mt-6 flex flex-col-reverse md:flex-row gap-4 md:gap-0 items-start md:items-center justify-start md:justify-between">
                 <div className="flex items-center gap-3">
                   {item.view ? (
                     <>
@@ -121,7 +121,7 @@ const CardProjectSecton = () => {
                     {item.status}
                   </Badge>
                 </div>
-                <div className="flex flex-wrap justify-end gap-2">
+                <div className="flex flex-wrap gap-2">
                   {item.technologies.map((items, index) => (
                     <TooltipProvider delayDuration={100} key={index}>
                       <Tooltip>
