@@ -359,12 +359,12 @@ export const ongithub: TskillBadgeIcon[] = [
         icon: "simple-icons:git"
     },
     {
-        name: "Github Actions",
-        icon: "simple-icons:githubactions"
+        name: "Gitlab",
+        icon: "simple-icons:gitlab"
     },
     {
-        name: "Github Copilot",
-        icon: "simple-icons:githubcopilot"
+        name: "Github Actions",
+        icon: "simple-icons:githubactions"
     },
     {
         name: "Markdown",
