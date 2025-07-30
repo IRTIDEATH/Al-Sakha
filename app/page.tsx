@@ -7,6 +7,7 @@ import ServiceSection from "@/components/section/home/service-section";
 import InternshipSection from "@/components/section/home/internship-section";
 import SkillSection from "@/components/section/home/skill-section";
 import ColorPaletteSection from "@/components/section/home/color-palette-section";
+import CommunitySection from "@/components/section/home/community-section";
 
 const Page = () => {
   return (
@@ -24,6 +25,8 @@ const Page = () => {
       <ColorPaletteSection/>
       <Divider />
       <InspirationSection />
+      <Divider />
+      <CommunitySection />
       <Divider />
       <ChatmeSection />
     </main>
