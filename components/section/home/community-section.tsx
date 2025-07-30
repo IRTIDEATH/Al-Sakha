@@ -1,4 +1,3 @@
-import CoffeeText from "@/components/ui/coffee-text";
 import { communityLink } from "@/constants";
 import Link from "next/link";
 

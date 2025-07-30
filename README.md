@@ -27,7 +27,7 @@ Every element—from color to layout to words—embodies a personality that is h
 
 - Typescript
 - Next.js
-- Tailwind CSS & Shadcn/ui
+- Tailwind CSS & Radix UI
 - Motion
 - MDX
 
@@ -42,7 +42,3 @@ Every element—from color to layout to words—embodies a personality that is h
 
 - [ ]  Up button on the writing page
 - [x]  Pagination on the writing page
-
-## License
-
-The project is licensed under the MIT License - see the license file for more details.
