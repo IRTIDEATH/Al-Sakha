@@ -11,7 +11,7 @@ const CommunitySection = () => {
       <ul className="w-full text-zeta font-medium text-lg text-start mt-4">
         {communityLink.map((item, index) => (
           <li className="flex items-center gap-2" key={index}>
-            <span className="text-2xl text-coffee">{"-->"}</span>
+            <span className="text-2xl text-foreground">{"-->"}</span>
             <Link
               aria-label={item.label}
               href={item.href}

@@ -9,6 +9,7 @@ import React from "react";
 import { Icon } from "@iconify/react";
 import { ongithub } from "@/constants";
 import { Badge } from "@/components/ui/badge";
+import CoffeeText from "@/components/ui/coffee-text";
 
 const MoreOnGtihubSection = () => {
   return (
@@ -16,8 +17,8 @@ const MoreOnGtihubSection = () => {
       <h1 className="mb-2 text-[20px] font-medium">more on Github!</h1>
       <p className="text-zeta text-[16px] font-medium">
         explore more projects on my github. if you are interested, you can
-        contribute in any of my repositories. give a star if there is a repo you
-        like.
+        contribute in any of my repositories. give a{" "}
+        <CoffeeText>star</CoffeeText> if there is a repo you like.
       </p>
       <div className="w-full mt-6 flex flex-col-reverse md:flex-row gap-4 md:gap-0 items-start md:items-center justify-start md:justify-between">
         <div className="flex items-center gap-3">
@@ -30,9 +31,7 @@ const MoreOnGtihubSection = () => {
             view
           </Link>
           <span className="text-zeta">|</span>
-          <Badge>
-            list
-          </Badge>
+          <Badge>list</Badge>
         </div>
         <div className="flex flex-wrap gap-2">
           {ongithub.map((items, index) => (
