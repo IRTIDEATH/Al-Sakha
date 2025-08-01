@@ -350,6 +350,11 @@ export const inspirationLink: TinspirationLink[] = [
         label: "Growtopia fandom wiki samille's soul",
         href: "https://growtopia.fandom.com/wiki/Samille%27s_Soul_Abductor",
         title: "Samille's Soul",
+    },
+    {
+        label: "Zeta my cat kkkk81115",
+        href: "https://x.com/kkkk8115/status/1891482869987475896?s=19",
+        title: "@kkkk8115",
     }
 ]
 
@@ -383,4 +388,14 @@ export const communityLink: TcommunityLink[] = [
         href: "https://discord.gg/ExCvJtVTu6",
         title: "discord/compile-cafe",
     },
+    {
+        label: "TI POLNES",
+        href: "https://discord.gg/59dsBb2GnD",
+        title: "discord/ti-polnes",
+    },
+    {
+        label: "Fireship",
+        href: "https://discord.gg/fireship",
+        title: "discord/fireship",
+    }
 ]

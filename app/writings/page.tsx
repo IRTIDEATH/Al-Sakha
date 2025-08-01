@@ -1,17 +1,32 @@
 import Link from "next/link";
 import { getBlogs } from "./fetchers";
 import Divider from "@/components/ui/divider";
+import Image from "next/image";
 
 export default async function BlogsPage() {
   const blogs = await getBlogs();
   return (
-    <main className="mt-12">
-      <h2 className="text-2xl mb-6 font-medium">writing in my spare time</h2>
-      <p className="text-zeta font-medium text-[16px] text-start mb-6">
-        whether it{"'"}s storytelling, crafting articles, or diving into
-        research.
-      </p>
-      <Divider className="mt-8 mb-6" />
+    <main className="mt-12 md:mt-14">
+      <Divider className="my-0 hidden md:block" />
+      <div className="flex flex-row items-center justify-between gap-0 md:gap-18 mb-8 md:mb-0">
+        <div>
+          <h2 className="text-2xl mb-6 font-medium">
+            writing in my spare time
+          </h2>
+          <p className="text-zeta font-medium text-[16px] text-start">
+            whether it{"'"}s storytelling, crafting articles, or diving into
+            research. just sharing what{"'"}s on my mind.
+          </p>
+        </div>
+        <Image
+          src={"/zetamycat.png"}
+          alt="Vestia Zeta My Mine"
+          width={500}
+          height={500}
+          className="object-cover w-28 h-auto hidden md:block border-[2px] border-b-0 border-t-0 border-suram"
+        />
+      </div>
+      <Divider className="mt-0 mb-6" />
       <div className="w-full">
         {blogs.map((item, i) => (
           <div key={i}>

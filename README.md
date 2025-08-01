@@ -37,6 +37,7 @@ Every element—from color to layout to words—embodies a personality that is h
 - [edqe.me](https://edqe.me/)
 - [Zetamin](https://www.pixiv.net/en/artworks/112555482)
 - [Samille's Soul Abductor](https://growtopia.fandom.com/wiki/Samille%27s_Soul_Abductor)
+- [@kkkk8115](https://x.com/kkkk8115/status/1891482869987475896?s=19)
 
 ## Future Enhancements
 
