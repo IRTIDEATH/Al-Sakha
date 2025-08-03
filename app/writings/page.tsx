@@ -23,6 +23,7 @@ export default async function BlogsPage() {
           alt="Vestia Zeta My Mine"
           width={500}
           height={500}
+          priority
           className="object-cover w-28 h-auto hidden md:block border-[2px] border-b-0 border-t-0 border-suram"
         />
       </div>
