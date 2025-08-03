@@ -19,10 +19,11 @@ export default async function BlogsPage() {
           </p>
         </div>
         <Image
-          src={"/zetamycat.png"}
+          src={"/zetamycat.webp"}
           alt="Vestia Zeta My Mine"
-          width={500}
-          height={500}
+          width={1400}
+          height={2048}
+          sizes="(max-width: 768px) 0px, 112px"
           priority
           className="object-cover w-28 h-auto hidden md:block border-[2px] border-b-0 border-t-0 border-suram"
         />
