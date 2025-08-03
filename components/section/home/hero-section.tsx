@@ -36,7 +36,7 @@ const HeroSection = () => {
             }}
           >
             <div className="w-58 h-34">
-              <Image src="/zetaagent.png" alt="Vestia Zeta" fill />
+              <Image src="/zetaagent.png" alt="Vestia Zeta" fill priority />
             </div>
           </Cursor>
           Gray
