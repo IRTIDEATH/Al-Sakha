@@ -25,6 +25,7 @@ const ServiceSection = () => {
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
               className="w-10 h-full"
+              aria-hidden="true"
             >
               <path
                 d="M32.626 1L32.9189 1.29297L166.384 134.757L167.091 135.464L158.492 144.062L157.785 143.355L27.5898 13.1592H13.1592V169.391H122.083V181.55H1V1H32.626Z"
@@ -59,6 +60,7 @@ const ServiceSection = () => {
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
               className="w-10 h-full"
+              aria-hidden="true"
             >
               <path
                 d="M3 177.834L4.01178 175.875L66.6433 57.9231L38.8114 5.69451C36.4985 1.38295 30.6245 2.48227 29.8655 7.30877L3 177.834Z"

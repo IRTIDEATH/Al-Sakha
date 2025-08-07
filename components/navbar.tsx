@@ -48,7 +48,7 @@ const Navbar = () => {
         </span>
       </div>
       <div className="md:hidden flex items-center font-roboto bg-suram">
-        <h1 className="px-4 text-lg font-medium">menu</h1>
+        <span className="px-4 text-lg font-medium">menu</span>
         <Drawer>
           <DrawerTrigger
             aria-label="Menu button"
@@ -87,7 +87,7 @@ const Navbar = () => {
                     animate={{ opacity: 1, y: 0 }}
                     key={index}
                     transition={{
-                      times: [0.4],
+                      times: [0.6],
                       duration: 0.5,
                       delay: index * 0.12,
                       ease: "easeOut",

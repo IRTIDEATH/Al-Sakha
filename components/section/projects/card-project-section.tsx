@@ -41,7 +41,7 @@ const CardProjectSecton = () => {
                       <div className="w-full h-full bg-foreground hover:shadow-shadow z-10 absolute hover:bg-transparent ease-in-out transition-all duration-400" />
                       <MorphingDialogImage
                         src={item.image}
-                        alt="Image Project"
+                        alt={item.name}
                         className="object-cover"
                       />
                     </div>
@@ -51,7 +51,7 @@ const CardProjectSecton = () => {
                       <div className="relative h-[90vh] w-[90vw]">
                         <MorphingDialogImage
                           src={item.image}
-                          alt="Image Project"
+                          alt={item.name}
                           className="object-contain"
                         />
                       </div>
@@ -87,7 +87,7 @@ const CardProjectSecton = () => {
               )}
             </div>
             <article className="w-full">
-              <h1 className="mb-2 text-[24px] font-medium">{item.name}</h1>
+              <h2 className="mb-2 text-[24px] font-medium">{item.name}</h2>
               <p className="mb-6 text-zeta text-[16px] font-medium">
                 {item.description}
               </p>

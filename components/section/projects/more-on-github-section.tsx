@@ -11,10 +11,10 @@ import { ongithub } from "@/constants";
 import { Badge } from "@/components/ui/badge";
 import CoffeeText from "@/components/ui/coffee-text";
 
-const MoreOnGtihubSection = () => {
+const MoreOnGithubSection = () => {
   return (
     <section className="w-full flex flex-col justify-between">
-      <h1 className="mb-2 text-[20px] font-medium">more on Github!</h1>
+      <h2 className="mb-2 text-[20px] font-medium">more on Github!</h2>
       <p className="text-zeta text-[16px] font-medium">
         explore more projects on my github. if you are interested, you can
         contribute in any of my repositories. give a{" "}
@@ -54,4 +54,4 @@ const MoreOnGtihubSection = () => {
   );
 };
 
-export default MoreOnGtihubSection;
+export default MoreOnGithubSection;

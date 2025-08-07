@@ -8,14 +8,14 @@ export default async function BlogsPage() {
   return (
     <main className="mt-12 md:mt-14">
       <Divider className="my-0 hidden md:block" />
-      <div className="flex flex-row items-center justify-between gap-0 md:gap-18 mb-8 md:mb-0">
+      <section className="flex flex-row items-center justify-between gap-0 md:gap-18 mb-8 md:mb-0">
         <div>
-          <h2 className="text-2xl mb-6 font-medium">
+          <h1 className="text-2xl mb-6 font-medium">
             writing in my spare time
-          </h2>
+          </h1>
           <p className="text-zeta font-medium text-[16px] text-start">
-            whether it{"'"}s storytelling, crafting articles, or diving into
-            research. just sharing what{"'"}s on my mind.
+            whether it&apos;s storytelling, crafting articles, or diving into
+            research. just sharing what&apos;s on my mind.
           </p>
         </div>
         <Image
@@ -25,11 +25,11 @@ export default async function BlogsPage() {
           height={2048}
           sizes="(max-width: 768px) 0px, 112px"
           priority
-          className="object-cover w-28 h-auto hidden md:block border-[2px] border-b-0 border-t-0 border-suram"
+          className="object-cover w-28 h-full hidden md:block border-[2px] border-b-0 border-t-0 border-suram"
         />
-      </div>
+      </section>
       <Divider className="mt-0 mb-6" />
-      <div className="w-full">
+      <section className="w-full">
         {blogs.map((item, i) => (
           <div key={i}>
             <article>
@@ -87,7 +87,11 @@ export default async function BlogsPage() {
             <Divider className="my-6" />
           </div>
         ))}
-      </div>
+      </section>
+      <blockquote className="italic text-zeta font-normal text-xs">
+        &ldquo;i&apos;m not a level 5 skibidi, because that&apos;s just a big
+        mewing.&rdquo;
+      </blockquote>
     </main>
   );
 }

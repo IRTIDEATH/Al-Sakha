@@ -11,9 +11,9 @@ const AboutSection = () => {
         not in college. i hope to stick with this career in the future.
       </p>
       <p className="w-full text-zeta font-medium text-[16px] text-start">
-        i{"'"}m also learning editing, graphic design, and writing. loving cold
+        i&apos;m also learning editing, graphic design, and writing. loving cold
         or hot <CoffeeText>coffee</CoffeeText> while working and study. anyway,
-        that{"'"}s all about me and thank you.
+        that&apos;s all about me and thank you.
       </p>
     </section>
   );
