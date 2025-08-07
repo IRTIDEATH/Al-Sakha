@@ -11,7 +11,7 @@ import WorkExperienceSection from "@/components/section/home/work-section";
 
 const Page = () => {
   return (
-    <main>
+    <main className="mt-12">
       <HeroSection />
       <Divider />
       <AboutSection />

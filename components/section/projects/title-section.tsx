@@ -4,7 +4,7 @@ import CoffeeText from "@/components/ui/coffee-text";
 
 const TitleSection = () => {
   return (
-    <section className="mt-12">
+    <section>
       <h2 className="text-3xl mb-6 font-medium">coding result</h2>
       <p className="w-full text-zeta font-medium text-[16px] text-start mb-6">
         these are some of my coding projects completed, under development, and

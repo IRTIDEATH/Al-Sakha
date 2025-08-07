@@ -5,7 +5,7 @@ import Divider from "@/components/ui/divider";
 
 const Page = () => {
   return (
-    <main>
+    <main className="mt-12">
       <TitleSection />
       <Divider />
       <CardProjectSecton />

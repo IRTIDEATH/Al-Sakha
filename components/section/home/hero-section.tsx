@@ -15,7 +15,7 @@ const TextLoop = dynamic(() => import("@/components/ui/text-loop"), {
 const HeroSection = () => {
   const prefersReducedMotion = useReducedMotion();
   return (
-    <section className="mt-12 relative flex items-start sm:items-center gap-8 justify-between bg-foreground px-6 py-8">
+    <section className="relative flex items-start sm:items-center gap-8 justify-between bg-foreground px-6 py-8">
       <div className="space-y-3 flex flex-col items-start">
         <h1 className="text-5xl font-semibold text-background">
           <Cursor
