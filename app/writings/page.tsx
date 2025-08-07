@@ -35,24 +35,41 @@ export default async function BlogsPage() {
             <article>
               <Link
                 href={`/writings/${item.slug}`}
-                className="text-xl font-medium inline-flex items-end gap-1"
+                className="text-xl font-medium inline-flex items-end gap-1 group"
               >
                 {item.frontmatter.title}
-                <svg
-                  className="mb-0.5"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="18"
-                  height="18"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="M7 7h10v10" />
-                  <path d="M7 17 17 7" />
-                </svg>
+                <span className="inline-block relative overflow-hidden h-5 w-5">
+                  <svg
+                    className="mb-0.5 transition-transform duration-150 group-hover:-translate-y-5 group-hover:translate-x-5"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="M7 7h10v10" />
+                    <path d="M7 17 17 7" />
+                  </svg>
+                  <svg
+                    className="absolute top-0 left-0 mb-0.5 transition-transform duration-150 -translate-x-5 translate-y-5 group-hover:translate-x-0 group-hover:translate-y-0"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="M7 7h10v10" />
+                    <path d="M7 17 17 7" />
+                  </svg>
+                </span>
               </Link>
               <p className="text-sm text-zeta mt-2.5">
                 {item.frontmatter.description}
