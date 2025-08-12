@@ -23,7 +23,7 @@ const WorkExperienceSection = () => {
                 rel="noopener noreferrer"
                 target="_blank"
                 href={item.link}
-                className="text-xl font-medium font-roboto inline-flex items-end gap-1 group"
+                className="text-xl font-medium font-roboto inline-flex items-end gap-1 group w-fit"
               >
                 {item.company}
                 <span className="inline-block relative overflow-hidden h-5 w-5">

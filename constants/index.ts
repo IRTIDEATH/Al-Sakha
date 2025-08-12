@@ -384,6 +384,11 @@ export const communityLink: TcommunityLink[] = [
         title: "discord/wpu",
     },
     {
+        label: "IMPHNEN",
+        href: "http://discord.gg/imphnen",
+        title: "discord/imphnen",
+    },
+    {
         label: "Compile Cafe",
         href: "https://discord.gg/ExCvJtVTu6",
         title: "discord/compile-cafe",
