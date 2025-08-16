@@ -34,6 +34,12 @@ export default async function sitemap(): Promise<SitemapEntry[]> {
             changeFrequency: 'daily',
             priority: 0.8
         },
+        {
+            url: `${BASE_URL}/writings`,
+            lastModified: new Date().toISOString(),
+            changeFrequency: 'daily',
+            priority: 0.8
+        },
         ...writings
             .filter(({ slug }) => existsSync(join(contentDir, `${slug}.mdx`)))
             .map(({ slug }) => {

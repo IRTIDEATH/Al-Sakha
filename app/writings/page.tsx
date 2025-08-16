@@ -95,3 +95,5 @@ export default async function BlogsPage() {
     </main>
   );
 }
+
+export const dynamic = "force-static";
