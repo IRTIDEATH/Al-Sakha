@@ -18,15 +18,17 @@ export default async function BlogsPage() {
             research. just sharing what&apos;s on my mind.
           </p>
         </div>
-        <Image
-          src={"/zetamycat.webp"}
-          alt="Vestia Zeta My Mine"
-          width={1400}
-          height={2048}
-          sizes="(max-width: 768px) 0px, 112px"
-          priority
-          className="object-cover w-28 h-full hidden md:block border-[2px] border-b-0 border-t-0 border-suram"
-        />
+        <div className="w-44 h-40 hidden md:block border-[2px] border-b-0 border-t-0 border-suram">
+          <Image
+            src={"/zetamycat.webp"}
+            alt="Vestia Zeta My Mine"
+            width={1400}
+            height={2048}
+            sizes="(max-width: 768px) 0px, 176px"
+            priority
+            className="object-cover w-full h-full"
+          />
+        </div>
       </section>
       <Divider className="mt-0 mb-6" />
       <section className="w-full">

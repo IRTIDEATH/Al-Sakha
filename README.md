@@ -15,12 +15,14 @@ Every element—from color to layout to words—embodies a personality that is h
 ## Features
 
 - **About Me Section:** Provides personal background and professional interests.
-- **Skills Showcase:** A collection of technologies that I used for development.
+- **Skills:** A collection of technologies that I used for development.
 - **Professional Experience:** Highlights internship activities.
 - **Services:** Details the web development services I offer.
-- **Color Palette:** Interactive color scheme section with copyable color codes.
+- **Color Palettes:** Interactive color scheme section with copyable color codes.
 - **Inspirations:** References to portfolios that influenced my design.
+- **Communities:** Join the conversation.
 - **Contact Information:** Ways to connect with me.
+- **Projects:** A showcase of my work and things I've built.
 - **Writings**: A literacy corner.
 
 ## Tech Stack
@@ -38,8 +40,3 @@ Every element—from color to layout to words—embodies a personality that is h
 - [Zetamin](https://www.pixiv.net/en/artworks/112555482)
 - [Samille's Soul Abductor](https://growtopia.fandom.com/wiki/Samille%27s_Soul_Abductor)
 - [@kkkk8115](https://x.com/kkkk8115/status/1891482869987475896?s=19)
-
-## Future Enhancements
-
-- [ ]  Up button on the writing page
-- [x]  Pagination on the writing page
