@@ -1,10 +1,16 @@
 # Documentation
 
-## Overview
+[![CodeFactor]](https://www.codefactor.io/repository/github/irtideath/al-sakha/badge)
+![Stargazers]
 
-This documentation provides information about my personal web portfolio, which showcases my skills, experience, and services as a web developer.
+### Overview
 
-## Design Philosophy
+> [!NOTE]
+> This documentation provides information about my personal web portfolio, which showcases my skills, experience, and services as a web developer.
+
+---
+
+### Design Philosophy
 
 The *Irtideath* website embraces a philosophy of **warm minimalism**, inspired by the quiet comfort of a cat taking a nap. Its calm color palette—soft grays with coffee-toned accents—creates a soothing, welcoming atmosphere.
 
@@ -12,7 +18,7 @@ Simple typography and generous white space offer visual breathing room, reflecti
 
 Every element—from color to layout to words—embodies a personality that is humble, open, and introspective. This isn’t just a portfolio—it’s an invitation to quietly get to know someone through design that speaks without shouting.
 
-## Features
+### Features
 
 - **About Me Section:** Provides personal background and professional interests.
 - **Skills:** A collection of technologies that I used for development.
@@ -25,13 +31,20 @@ Every element—from color to layout to words—embodies a personality that is h
 - **Projects:** A showcase of my work and things I've built.
 - **Writings**: A literacy corner.
 
-## Tech Stack
+### Tech Stack
 
-- Typescript
-- Next.js
-- Tailwind CSS & Radix UI
-- Motion
-- MDX
+This is a list of the various technologies used to build this website:
+
+| Category   | Technology Name                                                                                |
+| ---------- | ---------------------------------------------------------------------------------------------- |
+| Framework  | [**Next.js**](https://nextjs.org/)                                                             |
+| Styling    | [**Tailwind**](https://tailwindcss.com)                                                        |
+| Components | [**Radix UI**](https://www.radix-ui.com/?ref=DevHub)                                           |
+| Content    | [**MDX**](https://mdxjs.com/)                                                                  |
+| Animation  | [**Motion**](https://motion.dev/)                                                              |
+| Graphics   | [**Figma**](https://www.figma.com/)                                                            |
+| Deployment | [**Vercel**](https://vercel.com)                                                               |
+
 
 ## Thanks to
 - [pow.kim](https://pow.kim/)
@@ -40,3 +53,6 @@ Every element—from color to layout to words—embodies a personality that is h
 - [Zetamin](https://www.pixiv.net/en/artworks/112555482)
 - [Samille's Soul Abductor](https://growtopia.fandom.com/wiki/Samille%27s_Soul_Abductor)
 - [@kkkk8115](https://x.com/kkkk8115/status/1891482869987475896?s=19)
+
+[CodeFactor]: https://img.shields.io/codefactor/grade/github/IRTIDEATH/al-sakha?color=8C6053&logo=codefactor&logoColor=fff&style=for-the-badge
+[Stargazers]: https://img.shields.io/github/stars/irtideath/al-sakha?color=686C6F&logo=github&logoColor=fff&style=for-the-badge
