@@ -11,7 +11,7 @@ export const DotDivider = ({
   className,
 }: React.HTMLAttributes<HTMLDivElement>) => {
   return (
-    <div className={cn("w-full my-16 flex items-center justify-center gap-4 select-none", className)}>
+    <div className={cn("w-full my-18 flex items-center justify-center gap-4 select-none", className)}>
       <span className="p-0.5 bg-foreground" />
       <span className="p-[2.5px] bg-foreground" />
       <span className="p-0.5 bg-foreground" />

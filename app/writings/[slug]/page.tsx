@@ -1,7 +1,9 @@
 import Link from "next/link";
 import { getBlogBySlug, getAllBlogSlug } from "../fetchers";
-import { DotDivider } from "@/components/ui/divider";
+import { Divider, DotDivider } from "@/components/ui/divider";
 import { Badge } from "@/components/ui/badge";
+import ScrollUpButton from "@/components/scroll-up-button";
+import ShareButton from "@/components/share-button";
 
 export default async function BlogPage({
   params,
@@ -30,6 +32,14 @@ export default async function BlogPage({
           </li>
         ))}
       </ul>
+      <div className="flex items-center justify-between mt-10">
+        <Divider className="w-26 bg-foreground my-0" />
+
+        <div className="flex items-center gap-6">
+          <ShareButton />
+          <ScrollUpButton />
+        </div>
+      </div>
       <nav
         className={
           `flex flex-col sm:flex-row justify-between mt-10` +
