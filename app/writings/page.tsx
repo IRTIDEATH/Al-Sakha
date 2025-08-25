@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { getBlogs } from "./fetchers";
-import Divider from "@/components/ui/divider";
+import { Divider } from "@/components/ui/divider";
 import Image from "next/image";
+import { Fragment } from "react";
 
 export default async function BlogsPage() {
   const blogs = await getBlogs();
@@ -77,7 +78,16 @@ export default async function BlogsPage() {
                 {item.frontmatter.description}
               </p>
               <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center font-medium mt-4 gap-2">
-                <p className="text-[12px]">{item.frontmatter.category}</p>
+                <div className="flex items-center gap-2 flex-wrap">
+                  {item.frontmatter.category.map((category, index) => (
+                    <Fragment key={index}>
+                      <p className="text-[12px]">{category}</p>
+                      {index < item.frontmatter.category.length - 1 && (
+                        <span className="text-[12px] text-zeta select-none">|</span>
+                      )}
+                    </Fragment>
+                  ))}
+                </div>
                 <time
                   className="text-[12px] text-nowrap text-zeta"
                   dateTime={item.frontmatter.date}

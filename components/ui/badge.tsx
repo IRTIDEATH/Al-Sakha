@@ -12,10 +12,9 @@ const badgeVariants = cva(
         default:
           "bg-foreground px-2.5 py-0.5 text-[13px] text-background font-roboto font-normal",
         skill: "bg-suram text-foreground text-[16px] px-3 py-1",
-        destructive:
-          "border-transparent bg-destructive text-white [a&]:hover:bg-destructive/90 focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40 dark:bg-destructive/60",
+        tag: "bg-suram px-3.5 py-1.5 text-[13px] text-foreground font-roboto font-medium rounded-sm",
         outline:
-          "text-foreground [a&]:hover:bg-accent [a&]:hover:text-accent-foreground",
+          "border border-foreground px-2.5 py-0.5 text-[14px] text-foreground font-roboto font-normal",
       },
     },
     defaultVariants: {

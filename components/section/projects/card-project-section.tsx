@@ -17,7 +17,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import Divider from "@/components/ui/divider";
+import { Divider } from "@/components/ui/divider";
 import { projects } from "@/constants/index";
 import { useReducedMotion } from "motion/react";
 

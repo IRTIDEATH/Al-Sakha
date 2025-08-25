@@ -1,6 +1,7 @@
 import fs from "fs"
 import path from "path"
 import { compileMDX } from "next-mdx-remote/rsc"
+import { DotDivider } from "@/components/ui/divider"
 
 const contentDir = path.join(process.cwd(), "app/writings/_mdx-content")
 
@@ -13,11 +14,15 @@ export async function getBlogBySlug(slug: string) {
         title: string
         description: string
         slug: string
-        category: string
+        tags: string[]
+        category: string[]
         date: string
     }>({
         source: fileContent,
         options: { parseFrontmatter: true },
+        components: {
+            DotDivider,
+        },
     })
     return {
         frontmatter,

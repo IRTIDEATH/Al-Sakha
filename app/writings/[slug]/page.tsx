@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { getBlogBySlug, getAllBlogSlug } from "../fetchers";
+import { DotDivider } from "@/components/ui/divider";
+import { Badge } from "@/components/ui/badge";
 
 export default async function BlogPage({
   params,
@@ -20,6 +22,14 @@ export default async function BlogPage({
   return (
     <main className="mt-12 max-w-full prose prose-headings:text-foreground prose-p:text-zeta prose-ol:text-zeta prose-ul:text-zeta prose-li:text-zeta prose-a:text-foreground prose-strong:text-foreground">
       <article>{blog.content}</article>
+      <DotDivider />
+      <ul className="flex gap-2.5 items-center list-none not-prose flex-wrap">
+        {blog.frontmatter.tags.map((item, index) => (
+          <li key={index}>
+            <Badge variant={"tag"}>{item}</Badge>
+          </li>
+        ))}
+      </ul>
       <nav
         className={
           `flex flex-col sm:flex-row justify-between mt-10` +
