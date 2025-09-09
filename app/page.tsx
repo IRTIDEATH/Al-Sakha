@@ -1,13 +1,13 @@
-import HeroSection from "@/components/section/home/hero-section";
-import AboutSection from "@/components/section/home/about-section";
+import HeroSection from "@/components/pages/home/hero-section";
+import AboutSection from "@/components/pages/home/about-section";
 import { Divider } from "@/components/ui/divider";
-import InspirationSection from "@/components/section/home/inspiration-section";
-import ChatmeSection from "@/components/section/home/chatme-section";
-import ServiceSection from "@/components/section/home/service-section";
-import SkillSection from "@/components/section/home/skill-section";
-import ColorPaletteSection from "@/components/section/home/color-palette-section";
-import CommunitySection from "@/components/section/home/community-section";
-import WorkExperienceSection from "@/components/section/home/work-section";
+import InspirationSection from "@/components/pages/home/inspiration-section";
+import ChatmeSection from "@/components/pages/home/chatme-section";
+import ServiceSection from "@/components/pages/home/service-section";
+import SkillSection from "@/components/pages/home/skill-section";
+import ColorPaletteSection from "@/components/pages/home/color-palette-section";
+import CommunitySection from "@/components/pages/home/community-section";
+import WorkExperienceSection from "@/components/pages/home/work-section";
 
 const Page = () => {
   return (

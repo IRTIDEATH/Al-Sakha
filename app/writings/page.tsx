@@ -4,7 +4,7 @@ import { Divider } from "@/components/ui/divider";
 import Image from "next/image";
 import { Fragment } from "react";
 
-export default async function BlogsPage() {
+export default async function Page() {
   const blogs = await getBlogs();
   return (
     <main className="mt-12 md:mt-14">

@@ -10,7 +10,7 @@ import {
   MorphingDialogClose,
   MorphingDialogImage,
   MorphingDialogContainer,
-} from "@/components/ui/morphing-dialog";
+} from "@/components/morphing-dialog";
 import {
   Tooltip,
   TooltipContent,

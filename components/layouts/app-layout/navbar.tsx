@@ -10,13 +10,13 @@ import {
   DrawerTrigger,
 } from "@/components/ui/drawer";
 import { navigationItems } from "@/constants";
-import { Button } from "./ui/button";
+import { Button } from "@/components/ui/button";
 import { motion } from "motion/react";
 import dynamic from "next/dynamic";
 import { useReducedMotion } from "motion/react";
 import { usePathname } from "next/navigation";
 
-const SparkleGroup = dynamic(() => import("./sparkle-effect"), {
+const SparkleGroup = dynamic(() => import("@/components/sparkle-effect"), {
   ssr: false,
 });
 

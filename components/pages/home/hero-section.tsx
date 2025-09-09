@@ -4,11 +4,11 @@ import { useReducedMotion } from "motion/react";
 import Image from "next/image";
 import dynamic from "next/dynamic";
 
-const Cursor = dynamic(() => import("@/components/ui/animate-cursor"), {
+const Cursor = dynamic(() => import("@/components/animate-cursor"), {
   ssr: false,
 });
 
-const TextLoop = dynamic(() => import("@/components/ui/text-loop"), {
+const TextLoop = dynamic(() => import("@/components/text-loop"), {
   ssr: false,
 });
 

@@ -1,7 +1,7 @@
 "use client"
 
-import Navbar from "@/components/navbar";
-import Footer from "@/components/footer";
+import Navbar from "@/components/layouts/app-layout/navbar";
+import Footer from "@/components/layouts/app-layout/footer";
 import { ReactLenis } from "lenis/react";
 import type { LenisRef } from "lenis/react";
 import { cancelFrame, frame, useReducedMotion } from "motion/react";

@@ -2,10 +2,10 @@ import Link from "next/link";
 import { getBlogBySlug, getAllBlogSlug } from "../fetchers";
 import { Divider, DotDivider } from "@/components/ui/divider";
 import { Badge } from "@/components/ui/badge";
-import ScrollUpButton from "@/components/scroll-up-button";
-import ShareButton from "@/components/share-button";
+import ScrollUpButton from "@/components/layouts/writing-layout/scroll-up-button";
+import ShareButton from "@/components/layouts/writing-layout/share-button";
 
-export default async function BlogPage({
+export default async function Page({
   params,
 }: {
   params: Promise<{ slug: string }>;
