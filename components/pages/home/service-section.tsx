@@ -1,3 +1,5 @@
+import { DividerVertical } from "@/components/ui/divider";
+
 const ServiceSection = () => {
   return (
     <section className="w-full mx-auto">
@@ -7,7 +9,8 @@ const ServiceSection = () => {
         delivering effective and thoughtful solutions.
       </p>
       <div className="mt-8 flex flex-col gap-12">
-        <div className="flex flex-row-reverse items-start justify-between gap-4">
+        <div className="relative flex flex-row-reverse items-start justify-between gap-4">
+          <DividerVertical />
           <article className="space-y-2">
             <h2 className="text-lg font-medium">Frontend</h2>
             <p className="text-zeta text-[15px]">
@@ -17,7 +20,7 @@ const ServiceSection = () => {
               desktop to mobile.
             </p>
           </article>
-          <div>
+          <div className="z-10 bg-background">
             <svg
               width="196"
               height="218"
@@ -42,6 +45,7 @@ const ServiceSection = () => {
             </svg>
           </div>
         </div>
+
         <div className="flex flex-row-reverse items-start justify-between gap-4">
           <article className="space-y-2">
             <h2 className="text-lg font-medium">Backend</h2>
@@ -52,7 +56,7 @@ const ServiceSection = () => {
               easy.
             </p>
           </article>
-          <div>
+          <div className="z-10 bg-background">
             <svg
               width="165"
               height="221"

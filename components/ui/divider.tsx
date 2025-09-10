@@ -18,3 +18,9 @@ export const DotDivider = ({
     </div>
   );
 };
+
+export const DividerVertical = ({
+  className,
+}: React.HTMLAttributes<HTMLDivElement>) => {
+  return <div className={cn("absolute top-10 bottom-[-3rem] left-5 w-[2px] bg-suram my-4 select-none", className)} />;
+};

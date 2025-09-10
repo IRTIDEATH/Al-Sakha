@@ -17,9 +17,9 @@ const ColorPaletteSection = () => {
     { name: "suram", class: "text-suram", hex: "#E6E8ED" },
   ];
 
-  const handleCopyColor = (hex: string) => {
+  const handleCopyColor = (name: string, hex: string) => {
     navigator.clipboard.writeText(hex);
-    toast.success("Color copied to clipboard", {
+    toast.success(`Color ${name} to clipboard`, {
       description: `Color ${hex} copied to clipboard`,
       duration: 3000,
     });
@@ -35,7 +35,7 @@ const ColorPaletteSection = () => {
           <li className="flex items-center gap-2" key={index}>
             <span className={`text-2xl ${item.class}`}>{"-->"}</span>
             <button
-              onClick={() => handleCopyColor(item.hex)}
+              onClick={() => handleCopyColor(item.name, item.hex)}
               className="hover:underline decoration-2 cursor-pointer text-start"
             >
               {item.name}
