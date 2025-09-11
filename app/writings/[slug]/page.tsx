@@ -5,6 +5,14 @@ import { Badge } from "@/components/ui/badge";
 import ScrollUpButton from "@/components/layouts/writing-layout/scroll-up-button";
 import ShareButton from "@/components/layouts/writing-layout/share-button";
 
+export async function generateStaticParams() {
+  const allSlugs = getAllBlogSlug();
+
+  return allSlugs.map(({ slug }) => ({
+    slug: slug,
+  }));
+}
+
 export default async function Page({
   params,
 }: {
@@ -21,6 +29,7 @@ export default async function Page({
 
   const prevBlog = index > 0 ? allBlogs[index - 1] : null;
   const nextBlog = index < allBlogs.length - 1 ? allBlogs[index + 1] : null;
+
   return (
     <main className="mt-12 max-w-full prose prose-headings:text-foreground prose-p:text-zeta prose-ol:text-zeta prose-ul:text-zeta prose-li:text-zeta prose-a:text-foreground prose-strong:text-foreground">
       <article>{blog.content}</article>

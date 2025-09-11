@@ -3,6 +3,12 @@ import { getBlogs } from "./fetchers";
 import { Divider } from "@/components/ui/divider";
 import Image from "next/image";
 import { Fragment } from "react";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Irtideath - Writings",
+  description: "A collection of my thoughts and writings.",
+};
 
 export default async function Page() {
   const blogs = await getBlogs();
