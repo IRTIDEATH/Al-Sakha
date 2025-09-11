@@ -26,6 +26,7 @@ const ShareButton = () => {
       <Tooltip>
         <TooltipTrigger asChild>
           <button
+            aria-label="Share Button"
             onClick={handleShare}
             className="focus:outline-none cursor-pointer"
           >

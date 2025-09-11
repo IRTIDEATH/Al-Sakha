@@ -13,6 +13,7 @@ const ScrollUpButton = () => {
       <Tooltip>
         <TooltipTrigger asChild>
           <button
+            aria-label="Scroll Up Button"
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             className="bg-foreground cursor-pointer"
           >
