@@ -18,7 +18,7 @@ import {
 } from 'motion/react';
 import { createPortal } from 'react-dom';
 import { cn } from '@/lib/utils';
-import useClickOutside from './useClickOutside';
+import useClickOutside from './use-click-outside';
 import Image from 'next/image';
 
 export type MorphingDialogContextType = {

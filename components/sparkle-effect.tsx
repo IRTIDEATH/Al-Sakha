@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { motion } from "motion/react";
+import Image from "next/image";
 
 const sparkleSvgs = ["/Aks1.svg", "/Aks2.svg", "/Aks3.svg", "/Aks4.svg"];
 
@@ -68,10 +69,10 @@ export const Sparkle = ({
     }}
     onAnimationComplete={onComplete}
   >
-    <img
+    <Image
       src={sparkleSvgs[svgIndex]}
       alt="sparkle"
-      style={{ width: "100%", height: "auto" }}
+      fill
       draggable={false}
     />
   </motion.div>
