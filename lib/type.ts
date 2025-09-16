@@ -39,9 +39,3 @@ export type TinspirationLink = {
     href: string;
     title: string;
 }
-
-export type TcommunityLink = {
-    label: string;
-    href: string;
-    title: string;
-}

@@ -1,4 +1,4 @@
-import { TchatLink, TcommunityLink, TinspirationLink, Tinternship, TnavigationItem, Tproject, TskillBadgeIcon } from "@/lib/type";
+import { TchatLink, TinspirationLink, Tinternship, TnavigationItem, Tproject, TskillBadgeIcon } from "@/lib/type";
 
 export const navigationItems: TnavigationItem[] = [
     { name: "home", href: "/" },
@@ -375,32 +375,4 @@ export const ongithub: TskillBadgeIcon[] = [
         name: "Markdown",
         icon: "simple-icons:markdown"
     },
-]
-
-export const communityLink: TcommunityLink[] = [
-    {
-        label: "WPU Community",
-        href: "https://discord.gg/wpu",
-        title: "discord/wpu",
-    },
-    {
-        label: "IMPHNEN",
-        href: "http://discord.gg/imphnen",
-        title: "discord/imphnen",
-    },
-    {
-        label: "Compile Cafe",
-        href: "https://discord.gg/ExCvJtVTu6",
-        title: "discord/compile-cafe",
-    },
-    {
-        label: "TI POLNES",
-        href: "https://discord.gg/59dsBb2GnD",
-        title: "discord/ti-polnes",
-    },
-    {
-        label: "Fireship",
-        href: "https://discord.gg/fireship",
-        title: "discord/fireship",
-    }
 ]
