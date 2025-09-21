@@ -14,7 +14,7 @@ const TitleSection = () => {
       </p>
 
       <Divider className="md:mb-0"/>
-      <ul className="items-center justify-between text-[10px] font-medium font-roboto my-6 hidden md:flex">
+      <ul className="items-center justify-between text-[10px] font-medium font-roboto my-6 hidden md:flex select-none">
         <li>click</li>
         <li>the</li>
         <li>image</li>

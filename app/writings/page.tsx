@@ -25,7 +25,7 @@ export default async function Page() {
             research. just sharing what&apos;s on my mind.
           </p>
         </div>
-        <div className="w-44 h-40 hidden md:block border-[2px] border-b-0 border-t-0 border-suram">
+        <div className="w-44 h-40 hidden md:block border-[3px] border-b-0 border-t-0 border-suram">
           <Image
             src={"/zetamycat.webp"}
             alt="Vestia Zeta My Mine"

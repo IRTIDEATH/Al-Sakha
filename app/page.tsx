@@ -12,6 +12,10 @@ const Page = () => {
   return (
     <main className="mt-12">
       <HeroSection />
+      <ul className="flex items-center justify-between text-[8px] sm:text-[10px] font-medium mt-4 select-none">
+        <li><span className="inline-block rotate-90">{"->"}</span> scroll for</li>
+        <li>cool sh*t <span className="inline-block rotate-90">{"->"}</span></li>
+      </ul>
       <Divider />
       <AboutSection />
       <Divider />
