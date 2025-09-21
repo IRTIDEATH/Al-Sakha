@@ -13,7 +13,6 @@ export default function Page() {
   return (
     <main className="mt-12">
       <TitleSection />
-      <Divider />
       <CardProjectSecton />
       <MoreOnGithubSection />
     </main>

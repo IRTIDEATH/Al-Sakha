@@ -1,6 +1,7 @@
 "use client";
 
 import CoffeeText from "@/components/ui/coffee-text";
+import { Divider } from "@/components/ui/divider";
 
 const TitleSection = () => {
   return (
@@ -11,6 +12,13 @@ const TitleSection = () => {
         pending. i often used my free time, especially when unemployed, to build
         things, learn new skills, and stay <CoffeeText>productive.</CoffeeText>
       </p>
+
+      <Divider className="md:mb-0"/>
+      <ul className="items-center justify-between text-[10px] font-medium font-roboto my-6 hidden md:flex">
+        <li>click</li>
+        <li>the</li>
+        <li>image</li>
+      </ul>
     </section>
   );
 };

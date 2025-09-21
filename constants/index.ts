@@ -102,7 +102,7 @@ export const projects: Tproject[] = [
         name: "Pancarima",
         description: "pancarima is a website that provides information related to tourist attractions in indonesia. created during the sagasitas february 2024 competition.",
         view: "https://pancarima.vercel.app/",
-        status: "completed",
+        about: "competition",
         technologies: [
             {
                 name: "Javascript",
@@ -127,7 +127,7 @@ export const projects: Tproject[] = [
         name: "INDI Technology",
         description: "indi tech is a unique and interactive 3D-based company profile website of pt indi technology. created during pre-internship activities.",
         view: "https://web.indi.tech/",
-        status: "completed",
+        about: "internship",
         technologies: [
             {
                 name: "Javascript",
@@ -153,7 +153,7 @@ export const projects: Tproject[] = [
         description: "zentrahealth is a website that provides information related to a healthy lifestyle. created during the sagasitas august 2024 competition.",
         view: "https://zentrahealth.vercel.app/",
         github: "https://github.com/IRTIDEATH/ZentraHealth",
-        status: "completed",
+        about: "competition",
         technologies: [
             {
                 name: "Javascript",
@@ -182,7 +182,7 @@ export const projects: Tproject[] = [
         name: "Geoportal Laut Berkah",
         description: "an interactive 3D-based platform related to the licensing of marine space utilization in central kalimantan province. created during internship activities.",
         view: "https://web.geoportal-lautberkah.kalteng.go.id/",
-        status: "completed",
+        about: "internship",
         technologies: [
             {
                 name: "Javascript",
@@ -208,7 +208,7 @@ export const projects: Tproject[] = [
         description: "a small organization owned by al sakha, colored by the nord theme, and a layout style similar to the nord theme.",
         view: "https://zect.vercel.app/",
         github: "https://github.com/IRTIDEATH/Zect",
-        status: "completed",
+        about: "personal",
         technologies: [
             {
                 name: "Javascript",
@@ -233,7 +233,7 @@ export const projects: Tproject[] = [
         name: "Hadirin",
         description: "simple student attendance app for schools, created at the time of the exam. attendance recorded, learning monitored.",
         github: "https://github.com/IRTIDEATH/Absensi-Sederhana",
-        status: "completed",
+        about: "personal",
         technologies: [
             {
                 name: "Typescript",

@@ -20,7 +20,6 @@ import {
 import { Divider } from "@/components/ui/divider";
 import { projects } from "@/constants/index";
 import { useReducedMotion } from "motion/react";
-import Cursor from "@/components/animate-cursor";
 
 const CardProjectSecton = () => {
   const prefersReducedMotion = useReducedMotion();
@@ -30,23 +29,6 @@ const CardProjectSecton = () => {
         <section key={index}>
           <div className="flex w-full items-start gap-0 md:gap-5">
             <div className="relative hidden md:block">
-              <Cursor
-                attachToParent
-                variants={{
-                  initial: { scale: 0.3, opacity: 0 },
-                  animate: { scale: 1, opacity: 1 },
-                  exit: { scale: 0.3, opacity: 0 },
-                }}
-                transition={{
-                  ease: 'easeInOut',
-                  duration: 0.15,
-                }}
-                className='-left-10 -top-3'
-              >
-                <div className='ml-4 mt-1 bg-foreground px-1 py-0.5 text-[8px] text-background font-roboto'>
-                  click image
-                </div>
-              </Cursor>
               {!prefersReducedMotion && (
                 <MorphingDialog
                   transition={{
@@ -119,7 +101,7 @@ const CardProjectSecton = () => {
                       >
                         view
                       </Link>
-                      <span className="text-zeta">|</span>
+                      <span className="text-zeta select-none">|</span>
                     </>
                   ) : null}
                   {item.github ? (
@@ -132,11 +114,11 @@ const CardProjectSecton = () => {
                       >
                         github
                       </Link>
-                      <span className="text-zeta">|</span>
+                      <span className="text-zeta select-none">|</span>
                     </>
                   ) : null}
                   <Badge>
-                    {item.status}
+                    {item.about}
                   </Badge>
                 </div>
                 <div className="flex flex-wrap gap-2">

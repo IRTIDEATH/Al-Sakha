@@ -30,7 +30,7 @@ const MoreOnGithubSection = () => {
           >
             view
           </Link>
-          <span className="text-zeta">|</span>
+          <span className="text-zeta select-none">|</span>
           <Badge>list</Badge>
         </div>
         <div className="flex flex-wrap gap-2">

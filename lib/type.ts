@@ -23,7 +23,7 @@ export type Tproject = {
     description: string;
     view?: string;
     github?: string;
-    status: string;
+    about: string;
     technologies: TskillBadgeIcon[];
 }
 
