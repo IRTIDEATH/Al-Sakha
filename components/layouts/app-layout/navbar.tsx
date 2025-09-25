@@ -13,7 +13,6 @@ import { navigationItems } from "@/constants";
 import { Button } from "@/components/ui/button";
 import { motion } from "motion/react";
 import dynamic from "next/dynamic";
-import { useReducedMotion } from "motion/react";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
@@ -22,7 +21,6 @@ const SparkleGroup = dynamic(() => import("@/components/sparkle-effect"), {
 });
 
 const Navbar = () => {
-  const prefersReducedMotion = useReducedMotion();
   const pathname = usePathname();
   const [isClient, setIsClient] = useState<boolean>(false);
 
