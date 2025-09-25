@@ -81,13 +81,13 @@ export const Sparkle = ({
 const SparkleGroup = () => {
   const [sparkles, setSparkles] = useState<SparkleProps[]>([]);
   const sparkleId = useRef(0);
-  const componentId = useRef(Math.floor(Math.random() * 1000));
 
   useEffect(() => {
+    const componentId = Math.floor(Math.random() * 1000);
     const interval = setInterval(() => {
       setSparkles((prev) => {
         sparkleId.current += 1;
-        const uniqueId = componentId.current * 1000 + sparkleId.current;
+        const uniqueId = componentId * 1000 + sparkleId.current;
         const newSparkle = randomSparkle(uniqueId);
         const next = [...prev, newSparkle];
         return next.length > 20 ? next.slice(-20) : next;

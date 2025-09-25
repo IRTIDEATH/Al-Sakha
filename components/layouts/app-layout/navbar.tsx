@@ -15,6 +15,7 @@ import { motion } from "motion/react";
 import dynamic from "next/dynamic";
 import { useReducedMotion } from "motion/react";
 import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 
 const SparkleGroup = dynamic(() => import("@/components/sparkle-effect"), {
   ssr: false,
@@ -23,11 +24,17 @@ const SparkleGroup = dynamic(() => import("@/components/sparkle-effect"), {
 const Navbar = () => {
   const prefersReducedMotion = useReducedMotion();
   const pathname = usePathname();
+  const [isClient, setIsClient] = useState<boolean>(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
   return (
     <nav className="w-full h-24 text-foreground flex items-center justify-between">
       <div className="relative">
         <span className="font-medium text-[16px]">Irtideath</span>
-        {!prefersReducedMotion && <SparkleGroup />}
+        {isClient && <SparkleGroup />}
       </div>
       <div className="hidden md:flex items-center">
         <ul className="flex items-center gap-8 font-roboto font-medium text-[16px] pr-4">
