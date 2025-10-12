@@ -1,23 +1,23 @@
 "use client";
 
-import Link from "next/link";
-import { Badge } from "@/components/ui/badge";
 import { Icon } from "@iconify/react";
+import Link from "next/link";
 import {
   MorphingDialog,
-  MorphingDialogTrigger,
-  MorphingDialogContent,
   MorphingDialogClose,
-  MorphingDialogImage,
   MorphingDialogContainer,
+  MorphingDialogContent,
+  MorphingDialogImage,
+  MorphingDialogTrigger,
 } from "@/components/morphing-dialog";
+import { Badge } from "@/components/ui/badge";
+import { Divider } from "@/components/ui/divider";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { Divider } from "@/components/ui/divider";
 import { projects } from "@/constants/index";
 
 const CardProjectSecton = () => {
@@ -35,7 +35,7 @@ const CardProjectSecton = () => {
               >
                 <MorphingDialogTrigger>
                   <div className="relative h-40 w-28">
-                    <div className="w-full h-full bg-foreground hover:shadow-shadow z-10 absolute hover:bg-transparent ease-in-out transition-all duration-400" />
+                    <div className="absolute z-10 h-full w-full bg-foreground transition-all duration-400 ease-in-out hover:bg-transparent hover:shadow-shadow" />
                     <MorphingDialogImage
                       src={item.image}
                       alt={item.name}
@@ -54,7 +54,7 @@ const CardProjectSecton = () => {
                     </div>
                   </MorphingDialogContent>
                   <MorphingDialogClose
-                    className="fixed right-6 top-6 h-fit w-fit rounded-full bg-white p-1"
+                    className="fixed top-6 right-6 h-fit w-fit rounded-full bg-white p-1"
                     variants={{
                       initial: { opacity: 0 },
                       animate: {
@@ -83,21 +83,21 @@ const CardProjectSecton = () => {
               </MorphingDialog>
             </div>
             <article className="w-full">
-              <h2 className="mb-2 text-[24px] font-medium">{item.name}</h2>
-              <p className="mb-6 text-zeta text-[16px] font-medium">
+              <h2 className="mb-2 font-medium text-[24px]">{item.name}</h2>
+              <p className="mb-6 font-medium text-[16px] text-zeta">
                 {item.description}
               </p>
-              <div className="w-full mt-6 flex flex-col-reverse md:flex-row gap-4 md:gap-0 items-start md:items-center justify-start md:justify-between">
+              <div className="mt-6 flex w-full flex-col-reverse items-start justify-start gap-4 md:flex-row md:items-center md:justify-between md:gap-0">
                 <div className="flex items-center gap-3">
                   {item.view ? (
                     <>
                       <Link
                         href={item.view ?? ""}
-                        className="text-sm font-medium text-foreground hover:underline decoration-2"
+                        className="font-medium text-foreground text-sm decoration-2 hover:underline"
                       >
                         view
                       </Link>
-                      <span className="text-zeta select-none">|</span>
+                      <span className="select-none text-zeta">|</span>
                     </>
                   ) : null}
                   {item.github ? (
@@ -106,23 +106,25 @@ const CardProjectSecton = () => {
                         rel="noopener noreferrer"
                         target="_blank"
                         href={item.github ?? ""}
-                        className="text-sm font-medium text-foreground hover:underline decoration-2"
+                        className="font-medium text-foreground text-sm decoration-2 hover:underline"
                       >
                         github
                       </Link>
-                      <span className="text-zeta select-none">|</span>
+                      <span className="select-none text-zeta">|</span>
                     </>
                   ) : null}
-                  <Badge>
-                    {item.about}
-                  </Badge>
+                  <Badge>{item.about}</Badge>
                 </div>
                 <div className="flex flex-wrap gap-2">
                   {item.technologies.map((items, index) => (
                     <TooltipProvider delayDuration={100} key={index}>
                       <Tooltip>
                         <TooltipTrigger asChild>
-                          <Badge variant={"skill"} role="img" aria-label={items.name}>
+                          <Badge
+                            variant={"skill"}
+                            role="img"
+                            aria-label={items.name}
+                          >
                             <Icon icon={items.icon} />
                           </Badge>
                         </TooltipTrigger>

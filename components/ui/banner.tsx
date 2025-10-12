@@ -10,9 +10,9 @@ export default function Banner() {
   if (!isVisible) return null;
 
   return (
-    <div className="bg-foreground text-background sticky px-4 py-3 md:py-2 w-full top-0 left-0 z-[9999]">
-      <div className="flex gap-2 items-center">
-        <div className="flex grow gap-3 items-center justify-center">
+    <div className="sticky top-0 left-0 z-[9999] w-full bg-foreground px-4 py-3 text-background md:py-2">
+      <div className="flex items-center gap-2">
+        <div className="flex grow items-center justify-center gap-3">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             aria-hidden="true"

@@ -26,17 +26,17 @@ const ColorPaletteSection = () => {
   };
   return (
     <section>
-      <h1 className="text-2xl mb-4 font-medium">color palettes</h1>
-      <p className="w-full text-zeta font-medium text-[16px] text-start">
+      <h1 className="mb-4 font-medium text-2xl">color palettes</h1>
+      <p className="w-full text-start font-medium text-[16px] text-zeta">
         little and convenient. click to copy the color code.
       </p>
-      <ul className="w-full text-zeta font-medium text-lg text-start mt-4">
+      <ul className="mt-4 w-full text-start font-medium text-lg text-zeta">
         {colors.map((item, index) => (
           <li className="flex items-center gap-2" key={index}>
             <span className={`text-2xl ${item.class}`}>{"-->"}</span>
             <button
               onClick={() => handleCopyColor(item.name, item.hex)}
-              className="hover:underline decoration-2 cursor-pointer text-start"
+              className="cursor-pointer text-start decoration-2 hover:underline"
             >
               {item.name}
             </button>

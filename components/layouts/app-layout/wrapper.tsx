@@ -1,11 +1,11 @@
-"use client"
+"use client";
 
-import Navbar from "@/components/layouts/app-layout/navbar";
-import Footer from "@/components/layouts/app-layout/footer";
-import { ReactLenis } from "lenis/react";
 import type { LenisRef } from "lenis/react";
+import { ReactLenis } from "lenis/react";
 import { cancelFrame, frame } from "motion/react";
-import { PropsWithChildren, useEffect, useRef } from "react";
+import { type PropsWithChildren, useEffect, useRef } from "react";
+import Footer from "@/components/layouts/app-layout/footer";
+import Navbar from "@/components/layouts/app-layout/navbar";
 
 const Wrapper = ({ children }: PropsWithChildren) => {
   const lenisRef = useRef<LenisRef>(null);
@@ -20,7 +20,7 @@ const Wrapper = ({ children }: PropsWithChildren) => {
 
     return () => cancelFrame(update);
   }, []);
-  
+
   return (
     <ReactLenis options={{ autoRaf: false }} ref={lenisRef} root>
       <div className="mx-auto w-full max-w-[900px] px-7">
@@ -32,4 +32,4 @@ const Wrapper = ({ children }: PropsWithChildren) => {
   );
 };
 
-export default Wrapper
+export default Wrapper;

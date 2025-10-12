@@ -1,7 +1,7 @@
 "use client";
 
-import Image from "next/image";
 import dynamic from "next/dynamic";
+import Image from "next/image";
 
 const Cursor = dynamic(() => import("@/components/animate-cursor"), {
   ssr: false,
@@ -10,8 +10,8 @@ const Cursor = dynamic(() => import("@/components/animate-cursor"), {
 const HeroSection = () => {
   return (
     <section className="bg-foreground px-6 py-8">
-      <div className="space-y-3 flex flex-col items-start">
-        <h1 className="text-5xl font-semibold text-background">
+      <div className="flex flex-col items-start space-y-3">
+        <h1 className="font-semibold text-5xl text-background">
           <Cursor
             attachToParent
             variants={{
@@ -29,7 +29,7 @@ const HeroSection = () => {
               bounce: 0.01,
             }}
           >
-            <div className="w-58 h-34">
+            <div className="h-34 w-58">
               <Image src="/zetaagent.png" alt="Vestia Zeta" fill priority />
             </div>
           </Cursor>

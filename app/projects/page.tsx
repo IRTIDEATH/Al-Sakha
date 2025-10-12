@@ -1,7 +1,7 @@
+import type { Metadata } from "next";
 import CardProjectSecton from "@/components/pages/project/card-project-section";
 import MoreOnGithubSection from "@/components/pages/project/more-on-github-section";
 import TitleSection from "@/components/pages/project/title-section";
-import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Irtideath - Projects",

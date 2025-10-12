@@ -1,8 +1,8 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
 import { motion } from "motion/react";
 import Image from "next/image";
+import { useEffect, useRef, useState } from "react";
 
 const sparkleSvgs = ["/Aks1.svg", "/Aks2.svg", "/Aks3.svg", "/Aks4.svg"];
 
@@ -69,12 +69,7 @@ export const Sparkle = ({
     }}
     onAnimationComplete={onComplete}
   >
-    <Image
-      src={sparkleSvgs[svgIndex]}
-      alt="sparkle"
-      fill
-      draggable={false}
-    />
+    <Image src={sparkleSvgs[svgIndex]} alt="sparkle" fill draggable={false} />
   </motion.div>
 );
 

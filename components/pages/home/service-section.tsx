@@ -2,9 +2,9 @@ import { DividerVertical } from "@/components/ui/divider";
 
 const ServiceSection = () => {
   return (
-    <section className="w-full mx-auto">
-      <h1 className="text-2xl mb-6 font-medium">service</h1>
-      <p className="w-full text-zeta font-medium text-[16px] text-start">
+    <section className="mx-auto w-full">
+      <h1 className="mb-6 font-medium text-2xl">service</h1>
+      <p className="w-full text-start font-medium text-[16px] text-zeta">
         i provide services that reflect my current capabilities, with a focus on
         delivering effective and thoughtful solutions.
       </p>
@@ -12,8 +12,8 @@ const ServiceSection = () => {
         <div className="relative flex flex-row-reverse items-start justify-between gap-4">
           <DividerVertical />
           <article className="space-y-2">
-            <h2 className="text-lg font-medium">Frontend</h2>
-            <p className="text-zeta text-[15px]">
+            <h2 className="font-medium text-lg">Frontend</h2>
+            <p className="text-[15px] text-zeta">
               transforming designs into functional and responsive user
               interfaces. i create web experiences that are interactive, fast to
               load, seo friendly and optimized across multiple devices, from
@@ -27,7 +27,7 @@ const ServiceSection = () => {
               viewBox="0 0 196 218"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              className="w-10 h-full"
+              className="h-full w-10"
               aria-hidden="true"
             >
               <path
@@ -48,8 +48,8 @@ const ServiceSection = () => {
 
         <div className="flex flex-row-reverse items-start justify-between gap-4">
           <article className="space-y-2">
-            <h2 className="text-lg font-medium">Backend</h2>
-            <p className="text-zeta text-[15px]">
+            <h2 className="font-medium text-lg">Backend</h2>
+            <p className="text-[15px] text-zeta">
               i built a secure API that allows seamless integration, scalability
               across the system. with a focus on efficiency and reliability,
               ensuring clean and well-structured code, making future development
@@ -63,7 +63,7 @@ const ServiceSection = () => {
               viewBox="0 0 165 221"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              className="w-10 h-full"
+              className="h-full w-10"
               aria-hidden="true"
             >
               <path

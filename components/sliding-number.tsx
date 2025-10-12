@@ -1,12 +1,12 @@
 "use client";
-import { useEffect, useId } from "react";
 import {
-  MotionValue,
+  type MotionValue,
   motion,
+  motionValue,
   useSpring,
   useTransform,
-  motionValue,
 } from "motion/react";
+import { useEffect, useId } from "react";
 import useMeasure from "react-use-measure";
 
 const TRANSITION = {
@@ -26,7 +26,7 @@ function Digit({ value, place }: { value: number; place: number }) {
   }, [animatedValue, valueRoundedToPlace]);
 
   return (
-    <div className="relative inline-block w-[1ch] overflow-x-visible overflow-y-clip leading-none tabular-nums">
+    <div className="relative inline-block w-[1ch] overflow-y-clip overflow-x-visible tabular-nums leading-none">
       <div className="invisible">0</div>
       {Array.from({ length: 10 }, (_, i) => (
         <Number key={i} mv={animatedValue} number={i} />
@@ -91,8 +91,8 @@ export default function SlidingNumber({
   const paddedInteger =
     padStart && integerValue < 10 ? `0${integerPart}` : integerPart;
   const integerDigits = paddedInteger.split("");
-  const integerPlaces = integerDigits.map((_, i) =>
-    Math.pow(10, integerDigits.length - i - 1)
+  const integerPlaces = integerDigits.map(
+    (_, i) => 10 ** (integerDigits.length - i - 1),
   );
 
   return (
@@ -112,7 +112,7 @@ export default function SlidingNumber({
             <Digit
               key={`decimal-${index}`}
               value={parseInt(decimalPart, 10)}
-              place={Math.pow(10, decimalPart.length - index - 1)}
+              place={10 ** (decimalPart.length - index - 1)}
             />
           ))}
         </>

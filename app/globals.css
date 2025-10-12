@@ -3,13 +3,12 @@
 
 @plugin "@tailwindcss/typography";
 
-
 :root {
-  --background: #F2F2F4;
-  --foreground: #2E2E2E;
-  --coffee: #8C6053;
-  --zeta: #686C6F;
-  --suram: #E6E8ED;
+  --background: #f2f2f4;
+  --foreground: #2e2e2e;
+  --coffee: #8c6053;
+  --zeta: #686c6f;
+  --suram: #e6e8ed;
   --shadow: 4px 4px 0px 0px var(--foreground);
 }
 
@@ -29,5 +28,5 @@ body {
 }
 
 p {
-  @apply leading-relaxed
+  @apply leading-relaxed;
 }

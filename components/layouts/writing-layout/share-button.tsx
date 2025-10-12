@@ -28,7 +28,7 @@ const ShareButton = () => {
           <button
             aria-label="Share Button"
             onClick={handleShare}
-            className="focus:outline-none cursor-pointer"
+            className="cursor-pointer focus:outline-none"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"

@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { Roboto_Mono, Geist_Mono } from "next/font/google";
+import { Geist_Mono, Roboto_Mono } from "next/font/google";
 import "./globals.css";
-import { Toaster } from "@/components/ui/sonner";
 import Wrapper from "@/components/layouts/app-layout/wrapper";
+import { Toaster } from "@/components/ui/sonner";
 
 const robotoMono = Roboto_Mono({
   variable: "--font-roboto-mono",
@@ -64,7 +64,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${geistMono.variable} ${robotoMono.variable} antialiased font-normal font-geist text-foreground`}
+        className={`${geistMono.variable} ${robotoMono.variable} font-geist font-normal text-foreground antialiased`}
       >
         <Wrapper>{children}</Wrapper>
         <Toaster

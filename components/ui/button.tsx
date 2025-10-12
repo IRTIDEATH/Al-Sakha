@@ -1,39 +1,39 @@
 "use client";
 
-import * as React from "react";
 import { Slot } from "@radix-ui/react-slot";
 import { cva, type VariantProps } from "class-variance-authority";
 import { motion } from "motion/react";
+import * as React from "react";
 
 import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex items-center cursor-pointer justify-center gap-2 whitespace-nowrap text-base transition-colors focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
+  "inline-flex cursor-pointer items-center justify-center gap-2 whitespace-nowrap text-base transition-colors focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
   {
     variants: {
       variant: {
         default:
-          "bg-transparent border-[1.5px] border-foreground text-foreground relative z-10 font-roboto font-medium",
+          "relative z-10 border-[1.5px] border-foreground bg-transparent font-medium font-roboto text-foreground",
         link: "text-primary underline-offset-4 hover:underline",
         ghost: "hover:text-background",
         classic:
-          "w-full bg-foreground border border-foreground focus:bg-transparent focus:text-foreground text-center text-background",
+          "w-full border border-foreground bg-foreground text-center text-background focus:bg-transparent focus:text-foreground",
         active:
-          "w-full border border-foreground bg-transparent text-foreground text-center",
+          "w-full border border-foreground bg-transparent text-center text-foreground",
       },
       size: {
         default: "px-6 py-1",
         sm: "h-8 rounded-md px-3 text-xs",
         lg: "h-10 rounded-md px-8",
         icon: "h-9 w-9",
-        classic: "text-xl py-2.5",
+        classic: "py-2.5 text-xl",
       },
     },
     defaultVariants: {
       variant: "default",
       size: "default",
     },
-  }
+  },
 );
 
 export interface ButtonProps
@@ -52,7 +52,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         {...props}
       />
     );
-  }
+  },
 );
 Button.displayName = "Button";
 

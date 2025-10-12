@@ -8,7 +8,7 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-suram flex items-center justify-between h-12 mb-8 mt-16">
+    <footer className="mt-16 mb-8 flex h-12 w-full items-center justify-between bg-suram">
       <div className="flex items-center">
         <TooltipProvider delayDuration={300}>
           <Tooltip>
@@ -18,7 +18,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 target="_blank"
                 aria-label="IRTIDEATH github pages"
-                className="text-suram bg-foreground h-12 w-12 flex items-center justify-center border border-foreground hover:text-foreground hover:bg-suram transition-colors duration-400"
+                className="flex h-12 w-12 items-center justify-center border border-foreground bg-foreground text-suram transition-colors duration-400 hover:bg-suram hover:text-foreground"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -42,7 +42,7 @@ const Footer = () => {
           </Tooltip>
         </TooltipProvider>
       </div>
-      <div className="text-sm text-foreground px-4 font-medium">
+      <div className="px-4 font-medium text-foreground text-sm">
         © 2025 - Irtideath
       </div>
     </footer>

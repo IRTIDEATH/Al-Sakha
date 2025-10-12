@@ -1,6 +1,6 @@
-import type { MDXComponents } from "mdx/types";
-import { PropsWithChildren } from "react";
 import hljs from "highlight.js";
+import type { MDXComponents } from "mdx/types";
+import type { PropsWithChildren } from "react";
 import "highlight.js/styles/github.min.css";
 
 const Pre = ({ children }: PropsWithChildren) => {

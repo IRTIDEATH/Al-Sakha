@@ -1,6 +1,11 @@
 "use client";
 
+import { motion } from "motion/react";
+import dynamic from "next/dynamic";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
+import { Button } from "@/components/ui/button";
 import {
   Drawer,
   DrawerContent,
@@ -10,11 +15,6 @@ import {
   DrawerTrigger,
 } from "@/components/ui/drawer";
 import { navigationItems } from "@/constants";
-import { Button } from "@/components/ui/button";
-import { motion } from "motion/react";
-import dynamic from "next/dynamic";
-import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
 
 const SparkleGroup = dynamic(() => import("@/components/sparkle-effect"), {
   ssr: false,
@@ -29,18 +29,18 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="w-full h-24 text-foreground flex items-center justify-between">
+    <nav className="flex h-24 w-full items-center justify-between text-foreground">
       <div className="relative">
         <span className="font-medium text-[16px]">Irtideath</span>
         {isClient && <SparkleGroup />}
       </div>
-      <div className="hidden md:flex items-center">
-        <ul className="flex items-center gap-8 font-roboto font-medium text-[16px] pr-4">
+      <div className="hidden items-center md:flex">
+        <ul className="flex items-center gap-8 pr-4 font-medium font-roboto text-[16px]">
           {navigationItems.map((item, index) => (
             <li key={index}>
               <Link
                 aria-label="Nav link"
-                className="hover:underline decoration-2 text-zeta inline-block align-middle"
+                className="inline-block align-middle text-zeta decoration-2 hover:underline"
                 href={item.href}
               >
                 {item.name}
@@ -48,18 +48,14 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
-        <span className="px-2 bg-foreground text-background text-xl font-bold shadow-shadow">
+        <span className="bg-foreground px-2 font-bold text-background text-xl shadow-shadow">
           {"<--"}
         </span>
       </div>
-      <div className="md:hidden flex items-center font-roboto bg-suram">
-        <span className="px-4 text-lg font-medium">menu</span>
+      <div className="flex items-center bg-suram font-roboto md:hidden">
+        <span className="px-4 font-medium text-lg">menu</span>
         <Drawer>
-          <DrawerTrigger
-            aria-label="Menu button"
-            role="button"
-            asChild
-          >
+          <DrawerTrigger aria-label="Menu button" role="button" asChild>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="40"
@@ -70,7 +66,7 @@ const Navbar = () => {
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
-              className="bg-foreground border border-foreground p-1.5 text-background active:bg-background active:text-foreground"
+              className="border border-foreground bg-foreground p-1.5 text-background active:bg-background active:text-foreground"
             >
               <path d="M4 12h16" />
               <path d="M4 18h16" />
@@ -82,7 +78,7 @@ const Navbar = () => {
             <DrawerDescription className="sr-only">
               Navigation menu with links to different pages
             </DrawerDescription>
-            <DrawerFooter className="flex flex-col items-center w-full gap-2">
+            <DrawerFooter className="flex w-full flex-col items-center gap-2">
               {navigationItems.map((item, index) => {
                 const isActive = pathname === item.href;
                 return (

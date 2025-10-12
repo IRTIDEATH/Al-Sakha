@@ -15,7 +15,7 @@ const ScrollUpButton = () => {
           <button
             aria-label="Scroll Up Button"
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            className="bg-foreground cursor-pointer"
+            className="cursor-pointer bg-foreground"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"

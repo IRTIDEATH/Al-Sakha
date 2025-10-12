@@ -1,4 +1,4 @@
-import { PropsWithChildren } from "react";
+import type { PropsWithChildren } from "react";
 import { cn } from "@/lib/utils";
 
 type Props = {
@@ -6,9 +6,7 @@ type Props = {
 };
 
 const ZetaText = ({ children, className }: PropsWithChildren<Props>) => {
-  return (
-    <span className={cn("text-zeta", className)}>{children}</span>
-  );
+  return <span className={cn("text-zeta", className)}>{children}</span>;
 };
 
 export default ZetaText;
