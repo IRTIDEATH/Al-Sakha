@@ -1,6 +1,4 @@
-import { existsSync, statSync } from "node:fs";
-import { join } from "node:path";
-import { getAllBlogSlug } from "./writings/fetchers";
+import { getBlogs } from "./writings/fetchers";
 
 const BASE_URL = "https://irtideath.vercel.app";
 
@@ -18,15 +16,15 @@ type SitemapEntry = {
   priority: number;
 };
 
-function getLastModified(filePath: string): string {
-  const stats = statSync(filePath);
-  return stats.mtime.toISOString();
-}
-
 export default async function sitemap(): Promise<SitemapEntry[]> {
-  const writings = getAllBlogSlug();
+  const blogs = await getBlogs();
 
-  const contentDir = join(process.cwd(), "app/writings/_mdx-content");
+  const blogRoutes = blogs.map((blog) => ({
+    url: `${BASE_URL}/writings/${blog.slug}`,
+    lastModified: new Date(blog.frontmatter.date).toISOString(),
+    changeFrequency: "daily" as const,
+    priority: 0.9,
+  }));
 
   const staticRoutes: SitemapEntry[] = [
     {
@@ -47,20 +45,9 @@ export default async function sitemap(): Promise<SitemapEntry[]> {
       changeFrequency: "daily",
       priority: 0.8,
     },
-    ...writings
-      .filter(({ slug }) => existsSync(join(contentDir, `${slug}.mdx`)))
-      .map(({ slug }) => {
-        const filePath = join(contentDir, `${slug}.mdx`);
-        return {
-          url: `${BASE_URL}/writings/${slug}`,
-          lastModified: getLastModified(filePath),
-          changeFrequency: "daily" as const,
-          priority: 0.9,
-        };
-      }),
   ];
 
-  return [...staticRoutes].map((entry) => ({
+  return [...staticRoutes, ...blogRoutes].map((entry) => ({
     ...entry,
     url: entry.url.replace(/\/$/, ""),
   }));
