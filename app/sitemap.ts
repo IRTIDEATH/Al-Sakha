@@ -1,22 +1,9 @@
+import { MetadataRoute } from "next";
 import { getBlogs } from "./writings/fetchers";
 
 const BASE_URL = "https://irtideath.vercel.app";
 
-type SitemapEntry = {
-  url: string;
-  lastModified: string;
-  changeFrequency:
-    | "always"
-    | "hourly"
-    | "daily"
-    | "weekly"
-    | "monthly"
-    | "yearly"
-    | "never";
-  priority: number;
-};
-
-export default async function sitemap(): Promise<SitemapEntry[]> {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const blogs = await getBlogs();
 
   const blogRoutes = blogs.map((blog) => ({
@@ -26,7 +13,7 @@ export default async function sitemap(): Promise<SitemapEntry[]> {
     priority: 0.9,
   }));
 
-  const staticRoutes: SitemapEntry[] = [
+  const staticRoutes: MetadataRoute.Sitemap = [
     {
       url: BASE_URL,
       lastModified: new Date().toISOString(),
@@ -52,5 +39,3 @@ export default async function sitemap(): Promise<SitemapEntry[]> {
     url: entry.url.replace(/\/$/, ""),
   }));
 }
-
-export const dynamic = "force-static";
