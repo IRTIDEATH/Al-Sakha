@@ -1,4 +1,4 @@
-import { MetadataRoute } from "next";
+import type { MetadataRoute } from "next";
 import { getBlogs } from "./writings/fetchers";
 
 const BASE_URL = "https://irtideath.vercel.app";

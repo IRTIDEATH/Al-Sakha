@@ -4,7 +4,6 @@ import { motion } from "motion/react";
 import dynamic from "next/dynamic";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import {
   Drawer,
@@ -22,17 +21,12 @@ const SparkleGroup = dynamic(() => import("@/components/sparkle-effect"), {
 
 const Navbar = () => {
   const pathname = usePathname();
-  const [isClient, setIsClient] = useState<boolean>(false);
-
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
 
   return (
     <nav className="flex h-24 w-full items-center justify-between text-foreground">
       <div className="relative">
         <span className="font-medium text-[16px]">Irtideath</span>
-        {isClient && <SparkleGroup />}
+        <SparkleGroup />
       </div>
       <div className="hidden items-center md:flex">
         <ul className="flex items-center gap-8 pr-4 font-medium font-roboto text-[16px]">

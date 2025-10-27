@@ -6,7 +6,7 @@ import { DotDivider } from "@/components/ui/divider";
 const contentDir = path.join(process.cwd(), "app/writings/_mdx-content");
 
 export async function getBlogBySlug(slug: string) {
-  const fileName = slug + ".mdx";
+  const fileName = `${slug}.mdx`;
   const filePath = path.join(contentDir, fileName);
   const fileContent = fs.readFileSync(filePath, "utf8");
   const { frontmatter, content } = await compileMDX<{
