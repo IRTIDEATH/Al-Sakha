@@ -13,6 +13,7 @@ export type Tinternship = {
   company: string;
   position: string;
   date: string;
+  datetime: string;
   technologies: TskillBadgeIcon[];
   link: string;
 };

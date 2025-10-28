@@ -62,6 +62,7 @@ export const internships: Tinternship[] = [
     company: "INDI Technology",
     position: "Fullstack Developer",
     date: "Sep - Nov 2024",
+    datetime: "2024-09",
     technologies: [
       {
         name: "Javascript",
@@ -86,6 +87,7 @@ export const internships: Tinternship[] = [
     company: "GAMECOMM",
     position: "Frontend Developer",
     date: "Jan - Mar 2025",
+    datetime: "2025-01",
     technologies: [
       {
         name: "Typescript",
