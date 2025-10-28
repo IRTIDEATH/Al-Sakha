@@ -3,7 +3,7 @@ import { DividerVertical } from "@/components/ui/divider";
 const ServiceSection = () => {
   return (
     <section className="mx-auto w-full">
-      <h1 className="mb-6 font-medium text-2xl">service</h1>
+      <h2 className="mb-6 font-medium text-2xl">service</h2>
       <p className="w-full text-start font-medium text-[16px] text-zeta">
         i provide services that reflect my current capabilities, with a focus on
         delivering effective and thoughtful solutions.
@@ -12,7 +12,7 @@ const ServiceSection = () => {
         <div className="relative flex flex-row-reverse items-start justify-between gap-4">
           <DividerVertical />
           <article className="space-y-2">
-            <h2 className="font-medium text-lg">Frontend</h2>
+            <h3 className="font-medium text-lg">Frontend</h3>
             <p className="text-[15px] text-zeta">
               transforming designs into functional and responsive user
               interfaces. i create web experiences that are interactive, fast to
@@ -48,7 +48,7 @@ const ServiceSection = () => {
 
         <div className="flex flex-row-reverse items-start justify-between gap-4">
           <article className="space-y-2">
-            <h2 className="font-medium text-lg">Backend</h2>
+            <h3 className="font-medium text-lg">Backend</h3>
             <p className="text-[15px] text-zeta">
               i built a secure API that allows seamless integration, scalability
               across the system. with a focus on efficiency and reliability,

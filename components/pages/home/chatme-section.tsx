@@ -6,7 +6,7 @@ const ChatmeSection = () => {
   return (
     <section className="flex w-full flex-col justify-between gap-4 md:flex-row md:items-end md:gap-11">
       <div>
-        <h1 className="mb-4 font-medium text-2xl">wanna talk?</h1>
+        <h2 className="mb-4 font-medium text-2xl">wanna talk?</h2>
         <p className="w-full text-start font-medium text-[16px] text-zeta">
           need help, consultation, talk about random things, playing games, and
           connect with me.

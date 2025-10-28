@@ -26,7 +26,7 @@ const ColorPaletteSection = () => {
   };
   return (
     <section className="font-medium text-zeta">
-      <h1 className="mb-3 text-2xl text-foreground">color palettes</h1>
+      <h2 className="mb-3 text-2xl text-foreground">color palettes</h2>
       <p className="w-full text-start text-[16px]">
         little and convenient. click to copy the color code.
       </p>
