@@ -6,7 +6,7 @@ import { getBlogs } from "./fetchers";
 
 export const metadata: Metadata = {
   title: "Irtideath - Writings",
-  description: "you are free to compose the meaning",
+  description: "you are free to compose the meaning.",
 };
 
 export default async function Page() {

@@ -5,7 +5,7 @@ import TitleSection from "@/components/pages/project/title-section";
 
 export const metadata: Metadata = {
   title: "Irtideath - Projects",
-  description: "A collection of projects I've worked on.",
+  description: "chasing something until lose all feeling and forget the real world.",
 };
 
 export default function Page() {

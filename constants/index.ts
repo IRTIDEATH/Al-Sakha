@@ -367,11 +367,6 @@ export const inspirationLink: TinspirationLink[] = [
     href: "https://growtopia.fandom.com/wiki/Samille%27s_Soul_Abductor",
     title: "Samille's Soul",
   },
-  {
-    label: "Zeta my cat kkkk81115",
-    href: "https://x.com/kkkk8115/status/1891482869987475896?s=19",
-    title: "@kkkk8115",
-  },
 ];
 
 export const ongithub: TskillBadgeIcon[] = [
