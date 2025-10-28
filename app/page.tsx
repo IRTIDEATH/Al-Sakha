@@ -1,8 +1,6 @@
 import AboutSection from "@/components/pages/home/about-section";
 import ChatmeSection from "@/components/pages/home/chatme-section";
-import ColorPaletteSection from "@/components/pages/home/color-palette-section";
 import HeroSection from "@/components/pages/home/hero-section";
-import InspirationSection from "@/components/pages/home/inspiration-section";
 import ServiceSection from "@/components/pages/home/service-section";
 import SkillSection from "@/components/pages/home/skill-section";
 import WorkExperienceSection from "@/components/pages/home/work-section";
@@ -28,10 +26,6 @@ const Page = () => {
       <WorkExperienceSection />
       <Divider />
       <ServiceSection />
-      <Divider />
-      <ColorPaletteSection />
-      <Divider />
-      <InspirationSection />
       <Divider />
       <ChatmeSection />
     </main>

@@ -25,12 +25,12 @@ const ColorPaletteSection = () => {
     });
   };
   return (
-    <section>
-      <h1 className="mb-4 font-medium text-2xl">color palettes</h1>
-      <p className="w-full text-start font-medium text-[16px] text-zeta">
+    <section className="font-medium text-zeta">
+      <h1 className="mb-3 text-2xl text-foreground">color palettes</h1>
+      <p className="w-full text-start text-[16px]">
         little and convenient. click to copy the color code.
       </p>
-      <ul className="mt-4 w-full text-start font-medium text-lg text-zeta">
+      <ul className="mt-5 w-full text-start text-lg">
         {colors.map((item, index) => (
           <li className="flex items-center gap-2" key={index}>
             <span className={`text-2xl ${item.class}`}>{"-->"}</span>
