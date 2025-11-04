@@ -8,7 +8,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   const blogRoutes = blogs.map((blog) => ({
     url: `${BASE_URL}/writings/${blog.slug}`,
-    lastModified: new Date(blog.frontmatter.date).toISOString(),
+    lastModified: new Date(blog.frontmatter.date),
     changeFrequency: "daily" as const,
     priority: 0.9,
   }));
@@ -16,25 +16,25 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const staticRoutes: MetadataRoute.Sitemap = [
     {
       url: BASE_URL,
-      lastModified: new Date().toISOString(),
+      lastModified: new Date(),
       changeFrequency: "daily",
       priority: 1.0,
     },
     {
       url: `${BASE_URL}/about`,
-      lastModified: new Date().toISOString(),
+      lastModified: new Date(),
       changeFrequency: "daily",
       priority: 0.8,
     },
     {
       url: `${BASE_URL}/projects`,
-      lastModified: new Date().toISOString(),
+      lastModified: new Date(),
       changeFrequency: "daily",
       priority: 0.8,
     },
     {
       url: `${BASE_URL}/writings`,
-      lastModified: new Date().toISOString(),
+      lastModified: new Date(),
       changeFrequency: "daily",
       priority: 0.8,
     },
