@@ -20,8 +20,8 @@ const TitleSection = () => {
         <p>
           every element—from color to layout to words—embodies a personality
           that is humble, open, and introspective. this isn&apos;t just a
-          portfolio—it&apos;s an invitation to <CoffeeText>quietly</CoffeeText> get
-          to know someone through design that speaks without shouting.
+          portfolio—it&apos;s an invitation to <CoffeeText>quietly</CoffeeText>{" "}
+          get to know someone through design that speaks without shouting.
         </p>
       </div>
     </article>

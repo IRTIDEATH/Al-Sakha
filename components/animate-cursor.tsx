@@ -45,7 +45,7 @@ export default function Cursor({
       cursorX.set(window.innerWidth / 2);
       cursorY.set(window.innerHeight / 2);
     }
-  }, []);
+  }, [cursorX, cursorY]);
 
   useEffect(() => {
     if (!attachToParent) {
@@ -65,7 +65,7 @@ export default function Cursor({
     return () => {
       document.removeEventListener("mousemove", updatePosition);
     };
-  }, [cursorX, cursorY, onPositionChange]);
+  }, [cursorX, cursorY, onPositionChange, attachToParent]);
 
   const cursorXSpring = useSpring(cursorX, springConfig || { duration: 0 });
   const cursorYSpring = useSpring(cursorY, springConfig || { duration: 0 });

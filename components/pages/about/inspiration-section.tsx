@@ -7,7 +7,8 @@ const InspirationSection = () => {
     <section className="font-medium text-zeta">
       <h2 className="mb-3 text-2xl text-foreground">reference & inspiration</h2>
       <p className="w-full text-start text-[16px] text-zeta">
-        these are <CoffeeText>cool</CoffeeText> portfolios and stuff that i'm using.
+        these are <CoffeeText>cool</CoffeeText> portfolios and stuff that i'm
+        using.
       </p>
       <ul className="mt-5 w-full text-start text-lg text-zeta">
         {inspirationLink.map((item, index) => (

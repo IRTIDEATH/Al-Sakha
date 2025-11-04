@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     "vestia zeta",
     "cat",
     "iya, when yh",
-    "yasudahlah"
+    "yasudahlah",
   ],
   authors: [
     {

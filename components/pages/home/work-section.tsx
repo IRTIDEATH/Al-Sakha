@@ -62,7 +62,9 @@ const WorkExperienceSection = () => {
               </h2>
               <p className="text-[16px]">{item.position}</p>
             </article>
-            <time dateTime={item.datetime} className="mt-2 text-[14px]">{item.date}</time>
+            <time dateTime={item.datetime} className="mt-2 text-[14px]">
+              {item.date}
+            </time>
           </div>
         ))}
       </div>
