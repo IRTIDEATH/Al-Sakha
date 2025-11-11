@@ -6,12 +6,14 @@ const BASE_URL = "https://irtideath.vercel.app";
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const blogs = await getBlogs();
 
-  const blogRoutes = blogs.map((blog) => ({
-    url: `${BASE_URL}/writings/${blog.slug}`,
-    lastModified: new Date(blog.frontmatter.date),
-    changeFrequency: "daily" as const,
-    priority: 0.9,
-  }));
+  const blogRoutes = blogs
+    .filter((blog) => blog.slug)
+    .map((blog) => ({
+      url: `${BASE_URL}/writings/${blog.slug}`,
+      lastModified: new Date(blog.frontmatter.date),
+      changeFrequency: "daily" as const,
+      priority: 0.9,
+    }));
 
   const staticRoutes: MetadataRoute.Sitemap = [
     {
@@ -40,8 +42,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
   ];
 
-  return [...staticRoutes, ...blogRoutes].map((entry) => ({
-    ...entry,
-    url: entry.url.replace(/\/$/, ""),
-  }));
+  return [...staticRoutes, ...blogRoutes];
 }
