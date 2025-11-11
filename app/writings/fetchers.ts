@@ -33,8 +33,9 @@ export async function getBlogBySlug(slug: string) {
 
 export async function getBlogs() {
   const files = fs.readdirSync(contentDir);
+  const mdxFiles = files.filter((file) => path.extname(file) === ".mdx");
   const blogs = await Promise.all(
-    files.map(async (file) => await getBlogBySlug(path.parse(file).name)),
+    mdxFiles.map(async (file) => await getBlogBySlug(path.parse(file).name)),
   );
   blogs.sort(
     (a, b) =>
@@ -46,6 +47,7 @@ export async function getBlogs() {
 
 export function getAllBlogSlug() {
   const files = fs.readdirSync(contentDir);
-  const slugs = files.map((file) => ({ slug: path.parse(file).name }));
+  const mdxFiles = files.filter((file) => path.extname(file) === ".mdx");
+  const slugs = mdxFiles.map((file) => ({ slug: path.parse(file).name }));
   return slugs;
 }

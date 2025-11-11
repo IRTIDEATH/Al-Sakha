@@ -7,7 +7,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const blogs = await getBlogs();
 
   const blogRoutes = blogs
-    .filter((blog) => blog.slug)
+    .filter(
+      (blog) =>
+        blog && typeof blog.slug === "string" && !!blog.frontmatter?.date,
+    )
     .map((blog) => ({
       url: `${BASE_URL}/writings/${blog.slug}`,
       lastModified: new Date(blog.frontmatter.date),
