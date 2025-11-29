@@ -13,7 +13,7 @@ import {
   DrawerTitle,
   DrawerTrigger,
 } from "@/components/ui/drawer";
-import { navigationItems } from "@/constants";
+import { navigationItems } from "@/constants/navigation";
 
 const SparkleGroup = dynamic(() => import("@/components/sparkle-effect"), {
   ssr: false,

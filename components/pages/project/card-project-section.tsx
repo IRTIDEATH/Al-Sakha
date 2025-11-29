@@ -18,7 +18,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { projects } from "@/constants/index";
+import { projects } from "@/constants/project";
 
 const CardProjectSecton = () => {
   return (

@@ -8,18 +8,20 @@ import { Divider } from "@/components/ui/divider";
 
 const Page = () => {
   return (
-    <main className="mt-12">
-      <HeroSection />
-      <ul className="mt-4 flex select-none items-center justify-between font-medium text-[8px] sm:text-[10px]">
-        <li>
-          <span className="inline-block rotate-90">{"->"}</span> scroll for
-        </li>
-        <li>
-          cool sh*t <span className="inline-block rotate-90">{"->"}</span>
-        </li>
-      </ul>
-      <Divider />
-      <AboutSection />
+    <>
+      <main className="mt-12">
+        <HeroSection />
+        <div className="mt-4 flex select-none items-center justify-between font-medium text-[8px] sm:text-[10px]">
+          <span>
+            <span className="inline-block rotate-90">{"->"}</span> scroll for
+          </span>
+          <span>
+            cool sh*t <span className="inline-block rotate-90">{"->"}</span>
+          </span>
+        </div>
+        <Divider />
+        <AboutSection />
+      </main>
       <Divider />
       <SkillSection />
       <Divider />
@@ -28,7 +30,7 @@ const Page = () => {
       <ServiceSection />
       <Divider />
       <ChatmeSection />
-    </main>
+    </>
   );
 };
 

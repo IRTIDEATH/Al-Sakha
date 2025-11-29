@@ -8,7 +8,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { ongithub } from "@/constants";
+import { onGithubs } from "@/constants/on-github";
 
 const MoreOnGithubSection = () => {
   return (
@@ -33,7 +33,7 @@ const MoreOnGithubSection = () => {
           <Badge>list</Badge>
         </div>
         <div className="flex flex-wrap gap-2">
-          {ongithub.map((items, index) => (
+          {onGithubs.map((items, index) => (
             <TooltipProvider delayDuration={100} key={index}>
               <Tooltip>
                 <TooltipTrigger asChild>

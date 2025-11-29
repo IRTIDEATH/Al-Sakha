@@ -1,6 +1,6 @@
 import Link from "next/link";
 import CoffeeText from "@/components/ui/coffee-text";
-import { inspirationLink } from "@/constants";
+import { inspirationLink } from "@/constants/inspiration-link";
 
 const InspirationSection = () => {
   return (

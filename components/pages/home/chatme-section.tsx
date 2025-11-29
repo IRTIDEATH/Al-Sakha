@@ -1,6 +1,6 @@
 import { Icon } from "@iconify/react";
 import Link from "next/link";
-import { chatLink } from "@/constants";
+import { chatLink } from "@/constants/chat-link";
 
 const ChatmeSection = () => {
   return (

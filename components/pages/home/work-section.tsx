@@ -1,6 +1,6 @@
 import Link from "next/link";
 import CoffeeText from "@/components/ui/coffee-text";
-import { internships } from "@/constants";
+import { internships } from "@/constants/internship";
 
 const WorkExperienceSection = () => {
   return (

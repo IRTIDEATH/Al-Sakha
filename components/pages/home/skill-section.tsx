@@ -3,7 +3,7 @@
 import { Icon } from "@iconify/react";
 import Link from "next/link";
 import { AnimatedBackground } from "@/components/animated-background";
-import { skillBadgeIcon } from "@/constants";
+import { skillBadgeIcon } from "@/constants/skill-badge";
 
 const SkillSection = () => {
   return (

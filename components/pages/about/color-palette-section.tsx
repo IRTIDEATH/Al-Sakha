@@ -1,22 +1,9 @@
 "use client";
 
 import { toast } from "sonner";
-
-interface Icolors {
-  name: string;
-  class: string;
-  hex: string;
-}
+import { colors } from "@/constants/color-palette";
 
 const ColorPaletteSection = () => {
-  const colors: Icolors[] = [
-    { name: "background", class: "text-background", hex: "#F2F2F4" },
-    { name: "foreground", class: "text-foreground", hex: "#2E2E2E" },
-    { name: "coffee", class: "text-coffee", hex: "#8C6053" },
-    { name: "zeta", class: "text-zeta", hex: "#686C6F" },
-    { name: "suram", class: "text-suram", hex: "#E6E8ED" },
-  ];
-
   const handleCopyColor = (name: string, hex: string) => {
     navigator.clipboard.writeText(hex);
     toast.success(`Color ${name} to clipboard`, {
