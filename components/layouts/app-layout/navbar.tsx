@@ -15,9 +15,12 @@ import {
 } from "@/components/ui/drawer";
 import { navigationItems } from "@/constants/navigation";
 
-const SparkleGroup = dynamic(() => import("@/components/sparkle-effect"), {
-  ssr: false,
-});
+const SparkleGroup = dynamic(
+  () => import("@/components/animate/sparkle-effect"),
+  {
+    ssr: false,
+  },
+);
 
 const Navbar = () => {
   const pathname = usePathname();

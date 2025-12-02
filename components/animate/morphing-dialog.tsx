@@ -19,7 +19,7 @@ import React, {
 } from "react";
 import { createPortal } from "react-dom";
 import { cn } from "@/lib/utils";
-import useClickOutside from "./use-click-outside";
+import useClickOutside from "../hooks/use-click-outside";
 
 export type MorphingDialogContextType = {
   isOpen: boolean;

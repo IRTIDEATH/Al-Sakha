@@ -58,10 +58,10 @@ export default async function Page({
         {prevBlog ? (
           <Link
             href={`/writings/${prevBlog.slug}`}
-            className="group flex w-full flex-col items-start border border-foreground p-4 no-underline transition-colors duration-300 hover:bg-foreground active:bg-foreground"
+            className="group flex w-full flex-col items-start border border-foreground p-4 no-underline transition-colors duration-300 hover:bg-foreground active:bg-foreground active:text-background"
           >
             <span className="text-xs text-zeta">{"<-"} Previous</span>
-            <span className="mt-1 text-lg transition-colors ease-in-out active:text-background group-hover:text-background">
+            <span className="mt-1 text-lg transition-colors ease-in-out group-hover:text-background">
               {prevBlog.frontmatter.title}
             </span>
           </Link>
@@ -71,10 +71,10 @@ export default async function Page({
         {nextBlog ? (
           <Link
             href={`/writings/${nextBlog.slug}`}
-            className="group flex w-full flex-col items-end border border-foreground p-4 no-underline transition-colors duration-300 hover:bg-foreground active:bg-foreground"
+            className="group flex w-full flex-col items-end border border-foreground p-4 no-underline transition-colors duration-300 hover:bg-foreground active:bg-foreground active:text-background"
           >
             <span className="text-xs text-zeta">Next {"->"}</span>
-            <span className="mt-1 text-lg transition-colors ease-in-out active:text-background group-hover:text-background">
+            <span className="mt-1 text-lg transition-colors ease-in-out group-hover:text-background">
               {nextBlog.frontmatter.title}
             </span>
           </Link>

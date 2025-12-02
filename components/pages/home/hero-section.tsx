@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 
-const Cursor = dynamic(() => import("@/components/animate-cursor"), {
+const Cursor = dynamic(() => import("@/components/animate/animate-cursor"), {
   ssr: false,
 });
 
@@ -49,7 +49,7 @@ const HeroSection = () => {
           xmlns="http://www.w3.org/2000/svg"
           className="hidden size-22 sm:flex"
         >
-          <g clip-path="url(#clip0_98_8)">
+          <g clipPath="url(#clip0_98_8)">
             <mask
               id="mask0_98_8"
               maskUnits="userSpaceOnUse"

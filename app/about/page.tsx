@@ -5,7 +5,7 @@ import TitleSection from "@/components/pages/about/title-section";
 import { Divider } from "@/components/ui/divider";
 
 export const metadata: Metadata = {
-  title: "Irtideath - About",
+  title: "Irtideath | About",
   description: "this site, and all that it contains.",
 };
 

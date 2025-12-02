@@ -5,7 +5,7 @@ import { Divider } from "@/components/ui/divider";
 import { getBlogs } from "./fetchers";
 
 export const metadata: Metadata = {
-  title: "Irtideath - Writings",
+  title: "Irtideath | Writings",
   description: "you are free to compose the meaning.",
 };
 

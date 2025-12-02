@@ -9,7 +9,7 @@ import {
   MorphingDialogContent,
   MorphingDialogImage,
   MorphingDialogTrigger,
-} from "@/components/morphing-dialog";
+} from "@/components/animate/morphing-dialog";
 import { Badge } from "@/components/ui/badge";
 import { Divider } from "@/components/ui/divider";
 import {
