@@ -84,16 +84,14 @@ const CardProjectSecton = () => {
             </div>
             <article className="w-full">
               <h2 className="mb-2 font-medium text-[24px]">{item.name}</h2>
-              <p className="mb-6 font-medium text-[16px] text-zeta">
-                {item.description}
-              </p>
+              <p className="mb-6 text-[16px] text-zeta">{item.description}</p>
               <div className="mt-6 flex w-full flex-col-reverse items-start justify-start gap-4 md:flex-row md:items-center md:justify-between md:gap-0">
                 <div className="flex items-center gap-3">
                   {item.view ? (
                     <>
                       <Link
                         href={item.view ?? ""}
-                        className="font-medium text-foreground text-sm decoration-2 hover:underline"
+                        className="text-foreground text-sm decoration-2 hover:underline"
                       >
                         view
                       </Link>
@@ -106,7 +104,7 @@ const CardProjectSecton = () => {
                         rel="noopener noreferrer"
                         target="_blank"
                         href={item.github ?? ""}
-                        className="font-medium text-foreground text-sm decoration-2 hover:underline"
+                        className="text-foreground text-sm decoration-2 hover:underline"
                       >
                         github
                       </Link>

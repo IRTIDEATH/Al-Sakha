@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist_Mono, Roboto_Mono } from "next/font/google";
+import { Geist_Mono, Roboto_Mono, Schoolbell } from "next/font/google";
 import "./globals.css";
 import Wrapper from "@/components/layouts/app-layout/wrapper";
 import { Toaster } from "@/components/ui/sonner";
@@ -14,7 +14,13 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const schoolBell = Schoolbell({
+  weight: "400",
+  variable: "--font-schoolbell",
+});
+
 export const metadata: Metadata = {
+  metadataBase: new URL("https://irtideath.vercel.app"),
   title: "Irtideath | npc",
   description: "There's nothing here, just passing through.",
   keywords: [
@@ -66,7 +72,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${geistMono.variable} ${robotoMono.variable} font-geist font-normal text-foreground antialiased`}
+        className={`${geistMono.variable} ${robotoMono.variable} ${schoolBell.variable} font-geist font-normal text-foreground antialiased`}
       >
         <Wrapper>{children}</Wrapper>
         <Toaster

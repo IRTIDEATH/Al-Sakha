@@ -25,7 +25,7 @@ const MoreOnGithubSection = () => {
             rel="noopener noreferrer"
             target="_blank"
             href="https://github.com/IRTIDEATH?tab=repositories"
-            className="font-medium text-foreground text-sm decoration-2 hover:underline"
+            className="text-foreground text-sm decoration-2 hover:underline"
           >
             view
           </Link>

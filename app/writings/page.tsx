@@ -93,7 +93,7 @@ export default async function Page() {
           </Fragment>
         ))}
       </section>
-      <blockquote className="font-normal text-xs text-zeta italic">
+      <blockquote className="font-normal font-schoolbell text-xs text-zeta italic">
         &ldquo;i&apos;m not a level 5 skibidi, because that&apos;s just a big
         mewing.&rdquo;
       </blockquote>

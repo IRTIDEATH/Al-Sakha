@@ -23,11 +23,11 @@ export const inspirationLink: InspirationLinkInterface[] = [
   {
     label: "Zetamin art",
     href: "https://www.pixiv.net/en/artworks/112555482",
-    title: "Zetamin",
+    title: "zetamin",
   },
   {
     label: "Growtopia fandom wiki samille's soul",
     href: "https://growtopia.fandom.com/wiki/Samille%27s_Soul_Abductor",
-    title: "Samille's Soul",
+    title: "samille's soul",
   },
 ];

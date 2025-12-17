@@ -5,16 +5,16 @@ import type * as React from "react";
 import { cn } from "@/lib/utils";
 
 const badgeVariants = cva(
-  "inline-flex w-fit shrink-0 items-center justify-center gap-1.5 overflow-hidden whitespace-nowrap px-2 py-0.5 font-geist font-medium text-xs transition-[color,box-shadow] focus-visible:ring-[3px] focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 [&>svg]:pointer-events-none",
+  "inline-flex w-fit shrink-0 items-center justify-center gap-1.5 overflow-hidden whitespace-nowrap px-2 py-0.5 font-geist text-xs transition-[color,box-shadow] focus-visible:ring-[3px] focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 [&>svg]:pointer-events-none",
   {
     variants: {
       variant: {
         default:
-          "bg-foreground px-2.5 py-0.5 font-normal font-roboto text-[13px] text-background",
+          "bg-foreground px-2.5 py-0.5 font-roboto text-[13px] text-background",
         skill: "bg-suram px-3 py-1 text-[16px] text-foreground",
         tag: "rounded-sm bg-suram px-3.5 py-1.5 font-medium font-roboto text-[13px] text-foreground",
         outline:
-          "border border-foreground px-2.5 py-0.5 font-normal font-roboto text-[14px] text-foreground",
+          "border border-foreground px-2.5 py-0.5 font-roboto text-[14px] text-foreground",
       },
     },
     defaultVariants: {
