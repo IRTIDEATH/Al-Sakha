@@ -1,6 +1,5 @@
 import fs from "node:fs";
 import path from "node:path";
-import Image from "next/image";
 import { compileMDX } from "next-mdx-remote/rsc";
 import { DotDivider } from "@/components/ui/divider";
 
@@ -23,7 +22,6 @@ export async function getBlogBySlug(slug: string) {
     options: { parseFrontmatter: true },
     components: {
       DotDivider,
-      Image,
     },
   });
   return {
