@@ -5,7 +5,7 @@ import { internships } from "@/constants/internship";
 const WorkExperienceSection = () => {
   return (
     <section>
-      <h1 className="mb-6 font-medium text-2xl">work experience</h1>
+      <h2 className="mb-6 font-medium text-2xl">work experience</h2>
       <p className="mb-8 w-full text-start font-normal text-[16px] text-zeta">
         professional work experience that has contributed to the development of
         my skills and career, able to work on projects{" "}
@@ -18,7 +18,7 @@ const WorkExperienceSection = () => {
             className="flex w-full flex-col items-start font-normal text-zeta sm:flex-row sm:items-end sm:justify-between"
           >
             <article className="flex flex-col gap-0.5">
-              <h2 className="font-medium font-roboto text-foreground text-lg">
+              <h3 className="font-medium font-roboto text-foreground text-lg">
                 <Link
                   rel="noopener noreferrer"
                   target="_blank"
@@ -59,7 +59,7 @@ const WorkExperienceSection = () => {
                     </svg>
                   </span>
                 </Link>
-              </h2>
+              </h3>
               <p className="text-[16px]">{item.position}</p>
             </article>
             <time dateTime={item.datetime} className="mt-2 text-[14px]">

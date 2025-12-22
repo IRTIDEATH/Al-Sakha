@@ -13,7 +13,7 @@ const HeroSection = () => {
     <section className="bg-foreground px-6 py-8">
       <div className="flex items-center justify-between">
         <div className="flex max-w-lg flex-col items-start gap-3">
-          <h1 className="font-semibold text-5xl text-background">
+          <span className="font-semibold text-5xl text-background">
             <Cursor
               attachToParent
               variants={{
@@ -36,10 +36,10 @@ const HeroSection = () => {
               </div>
             </Cursor>
             Gray
-          </h1>
-          <p className="font-medium text-background text-xl">
+          </span>
+          <span className="font-medium text-background text-xl">
             cozy as a cat taking a nap
-          </p>
+          </span>
         </div>
         <svg
           width="96"

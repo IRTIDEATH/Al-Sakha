@@ -72,7 +72,10 @@ export default async function Page() {
                 <div className="flex flex-wrap items-center gap-2">
                   {item.frontmatter.category.map((category, index) => (
                     <Fragment key={index}>
-                      <p className="text-[12px]">{category}</p>
+                      {/* biome-ignore lint/a11y/useValidAriaRole: <explanation> */}
+                      <span className="text-[12px]" role="tag">
+                        {category}
+                      </span>
                       {index < item.frontmatter.category.length - 1 && (
                         <span className="select-none text-[12px] text-zeta">
                           |
