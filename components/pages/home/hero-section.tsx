@@ -6,6 +6,8 @@ const Cursor = dynamic(() => import("@/components/animate/animate-cursor"), {
   ssr: false,
 });
 
+import { motion } from "motion/react";
+
 import dynamic from "next/dynamic";
 
 const HeroSection = () => {
@@ -31,14 +33,47 @@ const HeroSection = () => {
                 bounce: 0.01,
               }}
             >
-              <div className="h-34 w-58">
-                <Image src="/zetaagent.png" alt="Vestia Zeta" fill priority />
-              </div>
+              <Image
+                src="/vestia-zeta.webp"
+                alt="Vestia Zeta"
+                priority
+                width={240}
+                height={240}
+                unoptimized
+                className="object-cover"
+              />
             </Cursor>
             Gray
           </span>
-          <span className="font-medium text-background text-xl">
+          <span className="relative font-medium font-schoolbell text-background text-xl">
             cozy as a cat taking a nap
+            <motion.span
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: 0.3 }}
+              className="-right-2 absolute rotate-12 select-none text-[9px] text-background/80"
+            >
+              z
+            </motion.span>
+            <motion.span
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: 0.8 }}
+              className="-right-4 -top-2.5 absolute rotate-12 select-none text-[12px] text-background/80"
+            >
+              z
+            </motion.span>
+            <motion.span
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: 1.3 }}
+              className="-right-6 -top-5 absolute rotate-12 select-none text-[12px] text-background/90"
+            >
+              Z
+            </motion.span>
           </span>
         </div>
         <svg

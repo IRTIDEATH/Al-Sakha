@@ -22,7 +22,7 @@ const schoolBell = Schoolbell({
 export const metadata: Metadata = {
   metadataBase: new URL("https://irtideath.vercel.app"),
   title: "Irtideath | npc",
-  description: "There's nothing here, just passing through.",
+  description: "I'm not a level 5 skibidi, because that's just a big mewing.",
   keywords: [
     "software engineer",
     "web developer",
