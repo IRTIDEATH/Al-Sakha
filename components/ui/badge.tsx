@@ -12,7 +12,7 @@ const badgeVariants = cva(
         default:
           "bg-foreground px-2.5 py-0.5 font-roboto text-[13px] text-background",
         skill: "bg-suram px-3 py-1 text-[16px] text-foreground",
-        tag: "rounded-sm bg-suram px-3.5 py-1.5 font-medium font-roboto text-[13px] text-foreground",
+        tag: "bg-suram px-3.5 py-1.5 font-medium font-roboto text-[13px] text-foreground",
         outline:
           "border border-foreground px-2.5 py-0.5 font-roboto text-[14px] text-foreground",
       },

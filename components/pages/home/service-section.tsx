@@ -50,10 +50,9 @@ const ServiceSection = () => {
           <article className="space-y-2">
             <h3 className="font-medium text-lg">Backend</h3>
             <p className="text-[15px] text-zeta">
-              i built a secure API that allows seamless integration, scalability
-              across the system. with a focus on efficiency and reliability,
-              ensuring clean and well-structured code, making future development
-              easy.
+              secure APIs built for scale and performance. i prioritize writing
+              clean, well-structured code that ensures seamless system
+              integration and long-term maintainability.
             </p>
           </article>
           <div className="z-10 bg-background">

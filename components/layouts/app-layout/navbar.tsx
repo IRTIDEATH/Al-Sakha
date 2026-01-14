@@ -49,7 +49,7 @@ const Navbar = () => {
           {"<--"}
         </span>
       </div>
-      <div className="flex items-center bg-suram font-roboto md:hidden">
+      <div className="flex items-center bg-suram md:hidden">
         <span className="px-4 font-medium text-lg">menu</span>
         <Drawer>
           <DrawerTrigger aria-label="Menu button" role="button" asChild>
@@ -80,7 +80,7 @@ const Navbar = () => {
                 const isActive = pathname === item.href;
                 return (
                   <motion.div
-                    className="w-full max-w-[300px]"
+                    className="w-full max-w-[300px] font-roboto"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     key={index}
