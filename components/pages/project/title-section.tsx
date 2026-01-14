@@ -6,9 +6,9 @@ const TitleSection = () => {
     <section>
       <h1 className="mb-6 font-medium text-3xl">coding result</h1>
       <p className="mb-6 w-full text-start font-medium text-[16px] text-zeta">
-        these are some of my coding projects completed, under development, and
-        pending. i often used my free time, especially when unemployed, to build
-        things, learn new skills, and stay <CoffeeText>productive.</CoffeeText>
+        echoes of my keyboard. a collection of logic created to define my
+        perspective. it dawned on me that i <CoffeeText>might</CoffeeText> be
+        useful, even just a little...
       </p>
 
       <Divider className="md:mb-0" />
