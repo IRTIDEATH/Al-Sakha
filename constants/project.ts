@@ -148,6 +148,24 @@ export const projects: ProjectInterface[] = [
     ],
   },
   {
+    image: "/project/gamecommimg.png",
+    name: "GAMECOMM Indonesia",
+    description:
+      "a company profile website of pt gamecomm indonesia. created during internship activities. please note that this project was not fully completed during the internship period.",
+    view: "https://gamecomm.vercel.app/",
+    about: "internship",
+    technologies: [
+      {
+        name: "Vue.js",
+        icon: "simple-icons:vuedotjs",
+      },
+      {
+        name: "Tailwind CSS",
+        icon: "simple-icons:tailwindcss",
+      },
+    ],
+  },
+  {
     image: "/project/hadirinimg.webp",
     name: "Hadirin",
     description:
