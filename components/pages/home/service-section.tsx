@@ -1,3 +1,5 @@
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 import { DividerVertical } from "@/components/ui/divider";
 
 const ServiceSection = () => {
@@ -89,6 +91,20 @@ const ServiceSection = () => {
               />
             </svg>
           </div>
+        </div>
+
+        <div className="flex flex-col items-start justify-between gap-4 bg-suram p-4 md:flex-row md:items-center">
+          <div className="space-y-1">
+            <h3 className="font-medium text-lg">have a project in mind?</h3>
+            <p className="font-medium text-[15px] text-zeta">
+              i offer more specialized services tailored to your specific needs.
+            </p>
+          </div>
+          <Button asChild className="ml-auto font-geist">
+            <Link href="/all-services" aria-label="Explore all services">
+              explore {"->"}
+            </Link>
+          </Button>
         </div>
       </div>
     </section>

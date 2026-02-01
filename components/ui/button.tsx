@@ -2,9 +2,7 @@
 
 import { Slot } from "@radix-ui/react-slot";
 import { cva, type VariantProps } from "class-variance-authority";
-import { motion } from "motion/react";
 import * as React from "react";
-
 import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
@@ -13,7 +11,7 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          "relative z-10 border-[1.5px] border-foreground bg-transparent font-medium font-roboto text-foreground",
+          "border-[1.5px] border-foreground bg-transparent font-medium font-roboto text-foreground",
         link: "text-primary underline-offset-4 hover:underline",
         ghost: "hover:text-background",
         classic:
@@ -22,7 +20,7 @@ const buttonVariants = cva(
           "w-full border border-foreground bg-transparent text-center text-foreground",
       },
       size: {
-        default: "px-6 py-1",
+        default: "px-4 py-1",
         sm: "h-8 rounded-md px-3 text-xs",
         lg: "h-10 rounded-md px-8",
         icon: "h-9 w-9",
@@ -56,41 +54,4 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 );
 Button.displayName = "Button";
 
-const AnimatedButton = React.forwardRef<
-  HTMLButtonElement,
-  ButtonProps & { children: React.ReactNode }
->(({ children, ...props }, ref) => {
-  const [isHovered, setIsHovered] = React.useState(false);
-
-  return (
-    <div
-      className="relative inline-block overflow-hidden"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-    >
-      <Button
-        ref={ref}
-        style={{ color: isHovered ? "#F2F2F4" : "#2E2E2E" }}
-        {...props}
-      >
-        {children}
-      </Button>
-
-      <motion.div
-        className="absolute inset-0 bg-foreground"
-        initial={{ width: 0 }}
-        animate={{ width: isHovered ? "100%" : 0 }}
-        transition={{ duration: 0.1, ease: "easeInOut" }}
-        style={{
-          top: 0,
-          left: 0,
-          bottom: 0,
-          originX: 0,
-        }}
-      />
-    </div>
-  );
-});
-AnimatedButton.displayName = "AnimatedButton";
-
-export { Button, buttonVariants, AnimatedButton };
+export { Button, buttonVariants };
