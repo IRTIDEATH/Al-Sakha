@@ -13,7 +13,7 @@ const ServicesGridSection = () => {
   return (
     <section className="w-full">
       {services.map((item, index) => (
-        <div key={index}>
+        <div key={item.number}>
           <div className="bg-foreground p-4 text-background">
             <div className="flex flex-col items-start gap-4">
               <span className="font-medium font-roboto text-[32px] text-zeta leading-none">
@@ -33,7 +33,7 @@ const ServicesGridSection = () => {
                       key={featureIndex}
                       className="flex items-start gap-2 text-[14px] text-suram"
                     >
-                      <span className="mt-1 inline-block rotate-90 font-geist text-[10px]">
+                      <span className="mt-1 inline-block rotate-90 whitespace-nowrap font-geist text-[10px]">
                         {"->"}
                       </span>
                       {feature}
