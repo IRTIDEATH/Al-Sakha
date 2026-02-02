@@ -43,7 +43,7 @@ const Footer = () => {
         </TooltipProvider>
       </div>
       <div className="px-4 font-medium text-foreground text-sm">
-        © 2025 - Irtideath
+        © 2026 - Irtideath
       </div>
     </footer>
   );
