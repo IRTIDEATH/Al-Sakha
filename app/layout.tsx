@@ -79,6 +79,7 @@ export default function RootLayout({
           richColors
           toastOptions={{
             style: {
+              borderRadius: 0,
               background: "#2E2E2E",
               border: "none",
               color: "#F2F2F4",
