@@ -50,9 +50,12 @@ const ServicesGridSection = () => {
                         <Badge
                           variant="skill"
                           className="bg-suram text-foreground"
-                          aria-label={`Technology: ${tech.name}`}
                         >
-                          <Icon icon={tech.icon} aria-hidden="true" />
+                          <Icon
+                            icon={tech.icon}
+                            aria-hidden="true"
+                            aria-label={tech.name}
+                          />
                         </Badge>
                       </TooltipTrigger>
                       <TooltipContent className="bg-suram text-foreground">

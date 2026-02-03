@@ -34,7 +34,7 @@ const StepContact = () => {
             <h2 className="font-medium text-[24px] text-foreground">
               Contact Me
             </h2>
-            <p className="max-w-lg text-[16px] text-zeta">
+            <p className="max-w-xl text-[16px] text-zeta">
               Reach out through your preferred channel. I&apos;m responsive and
               ready to discuss your project.
             </p>

@@ -101,7 +101,7 @@ const ServiceSection = () => {
             </p>
           </div>
           <Button asChild className="ml-auto font-geist font-normal">
-            <Link href="/all-services" aria-label="Explore all services">
+            <Link href="/all-services" aria-label="explore all services">
               explore {"->"}
             </Link>
           </Button>

@@ -11,7 +11,7 @@ interface ContactCardProps {
 
 const ContactCard = ({ icon, title, value, href }: ContactCardProps) => {
   return (
-    <Link href={href}>
+    <Link href={href} aria-label="contact link">
       <div className="group flex h-full flex-col items-start gap-3 bg-foreground p-4 text-background">
         <div className="flex items-center gap-2">
           <Badge variant="skill" className="bg-suram text-foreground">

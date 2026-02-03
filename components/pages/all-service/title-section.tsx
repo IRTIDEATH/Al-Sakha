@@ -1,5 +1,4 @@
 import Link from "next/link";
-import CoffeeText from "@/components/ui/coffee-text";
 import { Divider } from "@/components/ui/divider";
 
 const TitleSection = () => {
@@ -25,21 +24,21 @@ const TitleSection = () => {
         </svg>
       </h1>
       <p className="mb-4 w-full text-start font-medium text-[16px] text-zeta">
-        available for freelance work. here are the things i{" "}
-        <CoffeeText>can</CoffeeText> do to help bring your ideas to life.
+        available for freelance work. here are the things i can do to help bring
+        your ideas to life.
       </p>
-      <p className="w-full text-start font-medium text-[16px] text-zeta">
-        interested in working together?{" "}
+      <div className="flex flex-col items-start gap-2 sm:flex-row sm:items-center">
+        <p className="text-start font-medium text-[16px] text-zeta">
+          interested in working together?{" "}
+        </p>
         <Link
           href="/all-services/order"
-          className="group inline-flex items-center text-foreground decoration-2 hover:underline"
+          aria-label="link to order"
+          className="inline-flex items-center text-coffee decoration-2 hover:underline"
         >
-          learn how to order
+          learn how to order {"<-"}
         </Link>
-        <span className="inline-block translate-x-2 font-geist text-foreground text-lg">
-          {"<-"}
-        </span>
-      </p>
+      </div>
       <Divider />
     </section>
   );

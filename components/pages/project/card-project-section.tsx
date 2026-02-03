@@ -2,6 +2,7 @@
 
 import { Icon } from "@iconify/react";
 import Link from "next/link";
+import { Fragment } from "react";
 import {
   MorphingDialog,
   MorphingDialogClose,
@@ -22,9 +23,9 @@ import { projects } from "@/constants/project";
 
 const CardProjectSecton = () => {
   return (
-    <>
+    <section>
       {projects.map((item, index) => (
-        <section key={index}>
+        <Fragment key={index}>
           <div className="flex w-full items-start gap-0 md:gap-5">
             <div className="relative hidden md:block">
               <MorphingDialog
@@ -91,6 +92,7 @@ const CardProjectSecton = () => {
                     <>
                       <Link
                         href={item.view ?? ""}
+                        aria-label={`view ${item.name} live demo`}
                         className="text-foreground text-sm decoration-2 hover:underline"
                       >
                         view
@@ -104,6 +106,7 @@ const CardProjectSecton = () => {
                         rel="noopener noreferrer"
                         target="_blank"
                         href={item.github ?? ""}
+                        aria-label={`view ${item.name} source code on github`}
                         className="text-foreground text-sm decoration-2 hover:underline"
                       >
                         github
@@ -118,12 +121,8 @@ const CardProjectSecton = () => {
                     <TooltipProvider delayDuration={100} key={index}>
                       <Tooltip>
                         <TooltipTrigger asChild>
-                          <Badge
-                            variant={"skill"}
-                            role="img"
-                            aria-label={items.name}
-                          >
-                            <Icon icon={items.icon} />
+                          <Badge variant={"skill"}>
+                            <Icon icon={items.icon} aria-label={items.name} />
                           </Badge>
                         </TooltipTrigger>
                         <TooltipContent>
@@ -137,9 +136,9 @@ const CardProjectSecton = () => {
             </article>
           </div>
           <Divider />
-        </section>
+        </Fragment>
       ))}
-    </>
+    </section>
   );
 };
 

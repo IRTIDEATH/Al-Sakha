@@ -36,8 +36,8 @@ const MoreOnGithubSection = () => {
             <TooltipProvider delayDuration={100} key={index}>
               <Tooltip>
                 <TooltipTrigger asChild>
-                  <Badge variant={"skill"} role="img" aria-label={items.name}>
-                    <Icon icon={items.icon} />
+                  <Badge variant={"skill"}>
+                    <Icon icon={items.icon} aria-label={items.name} />
                   </Badge>
                 </TooltipTrigger>
                 <TooltipContent>
