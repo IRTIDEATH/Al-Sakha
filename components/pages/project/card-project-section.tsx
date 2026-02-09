@@ -2,7 +2,16 @@
 
 import { Icon } from "@iconify/react";
 import Link from "next/link";
-import { Fragment } from "react";
+import { useRouter } from "next/navigation";
+import {
+  Fragment,
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+  useTransition,
+} from "react";
 import {
   MorphingDialog,
   MorphingDialogClose,
@@ -21,10 +30,87 @@ import {
 } from "@/components/ui/tooltip";
 import { projects } from "@/constants/project";
 
-const CardProjectSecton = () => {
+type Category = string | "all";
+
+interface CardProjectSectionProps {
+  initialCategory: Category;
+}
+
+const CardProjectSecton = ({ initialCategory }: CardProjectSectionProps) => {
+  const router = useRouter();
+  const [, startTransition] = useTransition();
+  const prevTabRef = useRef<Category>(initialCategory);
+
+  const [activeTab, setActiveTab] = useState<Category>(initialCategory);
+
+  useEffect(() => {
+    if (prevTabRef.current === activeTab) {
+      return;
+    }
+    prevTabRef.current = activeTab;
+
+    const params = new URLSearchParams(window.location.search);
+    if (activeTab === "all") {
+      params.delete("category");
+    } else {
+      params.set("category", activeTab);
+    }
+
+    const queryString = params.toString();
+    const newUrl = queryString
+      ? `${window.location.pathname}?${queryString}`
+      : window.location.pathname;
+
+    startTransition(() => {
+      router.replace(newUrl, {
+        scroll: false,
+      });
+    });
+  }, [activeTab, router]);
+
+  const categories = useMemo(() => {
+    const uniqueCategories = [...new Set(projects.map((item) => item.about))];
+    return uniqueCategories.sort();
+  }, []);
+
+  const filteredProjects = useMemo(() => {
+    if (activeTab === "all") return projects;
+    return projects.filter((item) => item.about === activeTab);
+  }, [activeTab]);
+
+  const handleTabClick = useCallback((category: Category) => {
+    setActiveTab(category);
+  }, []);
   return (
     <section>
-      {projects.map((item, index) => (
+      <div className="mb-6 flex items-center justify-center gap-3">
+        <button
+          onClick={() => handleTabClick("all")}
+          className={`cursor-pointer px-4 py-2 font-roboto text-[14px] transition-all duration-400 ease-in-out ${
+            activeTab === "all"
+              ? "bg-foreground text-background"
+              : "bg-suram text-foreground hover:bg-foreground hover:text-background"
+          }`}
+        >
+          all
+        </button>
+        {categories.map((category) => {
+          return (
+            <button
+              key={category}
+              onClick={() => handleTabClick(category)}
+              className={`cursor-pointer px-4 py-2 font-roboto text-[14px] transition-all duration-400 ease-in-out ${
+                activeTab === category
+                  ? "bg-foreground text-background"
+                  : "bg-suram text-foreground hover:bg-foreground hover:text-background"
+              }`}
+            >
+              {category}
+            </button>
+          );
+        })}
+      </div>
+      {filteredProjects.map((item, index) => (
         <Fragment key={index}>
           <div className="flex w-full items-start gap-0 md:gap-5">
             <div className="relative hidden md:block">
