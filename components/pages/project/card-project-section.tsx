@@ -21,6 +21,13 @@ import {
   MorphingDialogTrigger,
 } from "@/components/animate/morphing-dialog";
 import { Badge } from "@/components/ui/badge";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 import { Divider } from "@/components/ui/divider";
 import {
   Tooltip,
@@ -83,33 +90,51 @@ const CardProjectSecton = ({ initialCategory }: CardProjectSectionProps) => {
   }, []);
   return (
     <section>
-      <div className="mb-6 flex items-center justify-center gap-3">
-        <button
-          onClick={() => handleTabClick("all")}
-          className={`cursor-pointer px-4 py-2 font-roboto text-[14px] transition-all duration-400 ease-in-out ${
-            activeTab === "all"
-              ? "bg-foreground text-background"
-              : "bg-suram text-foreground hover:bg-foreground hover:text-background"
-          }`}
-        >
-          all
-        </button>
-        {categories.map((category) => {
-          return (
-            <button
-              key={category}
-              onClick={() => handleTabClick(category)}
-              className={`cursor-pointer px-4 py-2 font-roboto text-[14px] transition-all duration-400 ease-in-out ${
-                activeTab === category
-                  ? "bg-foreground text-background"
-                  : "bg-suram text-foreground hover:bg-foreground hover:text-background"
-              }`}
-            >
-              {category}
-            </button>
-          );
-        })}
-      </div>
+      <Carousel
+        opts={{
+          dragFree: true,
+          duration: 15,
+          dragThreshold: 8,
+        }}
+        className="mb-6 w-full"
+      >
+        <div className="flex items-center gap-2">
+          <CarouselPrevious className="static h-8 w-8 translate-y-0 border-none bg-foreground text-background" />
+          <div className="flex-1 overflow-hidden">
+            <CarouselContent className="-ml-2 flex gap-2">
+              <CarouselItem className="basis-auto pl-2">
+                <button
+                  onClick={() => handleTabClick("all")}
+                  className={`cursor-pointer select-none px-4 py-2 font-roboto text-[14px] ${
+                    activeTab === "all"
+                      ? "bg-foreground text-background"
+                      : "bg-suram text-foreground hover:bg-foreground hover:text-background"
+                  }`}
+                >
+                  all
+                </button>
+              </CarouselItem>
+              {categories.map((category) => {
+                return (
+                  <CarouselItem key={category} className="basis-auto pl-2">
+                    <button
+                      onClick={() => handleTabClick(category)}
+                      className={`cursor-pointer select-none px-4 py-2 font-roboto text-[14px] ${
+                        activeTab === category
+                          ? "bg-foreground text-background"
+                          : "bg-suram text-foreground hover:bg-foreground hover:text-background"
+                      }`}
+                    >
+                      {category}
+                    </button>
+                  </CarouselItem>
+                );
+              })}
+            </CarouselContent>
+          </div>
+          <CarouselNext className="static h-8 w-8 translate-y-0 border-none bg-foreground text-background" />
+        </div>
+      </Carousel>
       {filteredProjects.map((item, index) => (
         <Fragment key={index}>
           <div className="flex w-full items-start gap-0 md:gap-5">

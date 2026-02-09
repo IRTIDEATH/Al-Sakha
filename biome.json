@@ -36,7 +36,8 @@
       "a11y": {
         "noSvgWithoutTitle": "off",
         "noStaticElementInteractions": "off",
-        "useButtonType": "off"
+        "useButtonType": "off",
+        "useSemanticElements": "off"
       },
       "correctness": {
         "useExhaustiveDependencies": "warn"
