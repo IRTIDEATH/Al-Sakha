@@ -105,7 +105,7 @@ const CardProjectSecton = ({ initialCategory }: CardProjectSectionProps) => {
               <CarouselItem className="basis-auto pl-2">
                 <button
                   onClick={() => handleTabClick("all")}
-                  className={`cursor-pointer select-none px-4 py-2 font-roboto text-[14px] ${
+                  className={`cursor-pointer select-none px-4 py-1.5 font-roboto text-[14px] ${
                     activeTab === "all"
                       ? "bg-foreground text-background"
                       : "bg-suram text-foreground hover:bg-foreground hover:text-background"
@@ -119,7 +119,7 @@ const CardProjectSecton = ({ initialCategory }: CardProjectSectionProps) => {
                   <CarouselItem key={category} className="basis-auto pl-2">
                     <button
                       onClick={() => handleTabClick(category)}
-                      className={`cursor-pointer select-none px-4 py-2 font-roboto text-[14px] ${
+                      className={`cursor-pointer select-none px-4 py-1.5 font-roboto text-[14px] ${
                         activeTab === category
                           ? "bg-foreground text-background"
                           : "bg-suram text-foreground hover:bg-foreground hover:text-background"

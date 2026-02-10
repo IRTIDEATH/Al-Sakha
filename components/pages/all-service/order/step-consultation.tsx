@@ -18,7 +18,7 @@ const StepConsultation = () => {
             </h2>
           </div>
           <p className="text-[16px] text-zeta md:ml-16">
-            1 day free consultation
+            a free consultation session is available for you.
           </p>
         </div>
 
