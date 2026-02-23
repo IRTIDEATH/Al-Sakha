@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Script from "next/script";
 import ScrollUpButton from "@/components/layouts/writing-layout/scroll-up-button";
 import ShareButton from "@/components/layouts/writing-layout/share-button";
 import { Badge } from "@/components/ui/badge";
@@ -88,10 +89,9 @@ export default async function Page({
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
+      <Script id="json-ld" type="application/ld+json">
+        {JSON.stringify(jsonLd).replace(/</g, "\u003c")}
+      </Script>
       <main className="prose mt-12 max-w-full prose-a:text-foreground prose-headings:text-foreground prose-li:text-zeta prose-ol:text-zeta prose-p:text-zeta prose-strong:text-foreground prose-ul:text-zeta">
         <article>{blog.content}</article>
         <DotDivider />

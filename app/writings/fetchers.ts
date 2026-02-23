@@ -1,5 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
+import rehypeShiki from "@shikijs/rehype";
 import { compileMDX } from "next-mdx-remote/rsc";
 import { DotDivider } from "@/components/ui/divider";
 
@@ -19,7 +20,12 @@ export async function getBlogBySlug(slug: string) {
     date: string;
   }>({
     source: fileContent,
-    options: { parseFrontmatter: true },
+    options: {
+      parseFrontmatter: true,
+      mdxOptions: {
+        rehypePlugins: [[rehypeShiki, { theme: "gruvbox-light-hard" }]],
+      },
+    },
     components: {
       DotDivider,
     },
