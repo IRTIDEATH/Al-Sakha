@@ -20,7 +20,7 @@ const schoolBell = Schoolbell({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://irtideath.vercel.app"),
+  metadataBase: new URL("https://irtideath.engineer"),
   title: "Irtideath | npc",
   description: "gray, cozy as a cat taking a nap.",
   keywords: [
@@ -65,12 +65,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <meta
-          name="google-site-verification"
-          content="XRsOgHAwdi2D8vg2NvkPbl4v8fGIGvEEG6I9-g7Pduo"
-        />
-      </head>
       <body
         className={`${geistMono.variable} ${robotoMono.variable} ${schoolBell.variable} font-geist font-normal text-foreground antialiased`}
       >

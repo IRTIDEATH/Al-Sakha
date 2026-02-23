@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { getBlogs } from "./writings/fetchers";
 
-const BASE_URL = "https://irtideath.vercel.app";
+const BASE_URL = "https://irtideath.engineer";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   let blogs = [];
@@ -64,6 +64,18 @@ function getStaticRoutes(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.9,
+    },
+    {
+      url: `${BASE_URL}/all-services`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${BASE_URL}/all-services/order`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
     },
   ];
 }
