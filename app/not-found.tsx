@@ -8,6 +8,8 @@ const NotFound = () => {
         <Image
           src="/jetaa2.webp"
           alt="zeta mangap"
+          priority
+          unoptimized
           className="object-contain"
           width={260}
           height={260}

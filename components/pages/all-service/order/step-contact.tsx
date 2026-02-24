@@ -3,10 +3,10 @@ import ContactCard from "./contact-card";
 const StepContact = () => {
   const contacts = [
     {
-      icon: "simple-icons:discord",
-      title: "Discord",
-      value: "@yasudahlah",
-      href: "https://discord.com/users/yasudahlah",
+      icon: "simple-icons:threads",
+      title: "Threads",
+      value: "@enderjhass",
+      href: "https://www.threads.com/@enderjhass",
     },
     {
       icon: "lucide:mail",
@@ -18,7 +18,7 @@ const StepContact = () => {
       icon: "simple-icons:whatsapp",
       title: "WhatsApp",
       value:
-        "can only be used if the service has been started. or try emailing me first",
+        "To get the WhatsApp number, please send a message via Email first.",
       href: "#",
     },
   ];
