@@ -60,9 +60,6 @@ export const metadata: Metadata = {
       url: "https://github.com/IRTIDEATH",
     },
   ],
-  icons: {
-    icon: "/irtilogo.svg",
-  },
 };
 
 export default function RootLayout({
