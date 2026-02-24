@@ -7,7 +7,7 @@ export interface InspirationLinkInterface {
 export const inspirationLink: InspirationLinkInterface[] = [
   {
     label: "Portfolio pow",
-    href: "https://pow.kim",
+    href: "https://pow.noval.me",
     title: "pow.kim",
   },
   {

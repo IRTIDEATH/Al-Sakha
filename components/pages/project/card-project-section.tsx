@@ -3,15 +3,7 @@
 import { Icon } from "@iconify/react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import {
-  Fragment,
-  useCallback,
-  useEffect,
-  useMemo,
-  useRef,
-  useState,
-  useTransition,
-} from "react";
+import { Fragment, useCallback, useMemo, useTransition } from "react";
 import {
   MorphingDialog,
   MorphingDialogClose,
@@ -46,34 +38,29 @@ interface CardProjectSectionProps {
 const CardProjectSecton = ({ initialCategory }: CardProjectSectionProps) => {
   const router = useRouter();
   const [, startTransition] = useTransition();
-  const prevTabRef = useRef<Category>(initialCategory);
 
-  const [activeTab, setActiveTab] = useState<Category>(initialCategory);
+  const handleTabClick = useCallback(
+    (category: Category) => {
+      const params = new URLSearchParams(window.location.search);
+      if (category === "all") {
+        params.delete("category");
+      } else {
+        params.set("category", category);
+      }
 
-  useEffect(() => {
-    if (prevTabRef.current === activeTab) {
-      return;
-    }
-    prevTabRef.current = activeTab;
+      const queryString = params.toString();
+      const newUrl = queryString
+        ? `${window.location.pathname}?${queryString}`
+        : window.location.pathname;
 
-    const params = new URLSearchParams(window.location.search);
-    if (activeTab === "all") {
-      params.delete("category");
-    } else {
-      params.set("category", activeTab);
-    }
-
-    const queryString = params.toString();
-    const newUrl = queryString
-      ? `${window.location.pathname}?${queryString}`
-      : window.location.pathname;
-
-    startTransition(() => {
-      router.replace(newUrl, {
-        scroll: false,
+      startTransition(() => {
+        router.replace(newUrl, {
+          scroll: false,
+        });
       });
-    });
-  }, [activeTab, router]);
+    },
+    [router],
+  );
 
   const categories = useMemo(() => {
     const uniqueCategories = [...new Set(projects.map((item) => item.about))];
@@ -81,13 +68,9 @@ const CardProjectSecton = ({ initialCategory }: CardProjectSectionProps) => {
   }, []);
 
   const filteredProjects = useMemo(() => {
-    if (activeTab === "all") return projects;
-    return projects.filter((item) => item.about === activeTab);
-  }, [activeTab]);
-
-  const handleTabClick = useCallback((category: Category) => {
-    setActiveTab(category);
-  }, []);
+    if (initialCategory === "all") return projects;
+    return projects.filter((item) => item.about === initialCategory);
+  }, [initialCategory]);
   return (
     <section>
       <Carousel
@@ -106,7 +89,7 @@ const CardProjectSecton = ({ initialCategory }: CardProjectSectionProps) => {
                 <button
                   onClick={() => handleTabClick("all")}
                   className={`cursor-pointer select-none px-4 py-1.5 font-roboto text-[14px] ${
-                    activeTab === "all"
+                    initialCategory === "all"
                       ? "bg-foreground text-background"
                       : "bg-suram text-foreground hover:bg-foreground hover:text-background"
                   }`}
@@ -120,7 +103,7 @@ const CardProjectSecton = ({ initialCategory }: CardProjectSectionProps) => {
                     <button
                       onClick={() => handleTabClick(category)}
                       className={`cursor-pointer select-none px-4 py-1.5 font-roboto text-[14px] ${
-                        activeTab === category
+                        initialCategory === category
                           ? "bg-foreground text-background"
                           : "bg-suram text-foreground hover:bg-foreground hover:text-background"
                       }`}
@@ -135,8 +118,8 @@ const CardProjectSecton = ({ initialCategory }: CardProjectSectionProps) => {
           <CarouselNext className="static h-8 w-8 translate-y-0 border-none bg-foreground text-background" />
         </div>
       </Carousel>
-      {filteredProjects.map((item, index) => (
-        <Fragment key={index}>
+      {filteredProjects.map((item) => (
+        <Fragment key={item.name}>
           <div className="flex w-full items-start gap-0 md:gap-5">
             <div className="relative hidden md:block">
               <MorphingDialog
