@@ -119,7 +119,7 @@ const CardProjectSecton = ({ initialCategory }: CardProjectSectionProps) => {
             <CarouselNext className="static h-[31px] w-9 translate-y-0 border-none bg-foreground text-background" />
           </div>
         </Carousel>
-        {filteredProjects.map((item) => (
+        {filteredProjects.map((item, index) => (
           <Fragment key={item.name}>
             <div className="flex w-full items-start gap-0 md:gap-5">
               <div className="relative hidden md:block">
@@ -136,6 +136,8 @@ const CardProjectSecton = ({ initialCategory }: CardProjectSectionProps) => {
                         src={item.image}
                         alt={item.name}
                         className="object-cover"
+                        sizes="112px"
+                        priority={index === 0}
                       />
                     </div>
                   </MorphingDialogTrigger>
@@ -146,6 +148,8 @@ const CardProjectSecton = ({ initialCategory }: CardProjectSectionProps) => {
                           src={item.image}
                           alt={item.name}
                           className="object-contain"
+                          sizes="90vw"
+                          priority={index === 0}
                         />
                       </div>
                     </MorphingDialogContent>

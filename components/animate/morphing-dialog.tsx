@@ -352,6 +352,7 @@ export type MorphingDialogImageProps = {
   className?: string;
   style?: React.CSSProperties;
   sizes?: string;
+  priority?: boolean;
 };
 
 const MotionImage = motion.create(Image);
@@ -362,6 +363,7 @@ function MorphingDialogImage({
   className,
   style,
   sizes,
+  priority,
 }: MorphingDialogImageProps) {
   const { uniqueId } = useMorphingDialog();
 
@@ -374,6 +376,7 @@ function MorphingDialogImage({
       className={cn(className)}
       layoutId={`dialog-img-${uniqueId}`}
       style={style}
+      priority={priority}
     />
   );
 }
