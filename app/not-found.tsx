@@ -6,7 +6,7 @@ const NotFound = () => {
     <div className="mt-12 flex flex-col items-center justify-center space-y-8 text-center">
       <div className="relative">
         <Image
-          src="/jetaa2.png"
+          src="/jetaa2.webp"
           alt="zeta mangap"
           className="object-contain"
           width={260}
