@@ -1,17 +1,10 @@
 "use client";
 
 import { Icon } from "@iconify/react";
+import dynamic from "next/dynamic";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { Fragment, useCallback, useMemo, useTransition } from "react";
-import {
-  MorphingDialog,
-  MorphingDialogClose,
-  MorphingDialogContainer,
-  MorphingDialogContent,
-  MorphingDialogImage,
-  MorphingDialogTrigger,
-} from "@/components/animate/morphing-dialog";
 import { Badge } from "@/components/ui/badge";
 import {
   Carousel,
@@ -28,6 +21,52 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { projects } from "@/constants/project";
+
+const MorphingDialog = dynamic(
+  () =>
+    import("@/components/animate/morphing-dialog").then(
+      (mod) => mod.MorphingDialog,
+    ),
+  {
+    ssr: true,
+    loading: () => <div className="h-40 w-28 animate-pulse bg-suram" />,
+  },
+);
+const MorphingDialogContainer = dynamic(
+  () =>
+    import("@/components/animate/morphing-dialog").then(
+      (mod) => mod.MorphingDialogContainer,
+    ),
+  { ssr: true },
+);
+const MorphingDialogContent = dynamic(
+  () =>
+    import("@/components/animate/morphing-dialog").then(
+      (mod) => mod.MorphingDialogContent,
+    ),
+  { ssr: true },
+);
+const MorphingDialogImage = dynamic(
+  () =>
+    import("@/components/animate/morphing-dialog").then(
+      (mod) => mod.MorphingDialogImage,
+    ),
+  { ssr: true },
+);
+const MorphingDialogTrigger = dynamic(
+  () =>
+    import("@/components/animate/morphing-dialog").then(
+      (mod) => mod.MorphingDialogTrigger,
+    ),
+  { ssr: true },
+);
+const MorphingDialogClose = dynamic(
+  () =>
+    import("@/components/animate/morphing-dialog").then(
+      (mod) => mod.MorphingDialogClose,
+    ),
+  { ssr: true },
+);
 
 type Category = string | "all";
 
