@@ -68,7 +68,7 @@ export const metadata: Metadata = {
     title: "Irtideath | npc",
     description: "gray, cozy as a cat taking a nap.",
     url: "https://irtideath.engineer",
-    siteName: "Irtideath",
+    siteName: "Irtideath.engineer",
     type: "website",
     locale: "en_US",
   },
