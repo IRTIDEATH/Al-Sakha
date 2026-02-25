@@ -1,7 +1,7 @@
 "use client";
 
 import type { LenisRef } from "lenis/react";
-import { ReactLenis, useLenis } from "lenis/react";
+import { ReactLenis } from "lenis/react";
 import { cancelFrame, frame } from "motion/react";
 import { usePathname } from "next/navigation";
 import { type PropsWithChildren, useEffect, useRef } from "react";
@@ -11,12 +11,10 @@ import Navbar from "@/components/layouts/app-layout/navbar";
 const Wrapper = ({ children }: PropsWithChildren) => {
   const lenisRef = useRef<LenisRef>(null);
   const pathname = usePathname();
-  const lenis = useLenis();
 
   useEffect(() => {
     function update(data: { timestamp: number }) {
-      const time = data.timestamp;
-      lenisRef.current?.lenis?.raf(time);
+      lenisRef.current?.lenis?.raf(data.timestamp);
     }
 
     frame.update(update, true);
@@ -25,16 +23,18 @@ const Wrapper = ({ children }: PropsWithChildren) => {
   }, []);
 
   useEffect(() => {
-    if (lenis) {
-      lenis.stop();
-      requestAnimationFrame(() => {
-        lenis.start();
-      });
-    }
-  }, [pathname, lenis]);
+    lenisRef.current?.lenis?.scrollTo(0, { immediate: true });
+  }, [pathname]);
 
   return (
-    <ReactLenis options={{ autoRaf: false }} ref={lenisRef} root>
+    <ReactLenis
+      root
+      ref={lenisRef}
+      options={{
+        autoRaf: false,
+        smoothWheel: true,
+      }}
+    >
       <div className="mx-auto w-full max-w-[900px] px-7">
         <Navbar />
         {children}

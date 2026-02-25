@@ -28,9 +28,8 @@ const schoolBell = Schoolbell({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://irtideath.engineer"),
-  title: "Irtideath | gray, cozy as a cat taking a nap",
-  description:
-    "just an ordinary npc and dumb in math. i never imagined myself in the field of programming, but now focusing on website development. unemployed and not in college. i hope to stick with this career in the future.",
+  title: "Irtideath | npc",
+  description: "gray, cozy as a cat taking a nap.",
   keywords: [
     "software engineer",
     "web developer",
@@ -65,6 +64,14 @@ export const metadata: Metadata = {
       url: "https://github.com/IRTIDEATH",
     },
   ],
+  openGraph: {
+    title: "Irtideath | npc",
+    description: "gray, cozy as a cat taking a nap.",
+    url: "https://irtideath.engineer",
+    siteName: "Irtideath",
+    type: "website",
+    locale: "en_US",
+  },
 };
 
 export default function RootLayout({

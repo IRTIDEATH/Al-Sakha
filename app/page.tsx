@@ -20,8 +20,7 @@ const jsonLd = {
   url: "https://irtideath.engineer",
   jobTitle: "Design Engineer",
   image: "https://irtideath.engineer/opengraph-image.png",
-  description:
-    "just an ordinary npc and dumb in math. i never imagined myself in the field of programming, but now focusing on website development. unemployed and not in college. i hope to stick with this career in the future.",
+  description: "gray, cozy as a cat taking a nap.",
   knowsAbout: ["Web Development", "Graphic Design", "Video Editing", "Writing"],
   sameAs: ["https://github.com/IRTIDEATH"],
 };
