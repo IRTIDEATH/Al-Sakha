@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import AboutSection from "@/components/pages/home/about-section";
 import ChatmeSection from "@/components/pages/home/chatme-section";
 import HeroSection from "@/components/pages/home/hero-section";
@@ -5,6 +6,12 @@ import ServiceSection from "@/components/pages/home/service-section";
 import SkillSection from "@/components/pages/home/skill-section";
 import WorkExperienceSection from "@/components/pages/home/work-section";
 import { Divider } from "@/components/ui/divider";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "/",
+  },
+};
 
 const jsonLd = {
   "@context": "https://schema.org",

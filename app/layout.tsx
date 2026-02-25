@@ -28,10 +28,7 @@ const schoolBell = Schoolbell({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://irtideath.engineer"),
-  title: {
-    default: "Irtideath | gray, cozy as a cat taking a nap",
-    template: "%s | Irtideath",
-  },
+  title: "Irtideath | gray, cozy as a cat taking a nap",
   description:
     "just an ordinary npc and dumb in math. i never imagined myself in the field of programming, but now focusing on website development. unemployed and not in college. i hope to stick with this career in the future.",
   keywords: [
