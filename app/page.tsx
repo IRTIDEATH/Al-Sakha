@@ -6,9 +6,28 @@ import SkillSection from "@/components/pages/home/skill-section";
 import WorkExperienceSection from "@/components/pages/home/work-section";
 import { Divider } from "@/components/ui/divider";
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Irtideath",
+  url: "https://irtideath.engineer",
+  jobTitle: "Design Engineer",
+  image: "https://irtideath.engineer/opengraph-image.png",
+  description:
+    "just an ordinary npc and dumb in math. i never imagined myself in the field of programming, but now focusing on website development. unemployed and not in college. i hope to stick with this career in the future.",
+  knowsAbout: ["Web Development", "Graphic Design", "Video Editing", "Writing"],
+  sameAs: ["https://github.com/IRTIDEATH"],
+};
+
 const Page = () => {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c"),
+        }}
+      />
       <main className="mt-12">
         <HeroSection />
         <div className="flex select-none items-center justify-between bg-suram py-1 font-roboto text-[8px] sm:text-[10px]">
