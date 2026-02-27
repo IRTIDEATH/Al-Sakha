@@ -21,6 +21,7 @@ export const services: ServiceInterface[] = [
       "Smooth animation and definitely not painful",
       "SEO-friendly structure for better Google visibility",
       "Lightning-fast loading times",
+      "Website maintenance for 1 year",
     ],
     technologies: [
       {

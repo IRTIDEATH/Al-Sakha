@@ -7,12 +7,6 @@ export interface ChatLinkInterface {
 
 export const chatLink: ChatLinkInterface[] = [
   {
-    label: "Talk with me on Discord",
-    icon: "simple-icons:discord",
-    href: "https://discord.com/users/yasudahlah",
-    title: "Discord",
-  },
-  {
     label: "Talk with me on Threads",
     icon: "simple-icons:threads",
     href: "https://www.threads.com/@enderjhass",
