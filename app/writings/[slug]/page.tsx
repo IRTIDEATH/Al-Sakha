@@ -3,7 +3,7 @@ import Link from "next/link";
 import ScrollUpButton from "@/components/layouts/writing-layout/scroll-up-button";
 import ShareButton from "@/components/layouts/writing-layout/share-button";
 import { Badge } from "@/components/ui/badge";
-import { Divider, DotDivider } from "@/components/ui/divider";
+import { Divider } from "@/components/ui/divider";
 import { getAllBlogSlug, getBlogBySlug } from "../fetchers";
 
 export async function generateStaticParams() {
@@ -94,18 +94,19 @@ export default async function Page({
           __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c"),
         }}
       />
-      <main className="prose mt-12 max-w-full prose-a:text-foreground prose-headings:text-foreground prose-li:text-zeta prose-ol:text-zeta prose-p:text-zeta prose-strong:text-foreground prose-ul:text-zeta">
+      <main className="style-prose font-source">
         <article>{blog.content}</article>
-        <DotDivider />
-        <ul className="not-prose flex list-none flex-wrap items-center gap-2.5">
+        <ul className="not-prose mt-18 flex list-none flex-wrap items-center gap-2.5">
           {blog.frontmatter.tags.map((item, index) => (
             <li key={index}>
-              <Badge variant={"tag"}>{item}</Badge>
+              <Badge className="font-satoshi" variant={"tag"}>
+                {item}
+              </Badge>
             </li>
           ))}
         </ul>
         <div className="mt-10 flex items-center justify-between">
-          <Divider className="my-0 w-26 bg-foreground" />
+          <Divider className="my-0 w-34 bg-foreground" />
 
           <div className="flex items-center gap-6">
             <ShareButton />

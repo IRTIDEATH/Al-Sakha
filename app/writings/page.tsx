@@ -65,17 +65,14 @@ export default async function Page() {
                   </span>
                 </Link>
               </h2>
-              <p className="mt-2.5 text-sm text-zeta">
+              <p className="mt-2.5 line-clamp-2 text-sm text-zeta">
                 {item.frontmatter.description}
               </p>
               <div className="mt-4 flex flex-col items-start justify-between gap-2 font-medium sm:flex-row sm:items-center">
                 <div className="flex flex-wrap items-center gap-2">
                   {item.frontmatter.category.map((category, index) => (
                     <Fragment key={index}>
-                      {/* biome-ignore lint/a11y/useValidAriaRole: <explanation> */}
-                      <span className="text-[12px]" role="tag">
-                        {category}
-                      </span>
+                      <span className="text-[12px]">{category}</span>
                       {index < item.frontmatter.category.length - 1 && (
                         <span className="select-none text-[12px] text-zeta">
                           |

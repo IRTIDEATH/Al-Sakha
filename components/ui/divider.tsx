@@ -17,13 +17,13 @@ export const DotDivider = ({
   return (
     <div
       className={cn(
-        "my-18 flex w-full select-none items-center justify-center gap-4",
+        "my-14 flex w-full select-none items-center justify-center gap-4",
         className,
       )}
     >
-      <span className="bg-foreground p-0.5" />
-      <span className="bg-foreground p-[2.5px]" />
-      <span className="bg-foreground p-0.5" />
+      <span className="bg-foreground p-[1.2px]" />
+      <span className="bg-foreground p-[1.4px]" />
+      <span className="bg-foreground p-[1.2px]" />
     </div>
   );
 };

@@ -1,5 +1,11 @@
 import type { Metadata } from "next";
-import { Geist_Mono, Roboto_Mono, Schoolbell } from "next/font/google";
+import {
+  Geist_Mono,
+  Roboto_Mono,
+  Schoolbell,
+  Source_Serif_4,
+} from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import Wrapper from "@/components/layouts/app-layout/wrapper";
 import { Toaster } from "@/components/ui/sonner";
@@ -18,10 +24,35 @@ const geistMono = Geist_Mono({
   preload: true,
 });
 
+const sourceSerif = Source_Serif_4({
+  variable: "--font-source-serif",
+  subsets: ["latin"],
+  display: "swap",
+  preload: true,
+});
+
 const schoolBell = Schoolbell({
   weight: "400",
   variable: "--font-schoolbell",
   subsets: ["latin"],
+  display: "swap",
+  preload: true,
+});
+
+const satoshi = localFont({
+  src: [
+    {
+      path: "../public/font/satoshi/Satoshi-Variable.woff2",
+      weight: "300 900",
+      style: "normal",
+    },
+    {
+      path: "../public/font/satoshi/Satoshi-VariableItalic.woff2",
+      weight: "300 900",
+      style: "italic",
+    },
+  ],
+  variable: "--font-satoshi",
   display: "swap",
   preload: true,
 });
@@ -82,7 +113,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistMono.variable} ${robotoMono.variable} ${schoolBell.variable} font-geist font-normal text-foreground antialiased`}
+        className={`${geistMono.variable} ${robotoMono.variable} ${schoolBell.variable} ${sourceSerif.variable} ${satoshi.variable} font-geist font-normal text-foreground antialiased`}
       >
         <Wrapper>{children}</Wrapper>
         <Toaster
