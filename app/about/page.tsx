@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     title: "Irtideath | About",
     description: "this site, and all that it contains.",
     url: "https://irtideath.engineer/about",
+    images: ["/opengraph-image.png"],
   },
 };
 

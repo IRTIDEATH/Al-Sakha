@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     description:
       "available for freelance work. web development services to bring your ideas to life.",
     url: "https://irtideath.engineer/all-services",
+    images: ["/opengraph-image.png"],
   },
 };
 

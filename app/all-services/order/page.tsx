@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     title: "Irtideath | Order",
     description: "a step-by-step guide on how to order my services.",
     url: "https://irtideath.engineer/all-services/order",
+    images: ["/opengraph-image.png"],
   },
 };
 
