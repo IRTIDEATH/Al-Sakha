@@ -30,7 +30,8 @@ const HeroSection = () => {
               }}
               className="overflow-hidden"
               springConfig={{
-                bounce: 0.01,
+                damping: 24,
+                mass: 0.4,
               }}
             >
               <Image
