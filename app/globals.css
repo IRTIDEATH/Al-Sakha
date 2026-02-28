@@ -39,15 +39,27 @@ p {
   @apply prose-a:underline;
   @apply prose-headings:font-satoshi;
   @apply prose-h1:text-[30px] md:prose-h1:text-[38px] prose-h1:font-black prose-h1:mb-16;
-  @apply prose-h2:text-2xl prose-h2:font-black prose-h2:mt-10 prose-h2:mb-1 md:prose-h2:mb-3;
+  @apply prose-h2:text-[20px] md:prose-h2:text-2xl prose-h2:font-black prose-h2:mt-10 prose-h2:mb-0.5 md:prose-h2:mb-3;
   @apply prose-ul:list-disc prose-ul:pl-8 prose-ul:my-5 md:prose-ul:my-6.5;
   @apply prose-ol:list-decimal prose-ol:pl-8 prose-ol:my-5 md:prose-ol:my-6.5;
-  @apply prose-li:my-4 prose-li:leading-relaxed prose-li:text-[20px];
-  @apply prose-p:font-normal prose-p:text-[20px];
-  @apply prose-pre:my-12 prose-pre:p-8 prose-pre:font-roboto;
+  @apply prose-li:my-4 prose-li:leading-relaxed prose-li:text-[17px] md:prose-li:text-[20px];
+  @apply prose-p:font-normal prose-p:text-[17px] md:prose-p:text-[20px];
+  @apply prose-pre:my-8 md:prose-pre:my-12 prose-pre:py-6 prose-pre:px-7.5 prose-pre:font-roboto prose-pre:text-[14px];
+  @apply prose-strong:font-semibold prose-strong:text-coffee;
+  @apply prose-em:text-zeta prose-em:italic;
+
+  & blockquote {
+    @apply relative pl-6 my-9 italic text-zeta text-[17px] md:text-[20px] font-normal;
+    @apply prose-p:before:content-none prose-p:after:content-none;
+
+    &::before {
+      content: "";
+      @apply absolute left-0 top-0 w-[2.5px] h-[105%] bg-zeta;
+    }
+  }
 
   & :not(pre) > code {
-    @apply bg-suram px-1.5 py-0.5 font-roboto font-normal text-[14px];
+    @apply bg-suram px-1.5 py-0.5 font-roboto font-normal text-[12px] md:text-[14px];
     &::before,
     &::after {
       content: none;

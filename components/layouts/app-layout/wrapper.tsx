@@ -35,7 +35,7 @@ const Wrapper = ({ children }: PropsWithChildren) => {
         smoothWheel: true,
       }}
     >
-      <div className="mx-auto w-full max-w-[900px] px-7">
+      <div className="mx-auto w-full max-w-[900px] px-[22px] md:px-7">
         <Navbar />
         {children}
         <Footer />

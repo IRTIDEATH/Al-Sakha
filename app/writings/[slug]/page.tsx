@@ -96,7 +96,7 @@ export default async function Page({
       />
       <main className="style-prose font-source">
         <article>{blog.content}</article>
-        <ul className="not-prose mt-18 flex list-none flex-wrap items-center gap-2.5">
+        <ul className="not-prose mt-15 flex list-none flex-wrap items-center gap-2.5">
           {blog.frontmatter.tags.map((item, index) => (
             <li key={index}>
               <Badge className="font-satoshi" variant={"tag"}>
