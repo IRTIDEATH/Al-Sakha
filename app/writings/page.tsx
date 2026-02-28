@@ -7,6 +7,11 @@ import { getBlogs } from "./fetchers";
 export const metadata: Metadata = {
   title: "Irtideath | Writings",
   description: "you are free to compose the meaning.",
+  openGraph: {
+    title: "Irtideath | Writings",
+    description: "you are free to compose the meaning.",
+    url: "https://irtideath.engineer/writings",
+  },
 };
 
 export default async function Page() {

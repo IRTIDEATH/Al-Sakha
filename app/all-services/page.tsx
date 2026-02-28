@@ -6,6 +6,12 @@ export const metadata: Metadata = {
   title: "Irtideath | Services",
   description:
     "available for freelance work. web development services to bring your ideas to life.",
+  openGraph: {
+    title: "Irtideath | Services",
+    description:
+      "available for freelance work. web development services to bring your ideas to life.",
+    url: "https://irtideath.engineer/all-services",
+  },
 };
 
 export default function Page() {

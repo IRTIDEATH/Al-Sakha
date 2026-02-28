@@ -7,6 +7,11 @@ import { Divider } from "@/components/ui/divider";
 export const metadata: Metadata = {
   title: "Irtideath | About",
   description: "this site, and all that it contains.",
+  openGraph: {
+    title: "Irtideath | About",
+    description: "this site, and all that it contains.",
+    url: "https://irtideath.engineer/about",
+  },
 };
 
 export default function Page() {

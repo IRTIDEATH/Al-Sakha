@@ -7,6 +7,11 @@ import TitleSection from "@/components/pages/all-service/order/title-section";
 export const metadata: Metadata = {
   title: "Irtideath | Order",
   description: "a step-by-step guide on how to order my services.",
+  openGraph: {
+    title: "Irtideath | Order",
+    description: "a step-by-step guide on how to order my services.",
+    url: "https://irtideath.engineer/all-services/order",
+  },
 };
 
 export default function Page() {

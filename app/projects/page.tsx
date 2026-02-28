@@ -8,6 +8,12 @@ export const metadata: Metadata = {
   title: "Irtideath | Projects",
   description:
     "chasing something until lose all feeling and forget the real world.",
+  openGraph: {
+    title: "Irtideath | Projects",
+    description:
+      "chasing something until lose all feeling and forget the real world.",
+    url: "https://irtideath.engineer/projects",
+  },
 };
 
 interface PageProps {
