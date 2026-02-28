@@ -12,6 +12,8 @@ const buttonVariants = cva(
       variant: {
         default:
           "border-[1.5px] border-foreground bg-transparent font-medium font-roboto text-foreground",
+        explore:
+          "border-foreground border-t border-r-none border-b-none border-l bg-foreground font-medium font-roboto text-background duration-150 ease-in-out hover:bg-transparent hover:text-foreground",
         link: "text-primary underline-offset-4 hover:underline",
         ghost: "hover:text-background",
         classic:
