@@ -6,6 +6,11 @@ export interface SkillBadgeIconInterface {
 
 export const skillBadgeIcon: SkillBadgeIconInterface[] = [
   {
+    name: "Zed",
+    icon: "simple-icons:zedindustries",
+    link: "https://zed.dev",
+  },
+  {
     name: "Typescript",
     icon: "simple-icons:typescript",
     link: "https://www.typescriptlang.org",
@@ -13,17 +18,17 @@ export const skillBadgeIcon: SkillBadgeIconInterface[] = [
   {
     name: "Bun",
     icon: "simple-icons:bun",
-    link: "https://bun.sh/",
+    link: "https://bun.sh",
   },
   {
     name: "PostgreSQL",
     icon: "simple-icons:postgresql",
-    link: "https://www.postgresql.org/",
+    link: "https://www.postgresql.org",
   },
   {
     name: "Git",
     icon: "simple-icons:git",
-    link: "https://git-scm.com/",
+    link: "https://git-scm.com",
   },
   {
     name: "Three.js",
