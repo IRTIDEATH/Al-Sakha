@@ -1,4 +1,5 @@
 import Link from "next/link";
+import CoffeeText from "@/components/ui/coffee-text";
 import { Divider } from "@/components/ui/divider";
 
 const TitleSection = () => {
@@ -27,18 +28,21 @@ const TitleSection = () => {
         available for freelance work. here are the things i can do to help bring
         your ideas to life.
       </p>
-      <div className="flex flex-col items-start gap-2 sm:flex-row sm:items-center">
-        <p className="text-start font-medium text-[16px] text-zeta">
-          interested in working together?{" "}
-        </p>
-        <Link
-          href="/all-services/order"
-          aria-label="link to order"
-          className="inline-flex items-center text-coffee decoration-2 hover:underline"
-        >
-          learn how to order {"<-"}
-        </Link>
-      </div>
+      <p className="text-start font-medium text-[16px] text-zeta">
+        interested in working together?{" "}
+        <CoffeeText>
+          <Link
+            href="/all-services"
+            className="whitespace-nowrap underline"
+            aria-label="Link to order"
+          >
+            learn how to order{" "}
+            <span aria-hidden="true" className="font-medium">
+              {"<--"}
+            </span>
+          </Link>
+        </CoffeeText>
+      </p>
       <Divider />
     </section>
   );
