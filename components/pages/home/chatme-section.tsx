@@ -8,8 +8,8 @@ const ChatmeSection = () => {
       <div>
         <h2 className="mb-4 font-medium text-2xl">wanna talk?</h2>
         <p className="w-full text-start font-medium text-[16px] text-zeta">
-          need help, consultation, talk about random things, playing games, and
-          connect with me.
+          need help, consultation, talk about random things, and connect with
+          me.
         </p>
       </div>
       <ul className="flex flex-row gap-2 font-medium text-lg">

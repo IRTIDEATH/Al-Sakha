@@ -6,7 +6,7 @@ const StepSelect = () => {
       <div className="flex flex-col gap-8 md:gap-4">
         <div className="flex flex-col gap-2">
           <div className="flex gap-2">
-            <span className="w-12 font-medium font-roboto text-[32px] text-zeta leading-none">
+            <span className="w-12 font-medium font-satoshi text-[32px] text-background leading-none">
               01
             </span>
             <h2 className="font-medium text-[24px] text-background">

@@ -4,8 +4,10 @@ import { inspirationLink } from "@/constants/inspiration-link";
 
 const InspirationSection = () => {
   return (
-    <section className="font-medium text-zeta">
-      <h2 className="mb-3 text-2xl text-foreground">reference & inspiration</h2>
+    <section className="text-zeta">
+      <h2 className="mb-3 font-medium text-2xl text-foreground">
+        reference & inspiration
+      </h2>
       <p className="w-full text-start text-[16px] text-zeta">
         these are <CoffeeText>cool</CoffeeText> portfolios and stuff that i'm
         using.

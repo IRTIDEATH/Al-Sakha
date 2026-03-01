@@ -125,6 +125,8 @@ export default function RootLayout({
               background: "#2E2E2E",
               border: "none",
               color: "#F2F2F4",
+              fontFamily: "var(--font-geist-mono)",
+              padding: "8px 12px",
             },
           }}
         />

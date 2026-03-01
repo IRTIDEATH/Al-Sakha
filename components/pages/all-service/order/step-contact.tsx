@@ -27,7 +27,7 @@ const StepContact = () => {
     <section className="py-8">
       <div className="flex flex-col gap-6">
         <div className="flex items-start gap-4">
-          <span className="font-medium font-roboto text-[32px] text-zeta leading-none">
+          <span className="font-medium font-satoshi text-[32px] text-zeta leading-none">
             02
           </span>
           <div className="flex flex-col gap-2">

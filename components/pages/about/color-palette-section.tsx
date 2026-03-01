@@ -1,19 +1,29 @@
 "use client";
 
+import { Icon } from "@iconify/react";
 import { toast } from "sonner";
 import { colors } from "@/constants/color-palette";
 
 const ColorPaletteSection = () => {
   const handleCopyColor = (name: string, hex: string) => {
     navigator.clipboard.writeText(hex);
-    toast.success(`Color ${name} to clipboard`, {
-      description: `Color ${hex} copied to clipboard`,
+    toast.success(`color ${name} to clipboard`, {
+      description: `code: ${hex}`,
       duration: 3000,
+      icon: (
+        <Icon
+          icon="clarity:copy-line"
+          className="text-[18px]"
+          aria-hidden="true"
+        />
+      ),
     });
   };
   return (
-    <section className="font-medium text-zeta">
-      <h2 className="mb-3 text-2xl text-foreground">color palettes</h2>
+    <section className="text-zeta">
+      <h2 className="mb-3 font-medium text-2xl text-foreground">
+        color palettes
+      </h2>
       <p className="w-full text-start text-[16px]">
         little and convenient. click to copy the color code.
       </p>
