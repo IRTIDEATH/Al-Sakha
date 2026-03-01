@@ -23,11 +23,9 @@ const StepSelect = () => {
         <Link
           href="/all-services"
           aria-label="back to services"
-          className="ml-auto text-background decoration-2 hover:underline"
+          className="ml-auto whitespace-nowrap text-[14px] text-background underline"
         >
-          <span className="font-geist text-background">
-            {"<-"} Back to services
-          </span>
+          <span aria-hidden="true">{"<-"}</span> back to services
         </Link>
       </div>
     </section>

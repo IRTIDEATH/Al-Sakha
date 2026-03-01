@@ -32,7 +32,7 @@ const TitleSection = () => {
         interested in working together?{" "}
         <CoffeeText>
           <Link
-            href="/all-services"
+            href="/all-services/order"
             className="whitespace-nowrap underline"
             aria-label="Link to order"
           >

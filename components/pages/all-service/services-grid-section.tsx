@@ -16,33 +16,28 @@ const ServicesGridSection = () => {
       {services.map((item, index) => (
         <Fragment key={item.number}>
           <div className="flex flex-col gap-6 bg-foreground p-4 text-background">
-            <h2 className="text-[20px]">{item.name}</h2>
+            <h2 className="font-medium text-[20px]">{item.name}</h2>
 
-            <p className="font-light text-[14px] text-suram">
-              {item.description}
-            </p>
+            <p className="text-[14px]">{item.description}</p>
 
             <div className="space-y-3">
-              <h3 className="font-medium text-sm">Features:</h3>
+              <h3 className="text-sm">What&apos;s included</h3>
               <ul className="space-y-2">
-                {item.features.map((feature, featureIndex) => (
+                {item.includes.map((include, index) => (
                   <li
-                    key={featureIndex}
-                    className="flex items-start gap-2 text-[14px] text-suram"
+                    key={index}
+                    className="flex items-start gap-2 font-light text-[14px]"
                   >
-                    <span className="mt-1 inline-block rotate-90 select-none whitespace-nowrap text-[10px]">
+                    <span className="mt-1 inline-block rotate-90 select-none whitespace-nowrap font-normal text-[10px]">
                       {"->"}
                     </span>
-                    {feature}
+                    {include}
                   </li>
                 ))}
               </ul>
             </div>
 
             <div className="flex items-center justify-between gap-2">
-              <span className="font-roboto text-[12px] text-suram">
-                Available
-              </span>
               <Divider className="my-0" />
               <div className="flex gap-2">
                 {item.technologies.map((tech, techIndex) => (

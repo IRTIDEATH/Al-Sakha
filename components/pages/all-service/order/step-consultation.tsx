@@ -6,9 +6,9 @@ const StepConsultation = () => {
   ];
 
   return (
-    <section className="bg-suram px-6 py-8">
+    <section className="px-6 py-8">
       <div className="flex flex-col gap-4">
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-2">
           <div className="flex gap-4">
             <span className="w-12 font-medium font-roboto text-[32px] text-zeta leading-none">
               03
