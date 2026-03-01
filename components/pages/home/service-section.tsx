@@ -1,16 +1,30 @@
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
-import { DividerVertical } from "@/components/ui/divider";
+// import { Button } from "@/components/ui/button";
+// import { DividerVertical } from "@/components/ui/divider";
+import CoffeeText from "@/components/ui/coffee-text";
 
 const ServiceSection = () => {
   return (
     <section className="mx-auto w-full">
       <h2 className="mb-6 font-medium text-2xl">service</h2>
-      <p className="w-full text-start font-medium text-[16px] text-zeta">
+      <p className="w-full text-start text-[16px] text-zeta">
         i provide services that reflect my current capabilities, with a focus on
-        delivering effective and thoughtful solutions.
+        delivering effective and thoughtful solutions.{" "}
+        <CoffeeText>
+          <Link
+            href="/all-services"
+            className="whitespace-nowrap underline"
+            aria-label="Explore all services"
+          >
+            explore{" "}
+            <span aria-hidden="true" className="font-medium">
+              {"<--"}
+            </span>
+          </Link>
+        </CoffeeText>
       </p>
-      <div className="mt-8 flex flex-col gap-12">
+
+      {/* <div className="mt-8 flex flex-col gap-12">
         <div className="relative flex flex-row-reverse items-start justify-between gap-4">
           <DividerVertical />
           <article className="space-y-2">
@@ -110,7 +124,7 @@ const ServiceSection = () => {
             </Link>
           </Button>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 };
