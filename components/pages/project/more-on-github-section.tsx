@@ -16,7 +16,7 @@ const MoreOnGithubSection = () => {
       <section className="flex w-full flex-col justify-between">
         <h2 className="mb-2 font-medium text-[20px]">more on Github!</h2>
         <p className="font-medium text-[16px] text-zeta">
-          explore more projects on my gitHub! feel free to contribute, or drop a{" "}
+          explore more projects on my github. feel free to contribute, or drop a{" "}
           <CoffeeText>star</CoffeeText> if you find something useful.
         </p>
         <div className="mt-6 flex w-full flex-col-reverse items-start justify-start gap-4 md:flex-row md:items-center md:justify-between md:gap-0">

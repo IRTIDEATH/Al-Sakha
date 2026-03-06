@@ -61,7 +61,8 @@ const satoshi = localFont({
 export const metadata: Metadata = {
   metadataBase: new URL("https://irtideath.engineer"),
   title: "Irtideath | npc",
-  description: "gray, cozy as a cat taking a nap.",
+  description:
+    "gray, cozy as a cat taking a nap. just an ordinary npc and dumb in math, you can call me al sakha. i never imagined myself in the field of programming.",
   keywords: [
     "software engineer",
     "web developer",
@@ -98,7 +99,8 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: "Irtideath | npc",
-    description: "gray, cozy as a cat taking a nap.",
+    description:
+      "gray, cozy as a cat taking a nap. just an ordinary npc and dumb in math, you can call me al sakha. i never imagined myself in the field of programming.",
     url: "https://irtideath.engineer",
     siteName: "irtideath.engineer",
     type: "website",

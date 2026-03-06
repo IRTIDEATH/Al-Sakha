@@ -170,7 +170,7 @@ const CardProjectSecton = ({ initialCategory }: CardProjectSectionProps) => {
                 >
                   <MorphingDialogTrigger>
                     <div className="relative h-40 w-28">
-                      <div className="absolute z-10 h-full w-full bg-foreground transition-all duration-400 ease-in-out hover:bg-transparent hover:shadow-shadow" />
+                      <div className="absolute z-10 h-full w-full bg-suram/70 transition-all duration-400 ease-in-out hover:bg-transparent hover:shadow-shadow" />
                       <MorphingDialogImage
                         src={item.image}
                         alt={item.name}

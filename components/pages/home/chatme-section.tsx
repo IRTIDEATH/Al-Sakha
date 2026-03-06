@@ -7,7 +7,7 @@ const ChatmeSection = () => {
     <section className="flex w-full flex-col justify-between gap-4 md:flex-row md:items-end md:gap-11">
       <div>
         <h2 className="mb-4 font-medium text-2xl">wanna talk?</h2>
-        <p className="w-full text-start font-medium text-[16px] text-zeta">
+        <p className="w-full text-start text-[16px] text-zeta">
           need help, consultation, talk about random things, and connect with
           me.
         </p>
