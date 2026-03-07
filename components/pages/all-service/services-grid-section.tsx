@@ -17,9 +17,7 @@ const ServicesGridSection = () => {
         <Fragment key={item.number}>
           <div className="flex flex-col gap-6 bg-foreground p-4 text-background">
             <h2 className="font-medium text-[20px]">{item.name}</h2>
-
             <p className="text-[14px]">{item.description}</p>
-
             <div className="space-y-3">
               <h3 className="text-sm">What&apos;s included</h3>
               <ul className="space-y-2">

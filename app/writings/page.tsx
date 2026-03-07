@@ -19,13 +19,13 @@ export default async function Page() {
   const blogs = await getBlogs();
   return (
     <main className="mt-14">
-      <section className="space-y-6 font-medium">
+      <header className="space-y-6 font-medium">
         <h1 className="text-2xl">writing in my spare time</h1>
         <p className="text-start text-[16px] text-zeta">
           whether it&apos;s storytelling, crafting articles, or diving into
           research. just sharing what&apos;s on my mind.
         </p>
-      </section>
+      </header>
       <Divider />
       <section className="w-full">
         {blogs.map((item, i) => (

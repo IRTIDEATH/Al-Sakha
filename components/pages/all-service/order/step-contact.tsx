@@ -65,7 +65,11 @@ const StepContact = () => {
                   <div className="flex flex-col gap-3">
                     <div className="flex items-center gap-2">
                       <Badge variant="skill" className="bg-suram">
-                        <Icon icon={contact.icon} className="size-4" />
+                        <Icon
+                          icon={contact.icon}
+                          className="size-4"
+                          aria-hidden="true"
+                        />
                       </Badge>
                       <span className="font-medium text-[14px] text-background">
                         {contact.title}

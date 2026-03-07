@@ -4,7 +4,7 @@ import { Divider } from "@/components/ui/divider";
 
 const TitleSection = () => {
   return (
-    <section>
+    <header>
       <h1 className="mb-6 flex items-center gap-2 font-medium text-2xl">
         turn your idea here
         <svg
@@ -44,7 +44,7 @@ const TitleSection = () => {
         </CoffeeText>
       </p>
       <Divider />
-    </section>
+    </header>
   );
 };
 

@@ -2,7 +2,7 @@ import CoffeeText from "@/components/ui/coffee-text";
 
 const TitleSection = () => {
   return (
-    <article className="text-start font-medium">
+    <section className="text-start font-medium">
       <h1 className="mb-6 text-3xl">philosophy</h1>
       <div className="space-y-4 font-normal text-[16px] text-zeta">
         <p>
@@ -24,7 +24,7 @@ const TitleSection = () => {
           get to know someone through design that speaks without shouting.
         </p>
       </div>
-    </article>
+    </section>
   );
 };
 
