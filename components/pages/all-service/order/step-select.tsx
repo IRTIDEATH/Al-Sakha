@@ -2,32 +2,23 @@ import Link from "next/link";
 
 const StepSelect = () => {
   return (
-    <section className="bg-foreground p-5">
-      <div className="flex flex-col gap-8 md:gap-4">
-        <div className="flex flex-col gap-2">
-          <div className="flex gap-2">
-            <span className="w-12 font-medium font-satoshi text-[32px] text-background leading-none">
-              01
-            </span>
-            <h2 className="font-medium text-[24px] text-background">
-              Select a Service
-            </h2>
-          </div>
-          <p className="w-full text-[16px] text-suram md:ml-14 md:max-w-xl">
-            Browse my available services and choose the one that fits your
-            needs. Each service is crafted with attention to detail and modern
-            web standards.
-          </p>
-        </div>
-
-        <Link
-          href="/all-services"
-          aria-label="back to services"
-          className="ml-auto whitespace-nowrap text-[14px] text-background underline"
-        >
-          <span aria-hidden="true">{"<-"}</span> back to services
-        </Link>
-      </div>
+    <section>
+      <span className="w-12 font-medium font-satoshi text-[32px] leading-none">
+        01
+      </span>
+      <h2 className="font-medium text-[24px]">select a service</h2>
+      <p className="mt-4 text-[16px] text-zeta">
+        browse my available services and choose the one that fits your needs.
+        each service is delivered with high attention to detail and commitment
+        to quality.
+      </p>
+      <Link
+        href="/all-services"
+        aria-label="back to services"
+        className="mt-4 inline-block text-[14px] text-coffee underline"
+      >
+        <span aria-hidden="true">{"<-"}</span> back to services
+      </Link>
     </section>
   );
 };

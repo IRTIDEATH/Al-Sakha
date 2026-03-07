@@ -34,6 +34,7 @@ export async function generateMetadata({
     ],
     openGraph: {
       title: blog.frontmatter.title,
+      siteName: "irtideath.engineer",
       description: blog.frontmatter.description,
       type: "article",
       publishedTime: blog.frontmatter.date,
