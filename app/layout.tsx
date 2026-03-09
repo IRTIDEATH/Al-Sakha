@@ -99,8 +99,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: "Irtideath | npc",
-    description:
-      "gray, cozy as a cat taking a nap. just an ordinary npc and dumb in math, you can call me al sakha. i never imagined myself in the field of programming.",
+    description: "gray, cozy as a cat taking a nap.",
     url: "https://irtideath.engineer",
     siteName: "irtideath.engineer",
     type: "website",

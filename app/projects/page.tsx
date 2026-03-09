@@ -7,11 +7,11 @@ import TitleSection from "@/components/pages/project/title-section";
 export const metadata: Metadata = {
   title: "Irtideath | Projects",
   description:
-    "chasing something until lose all feeling and forget the real world.",
+    "echoes of my keyboard. a collection of logic created to define my perspective. it dawned on me that i might be useful, even just a little...",
   openGraph: {
     title: "Irtideath | Projects",
     description:
-      "chasing something until lose all feeling and forget the real world.",
+      "perhaps it is the kind of thing that quietly erases sensation, until the world feels like a rumor you once believed. yet even now, i cannot name it.",
     url: "https://irtideath.engineer/projects",
     images: ["/opengraph-image.png"],
   },
