@@ -14,6 +14,9 @@ export const metadata: Metadata = {
       "perhaps it is the kind of thing that quietly erases sensation, until the world feels like a rumor you once believed. yet even now, i cannot name it.",
     url: "https://irtideath.engineer/projects",
     images: ["/opengraph-image.png"],
+    siteName: "irtideath.engineer",
+    type: "website",
+    locale: "en_US",
   },
 };
 

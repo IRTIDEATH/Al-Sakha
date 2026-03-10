@@ -13,6 +13,9 @@ export const metadata: Metadata = {
     description: "a step-by-step guide to ordering my services.",
     url: "https://irtideath.engineer/all-services/order",
     images: ["/opengraph-image.png"],
+    siteName: "irtideath.engineer",
+    type: "website",
+    locale: "en_US",
   },
 };
 

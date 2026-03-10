@@ -13,6 +13,9 @@ export const metadata: Metadata = {
     description: "this site, and all that it contains.",
     url: "https://irtideath.engineer/about",
     images: ["/opengraph-image.png"],
+    siteName: "irtideath.engineer",
+    type: "website",
+    locale: "en_US",
   },
 };
 

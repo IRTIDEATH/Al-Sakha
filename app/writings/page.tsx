@@ -13,6 +13,9 @@ export const metadata: Metadata = {
     description: "you are free to weave your own meaning—alone.",
     url: "https://irtideath.engineer/writings",
     images: ["/opengraph-image.png"],
+    siteName: "irtideath.engineer",
+    type: "website",
+    locale: "en_US",
   },
 };
 
