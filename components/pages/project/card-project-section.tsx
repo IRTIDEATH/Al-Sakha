@@ -1,10 +1,24 @@
 "use client";
 
 import { Icon } from "@iconify/react";
-import dynamic from "next/dynamic";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
-import { Fragment, useCallback, useMemo, useTransition } from "react";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import {
+  Fragment,
+  useCallback,
+  useEffect,
+  useMemo,
+  useState,
+  useTransition,
+} from "react";
+import {
+  MorphingDialog,
+  MorphingDialogClose,
+  MorphingDialogContainer,
+  MorphingDialogContent,
+  MorphingDialogImage,
+  MorphingDialogTrigger,
+} from "@/components/animate/morphing-dialog";
 import { Badge } from "@/components/ui/badge";
 import {
   Carousel,
@@ -22,65 +36,26 @@ import {
 } from "@/components/ui/tooltip";
 import { projects } from "@/constants/project";
 
-const MorphingDialog = dynamic(
-  () =>
-    import("@/components/animate/morphing-dialog").then(
-      (mod) => mod.MorphingDialog,
-    ),
-  {
-    ssr: true,
-    loading: () => <div className="h-40 w-28 animate-pulse bg-suram" />,
-  },
-);
-const MorphingDialogContainer = dynamic(
-  () =>
-    import("@/components/animate/morphing-dialog").then(
-      (mod) => mod.MorphingDialogContainer,
-    ),
-  { ssr: true },
-);
-const MorphingDialogContent = dynamic(
-  () =>
-    import("@/components/animate/morphing-dialog").then(
-      (mod) => mod.MorphingDialogContent,
-    ),
-  { ssr: true },
-);
-const MorphingDialogImage = dynamic(
-  () =>
-    import("@/components/animate/morphing-dialog").then(
-      (mod) => mod.MorphingDialogImage,
-    ),
-  { ssr: true },
-);
-const MorphingDialogTrigger = dynamic(
-  () =>
-    import("@/components/animate/morphing-dialog").then(
-      (mod) => mod.MorphingDialogTrigger,
-    ),
-  { ssr: true },
-);
-const MorphingDialogClose = dynamic(
-  () =>
-    import("@/components/animate/morphing-dialog").then(
-      (mod) => mod.MorphingDialogClose,
-    ),
-  { ssr: true },
-);
-
 type Category = string | "all";
 
-interface CardProjectSectionProps {
-  initialCategory: Category;
-}
-
-const CardProjectSecton = ({ initialCategory }: CardProjectSectionProps) => {
+const CardProjectSecton = () => {
   const router = useRouter();
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
+  const categoryParam = searchParams.get("category") || "all";
+
+  const [activeCategory, setActiveCategory] = useState<Category>(categoryParam);
   const [, startTransition] = useTransition();
+
+  useEffect(() => {
+    setActiveCategory(categoryParam);
+  }, [categoryParam]);
 
   const handleTabClick = useCallback(
     (category: Category) => {
-      const params = new URLSearchParams(window.location.search);
+      setActiveCategory(category);
+
+      const params = new URLSearchParams(searchParams.toString());
       if (category === "all") {
         params.delete("category");
       } else {
@@ -88,9 +63,7 @@ const CardProjectSecton = ({ initialCategory }: CardProjectSectionProps) => {
       }
 
       const queryString = params.toString();
-      const newUrl = queryString
-        ? `${window.location.pathname}?${queryString}`
-        : window.location.pathname;
+      const newUrl = queryString ? `${pathname}?${queryString}` : pathname;
 
       startTransition(() => {
         router.replace(newUrl, {
@@ -98,7 +71,7 @@ const CardProjectSecton = ({ initialCategory }: CardProjectSectionProps) => {
         });
       });
     },
-    [router],
+    [pathname, router, searchParams],
   );
 
   const categories = useMemo(() => {
@@ -107,9 +80,9 @@ const CardProjectSecton = ({ initialCategory }: CardProjectSectionProps) => {
   }, []);
 
   const filteredProjects = useMemo(() => {
-    if (initialCategory === "all") return projects;
-    return projects.filter((item) => item.about === initialCategory);
-  }, [initialCategory]);
+    if (activeCategory === "all") return projects;
+    return projects.filter((item) => item.about === activeCategory);
+  }, [activeCategory]);
   return (
     <TooltipProvider delayDuration={100}>
       <section>
@@ -129,7 +102,7 @@ const CardProjectSecton = ({ initialCategory }: CardProjectSectionProps) => {
                   <button
                     onClick={() => handleTabClick("all")}
                     className={`cursor-pointer select-none px-4 py-[5px] font-roboto text-[14px] transition-colors duration-150 ease-in-out ${
-                      initialCategory === "all"
+                      activeCategory === "all"
                         ? "bg-foreground text-background"
                         : "bg-suram text-foreground hover:bg-foreground hover:text-background"
                     }`}
@@ -143,7 +116,7 @@ const CardProjectSecton = ({ initialCategory }: CardProjectSectionProps) => {
                       <button
                         onClick={() => handleTabClick(category)}
                         className={`cursor-pointer select-none px-4 py-[5px] font-roboto text-[14px] transition-colors duration-150 ease-in-out ${
-                          initialCategory === category
+                          activeCategory === category
                             ? "bg-foreground text-background"
                             : "bg-suram text-foreground hover:bg-foreground hover:text-background"
                         }`}

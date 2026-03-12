@@ -20,19 +20,12 @@ export const metadata: Metadata = {
   },
 };
 
-interface PageProps {
-  searchParams: Promise<{ category?: string }>;
-}
-
-export default async function Page({ searchParams }: PageProps) {
-  const params = await searchParams;
-  const initialCategory = params.category || "all";
-
+export default function Page() {
   return (
     <main className="mt-12">
       <TitleSection />
       <Suspense fallback={<div className="h-20 animate-pulse bg-suram/50" />}>
-        <CardProjectSecton initialCategory={initialCategory} />
+        <CardProjectSecton />
       </Suspense>
       <MoreOnGithubSection />
     </main>
