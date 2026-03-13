@@ -32,7 +32,7 @@ const Navbar = () => {
         <SparkleGroup />
       </div>
       <div className="hidden items-center md:flex">
-        <ul className="flex items-center gap-6 pr-4 font-medium font-roboto text-[16px]">
+        <ul className="flex items-center gap-5 pr-4 font-medium font-roboto text-[14px]">
           {navigationItems.map((item, index) => (
             <li key={index}>
               <Link

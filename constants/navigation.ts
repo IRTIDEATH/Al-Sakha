@@ -5,7 +5,7 @@ export interface NavigationInterface {
 
 export const navigationItems: NavigationInterface[] = [
   { name: "home", href: "/" },
-  { name: "about", href: "/about" },
   { name: "projects", href: "/projects" },
+  { name: "services", href: "/all-services" },
   { name: "writings", href: "/writings" },
 ];
