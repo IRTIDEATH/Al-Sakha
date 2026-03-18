@@ -18,6 +18,13 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
   },
+  keywords: [
+    "irtideath projects",
+    "personal projects",
+    "internship projects",
+    "competition projects",
+    "freelance projects",
+  ],
 };
 
 export default function Page() {

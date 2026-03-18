@@ -24,11 +24,11 @@ const TitleSection = () => {
           <path d="M10 22h4" />
         </svg>
       </h1>
-      <p className="mb-4 w-full text-start font-medium text-[16px] text-zeta">
+      <p className="mb-4 w-full text-start text-[16px] text-zeta">
         available for freelance work. here are the things i can do to help bring
         your ideas to life.
       </p>
-      <p className="text-start font-medium text-[16px] text-zeta">
+      <p className="text-start text-[16px] text-zeta">
         interested in working together?{" "}
         <CoffeeText>
           <Link

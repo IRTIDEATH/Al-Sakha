@@ -9,14 +9,14 @@ const ServiceSection = () => {
       <h2 className="mb-6 font-medium text-2xl">service</h2>
       <p className="w-full text-start text-[16px] text-zeta">
         i provide services that reflect my current capabilities, with a focus on
-        delivering effective and thoughtful solutions.{" "}
+        delivering effective and thoughtful solution.{" "}
         <CoffeeText>
           <Link
             href="/all-services"
             className="whitespace-nowrap underline"
             aria-label="Explore all services"
           >
-            explore{" "}
+            explore services{" "}
             <span aria-hidden="true" className="font-medium">
               {"<--"}
             </span>

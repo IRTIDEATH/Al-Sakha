@@ -17,14 +17,22 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
   },
+  keywords: [
+    "irtideath writing",
+    "irtideath writings",
+    "irtideath blog",
+    "irtideath articles",
+    "personal thoughts",
+    "storytelling",
+  ],
 };
 
 export default async function Page() {
   const blogs = await getBlogs();
   return (
     <main className="mt-14">
-      <header className="space-y-6 font-medium">
-        <h1 className="text-2xl">writing in my spare time</h1>
+      <header className="space-y-6">
+        <h1 className="font-medium text-2xl">writing in my spare time</h1>
         <p className="text-start text-[16px] text-zeta">
           whether it&apos;s storytelling, crafting articles, or diving into
           research. just sharing what&apos;s on my mind.

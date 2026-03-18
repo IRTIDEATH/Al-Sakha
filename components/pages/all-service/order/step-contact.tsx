@@ -10,7 +10,7 @@ const StepContact = () => {
       icon: "simple-icons:whatsapp",
       title: "whatsapp",
       value:
-        "to get the whatsapp number, please send a message via email/treads first.",
+        "to get the whatsapp number, please send a message via email or threads first.",
       href: "#",
     },
     {

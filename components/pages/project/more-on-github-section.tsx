@@ -15,7 +15,7 @@ const MoreOnGithubSection = () => {
     <TooltipProvider delayDuration={100}>
       <section className="flex w-full flex-col justify-between">
         <h2 className="mb-2 font-medium text-[20px]">more on Github!</h2>
-        <p className="font-medium text-[16px] text-zeta">
+        <p className="text-[16px] text-zeta">
           explore more projects on my github. feel free to contribute, or drop a{" "}
           <CoffeeText>star</CoffeeText> if you find something useful.
         </p>

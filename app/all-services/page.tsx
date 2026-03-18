@@ -15,6 +15,23 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
   },
+  keywords: [
+    "hire irtideath",
+    "irtideath service",
+    "irtideath services",
+    "irtideath all services",
+    "freelance web developer",
+    "freelance web designer",
+    "freelance software engineer",
+    "freelance design engineer",
+    "web development services",
+    "hire frontend developer",
+    "design engineering services",
+    "creative web development",
+    "ui engineering",
+    "interactive interfaces",
+    "custom website development",
+  ],
 };
 
 export default function Page() {

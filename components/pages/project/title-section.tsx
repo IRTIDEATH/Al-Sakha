@@ -5,7 +5,7 @@ const TitleSection = () => {
   return (
     <header>
       <h1 className="mb-6 font-medium text-3xl">coding result</h1>
-      <p className="mb-6 w-full text-start font-medium text-[16px] text-zeta">
+      <p className="mb-6 w-full text-start text-[16px] text-zeta">
         echoes of my keyboard. a collection of logic created to define my
         perspective. it dawned on me that i <CoffeeText>might</CoffeeText> be
         useful, even just a little...
