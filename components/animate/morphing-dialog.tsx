@@ -363,7 +363,6 @@ function MorphingDialogImage({
   className,
   style,
   sizes,
-  priority,
 }: MorphingDialogImageProps) {
   const { uniqueId } = useMorphingDialog();
 
@@ -376,7 +375,7 @@ function MorphingDialogImage({
       className={cn(className)}
       layoutId={`dialog-img-${uniqueId}`}
       style={style}
-      priority={priority}
+      unoptimized
     />
   );
 }
