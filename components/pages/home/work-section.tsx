@@ -18,7 +18,7 @@ const WorkExperienceSection = () => {
             className="flex w-full flex-col items-start font-normal text-zeta sm:flex-row sm:items-end sm:justify-between"
           >
             <article className="flex flex-col gap-0.5">
-              <h3 className="font-medium font-roboto text-foreground text-lg">
+              <h3 className="font-geist font-medium text-foreground text-lg">
                 <Link
                   rel="noopener noreferrer"
                   target="_blank"

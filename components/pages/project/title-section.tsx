@@ -12,7 +12,7 @@ const TitleSection = () => {
       </p>
       <Divider className="md:mb-0" />
       <div
-        className="my-6 hidden select-none items-center justify-between font-roboto text-[10px] md:flex"
+        className="my-6 hidden select-none items-center justify-between font-geist text-[10px] md:flex"
         aria-hidden="true"
       >
         <span>click</span>

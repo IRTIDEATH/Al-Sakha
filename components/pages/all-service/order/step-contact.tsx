@@ -75,7 +75,7 @@ const StepContact = () => {
                         {contact.title}
                       </span>
                     </div>
-                    <p className="font-roboto text-[12px] text-suram">
+                    <p className="font-geist text-[12px] text-suram">
                       {contact.value}
                     </p>
                   </div>

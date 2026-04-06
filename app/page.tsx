@@ -29,14 +29,12 @@ const Page = () => {
       />
       <main className="mt-12">
         <HeroSection />
-        <div className="flex select-none items-center justify-between bg-suram py-1 font-roboto text-[8px] sm:text-[10px]">
-          <span>
-            <span className="inline-block rotate-90 font-geist">{"->"}</span>{" "}
-            scroll for
+        <div className="flex select-none items-center justify-between bg-suram py-1 text-[8px] sm:text-[10px]">
+          <span className="font-geist">
+            <span className="inline-block rotate-90">{"->"}</span> scroll for
           </span>
-          <span>
-            cool sh*t{" "}
-            <span className="inline-block rotate-90 font-geist">{"->"}</span>
+          <span className="font-geist">
+            cool sh*t <span className="inline-block rotate-90">{"->"}</span>
           </span>
         </div>
         <Divider />

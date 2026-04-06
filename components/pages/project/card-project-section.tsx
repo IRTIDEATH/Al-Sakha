@@ -101,7 +101,7 @@ const CardProjectSecton = () => {
                 <CarouselItem className="basis-auto pl-2">
                   <button
                     onClick={() => handleTabClick("all")}
-                    className={`cursor-pointer select-none px-4 py-[5px] font-roboto text-[14px] transition-colors duration-150 ease-in-out ${
+                    className={`cursor-pointer select-none px-4 py-[5px] font-geist text-[14px] transition-colors duration-150 ease-in-out ${
                       activeCategory === "all"
                         ? "bg-foreground text-background"
                         : "bg-suram text-foreground hover:bg-foreground hover:text-background"
@@ -115,7 +115,7 @@ const CardProjectSecton = () => {
                     <CarouselItem key={category} className="basis-auto pl-4">
                       <button
                         onClick={() => handleTabClick(category)}
-                        className={`cursor-pointer select-none px-4 py-[5px] font-roboto text-[14px] transition-colors duration-150 ease-in-out ${
+                        className={`cursor-pointer select-none px-4 py-[5px] font-geist text-[14px] transition-colors duration-150 ease-in-out ${
                           activeCategory === category
                             ? "bg-foreground text-background"
                             : "bg-suram text-foreground hover:bg-foreground hover:text-background"

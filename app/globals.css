@@ -18,7 +18,6 @@
   --color-coffee: var(--coffee);
   --color-zeta: var(--zeta);
   --color-suram: var(--suram);
-  --font-roboto: var(--font-roboto-mono);
   --font-geist: var(--font-geist-mono);
   --font-schoolbell: var(--font-schoolbell);
   --font-source: var(--font-source-serif);
@@ -44,7 +43,7 @@ p {
   @apply prose-ol:list-decimal prose-ol:pl-8 prose-ol:my-5 md:prose-ol:my-6.5;
   @apply prose-li:my-4 prose-li:leading-relaxed prose-li:text-[17px] md:prose-li:text-[20px];
   @apply prose-p:font-normal prose-p:text-[17px] md:prose-p:text-[20px];
-  @apply prose-pre:my-8 md:prose-pre:my-12 prose-pre:py-6 prose-pre:px-7.5 prose-pre:font-roboto prose-pre:text-[14px];
+  @apply prose-pre:my-8 md:prose-pre:my-12 prose-pre:py-6 prose-pre:px-7.5 prose-pre:font-geist prose-pre:text-[14px];
   @apply prose-strong:font-semibold prose-strong:text-coffee;
   @apply prose-em:text-zeta prose-em:italic;
 
@@ -59,7 +58,7 @@ p {
   }
 
   & :not(pre) > code {
-    @apply bg-suram px-1.5 py-0.5 font-roboto font-normal text-[12px] md:text-[14px];
+    @apply bg-suram px-1.5 py-0.5 font-geist font-normal text-[12px] md:text-[14px];
     &::before,
     &::after {
       content: none;

@@ -6,14 +6,14 @@ import * as React from "react";
 import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex cursor-pointer items-center justify-center gap-2 whitespace-nowrap text-base transition-colors focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
+  "inline-flex cursor-pointer items-center justify-center gap-2 whitespace-nowrap font-geist text-base transition-colors focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
   {
     variants: {
       variant: {
         default:
-          "border-[1.5px] border-foreground bg-transparent font-medium font-roboto text-foreground",
+          "border-[1.5px] border-foreground bg-transparent font-medium text-foreground",
         explore:
-          "border-foreground border-t border-r-none border-b-none border-l bg-foreground font-medium font-roboto text-background duration-150 ease-in-out hover:bg-transparent hover:text-foreground",
+          "border-foreground border-t border-r-none border-b-none border-l bg-foreground font-medium text-background duration-150 ease-in-out hover:bg-transparent hover:text-foreground",
         link: "text-primary underline-offset-4 hover:underline",
         ghost: "hover:text-background",
         classic:

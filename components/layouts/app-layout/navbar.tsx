@@ -32,7 +32,7 @@ const Navbar = () => {
         <SparkleGroup />
       </div>
       <div className="hidden items-center md:flex">
-        <ul className="flex items-center gap-5 pr-4 font-medium font-roboto text-[14px]">
+        <ul className="flex items-center gap-5 pr-4 font-geist font-medium text-[14px]">
           {navigationItems.map((item, index) => (
             <li key={index}>
               <Link
@@ -80,7 +80,7 @@ const Navbar = () => {
                 const isActive = pathname === item.href;
                 return (
                   <motion.div
-                    className="w-full max-w-[300px] font-roboto"
+                    className="w-full max-w-[300px] font-geist"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     key={index}
