@@ -10,10 +10,6 @@ export const onGithubs: SkillBadgeIconInterface[] = [
     icon: "simple-icons:gitlab",
   },
   {
-    name: "Github Actions",
-    icon: "simple-icons:githubactions",
-  },
-  {
     name: "Markdown",
     icon: "simple-icons:markdown",
   },

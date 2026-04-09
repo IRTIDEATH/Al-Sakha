@@ -35,6 +35,10 @@ export const projects: ProjectInterface[] = [
         name: "Tailwind CSS",
         icon: "simple-icons:tailwindcss",
       },
+      {
+        name: "GSAP",
+        icon: "simple-icons:gsap",
+      },
     ],
   },
   {
@@ -89,8 +93,8 @@ export const projects: ProjectInterface[] = [
         icon: "simple-icons:tailwindcss",
       },
       {
-        name: "Shadcn/ui",
-        icon: "simple-icons:shadcnui",
+        name: "Motion",
+        icon: "devicon:motion",
       },
     ],
   },
@@ -117,6 +121,10 @@ export const projects: ProjectInterface[] = [
       {
         name: "Tailwind CSS",
         icon: "simple-icons:tailwindcss",
+      },
+      {
+        name: "GSAP",
+        icon: "simple-icons:gsap",
       },
     ],
   },
@@ -200,6 +208,28 @@ export const projects: ProjectInterface[] = [
       {
         name: "PrismaORM",
         icon: "simple-icons:prisma",
+      },
+    ],
+  },
+  {
+    image: "/project/teremisimg.webp",
+    name: "Teremis",
+    view: "https://teremis.pages.dev",
+    description:
+      "a web platform for a custom acrylic keychain studio. this website is designed to reflect a clean, modern, and precise brand identity. its primary focus is to make it easy for customers to understand our production services.",
+    about: "landing page",
+    technologies: [
+      {
+        name: "Astro",
+        icon: "simple-icons:astro",
+      },
+      {
+        name: "Tailwind CSS",
+        icon: "simple-icons:tailwindcss",
+      },
+      {
+        name: "GSAP",
+        icon: "simple-icons:gsap",
       },
     ],
   },
