@@ -116,14 +116,14 @@ export default async function Page({
         </div>
         <nav
           className={
-            `mt-10 flex flex-col justify-between sm:flex-row` +
+            `not-prose mt-10 flex flex-col justify-between sm:flex-row` +
             (prevBlog && nextBlog ? "gap-4" : "")
           }
         >
           {prevBlog ? (
             <Link
               href={`/writings/${prevBlog.slug}`}
-              className="group flex w-full flex-col items-start border border-foreground p-4 no-underline transition-colors duration-300 hover:bg-foreground active:bg-foreground active:text-background"
+              className="group flex w-full flex-col items-start border border-foreground p-4 font-geist no-underline transition-colors duration-300 hover:bg-foreground active:bg-foreground active:text-background"
             >
               <span className="text-xs text-zeta">{"<-"} Previous</span>
               <span className="mt-1 text-lg transition-colors ease-in-out group-hover:text-background">
@@ -136,7 +136,7 @@ export default async function Page({
           {nextBlog ? (
             <Link
               href={`/writings/${nextBlog.slug}`}
-              className="group flex w-full flex-col items-end border border-foreground p-4 no-underline transition-colors duration-300 hover:bg-foreground active:bg-foreground active:text-background"
+              className="group flex w-full flex-col items-end border border-foreground p-4 font-geist no-underline transition-colors duration-300 hover:bg-foreground active:bg-foreground active:text-background"
             >
               <span className="text-xs text-zeta">Next {"->"}</span>
               <span className="mt-1 text-lg transition-colors ease-in-out group-hover:text-background">

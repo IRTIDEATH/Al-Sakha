@@ -2,6 +2,9 @@ import fs from "node:fs";
 import path from "node:path";
 import rehypeShiki from "@shikijs/rehype";
 import { compileMDX } from "next-mdx-remote/rsc";
+import remarkFlexibleMarkers from "remark-flexible-markers";
+import remarkGfm from "remark-gfm";
+import { MdxImage } from "@/components/layouts/writing-layout/mdx-image";
 import { DotDivider } from "@/components/ui/divider";
 
 const contentDir = path.join(process.cwd(), "app/writings/_mdx-content");
@@ -23,11 +26,13 @@ export async function getBlogBySlug(slug: string) {
     options: {
       parseFrontmatter: true,
       mdxOptions: {
+        remarkPlugins: [remarkGfm, remarkFlexibleMarkers],
         rehypePlugins: [[rehypeShiki, { theme: "gruvbox-light-hard" }]],
       },
     },
     components: {
       DotDivider,
+      img: MdxImage,
     },
   });
   return {

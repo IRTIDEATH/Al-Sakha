@@ -42,10 +42,28 @@ p {
   @apply prose-ul:list-disc prose-ul:pl-8 prose-ul:my-5 md:prose-ul:my-6.5;
   @apply prose-ol:list-decimal prose-ol:pl-8 prose-ol:my-5 md:prose-ol:my-6.5;
   @apply prose-li:my-4 prose-li:leading-relaxed prose-li:text-[17px] md:prose-li:text-[20px];
-  @apply prose-p:font-normal prose-p:text-[17px] md:prose-p:text-[20px];
-  @apply prose-pre:my-8 md:prose-pre:my-12 prose-pre:py-6 prose-pre:px-7.5 prose-pre:font-geist prose-pre:text-[14px];
+  @apply prose-p:font-normal prose-p:text-[17px] md:prose-p:text-[20px] prose-p:my-5;
+  @apply prose-pre:my-8 md:prose-pre:my-11 prose-pre:py-6 prose-pre:px-7.5 prose-pre:font-geist prose-pre:text-[14px] prose-pre:overflow-x-auto;
   @apply prose-strong:font-semibold prose-strong:text-coffee;
   @apply prose-em:text-zeta prose-em:italic;
+
+  & .task-list-item {
+    @apply list-none;
+  }
+
+  & .contains-task-list {
+    @apply pl-3;
+  }
+
+  & table {
+    @apply w-full border-collapse my-8 md:my-11 border border-foreground font-satoshi;
+    & th {
+      @apply border border-foreground bg-suram p-3 font-semibold;
+    }
+    & td {
+      @apply border border-foreground p-3 text-sm font-medium;
+    }
+  }
 
   & blockquote {
     @apply relative pl-6 my-9 italic text-zeta text-[17px] md:text-[20px] font-normal;
@@ -63,5 +81,9 @@ p {
     &::after {
       content: none;
     }
+  }
+
+  & mark {
+    @apply bg-[#F9F5D7] text-foreground px-0.5 py-0.5;
   }
 }

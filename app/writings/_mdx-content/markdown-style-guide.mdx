@@ -1,0 +1,81 @@
+---
+thumbnail: "/writings/lorem-ipsum.webp"
+title: "markdown style guide"
+description: ""
+slug: "markdown-style-guide"
+tags:
+  - Markdown
+category: 
+  - "#guide"
+date: "2026.04.10"
+---
+
+# Markdown Style Guide
+
+## Paragraph
+Here’s a practical example of a paragraph in Markdown. This text demonstrates how content flows naturally in a blog post.  
+
+You can use various formatting options like **bold**, *italic*, ~~strikethrough~~, and `code` within your paragraphs.
+
+## Blockquotes
+>I'm not a level 5 skibidi, because that's just a big mewing.
+>
+>— Irtideath
+
+Ordered List
+1. First item
+2. Second item
+3. Third item
+
+Unordered List
+- Item
+- Subitem
+- Subitem
+
+Task List
+- [ ] First item
+- [ ] Second item
+- [x] Third item
+
+## Image
+
+To hide the caption, start it with an underscore `_` or leave the alt text empty.
+
+![Vestia Zeta Your Mine](/writings/markdown-style-guide/zetayourmine.jpeg)
+
+## Table
+
+| Style | Weight | Other |
+| :--- | :--- | :--- |
+| Normal | Regular | Text |
+| *Italic* | **Bold** | `code` |
+
+## Code Blocks
+
+```ts
+// button.tsx
+
+export interface ButtonProps
+  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
+    VariantProps<typeof buttonVariants> {
+  asChild?: boolean;
+}
+
+const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
+  ({ className, variant, size, asChild = false, ...props }, ref) => {
+    const Comp = asChild ? Slot : "button";
+    return (
+      <Comp
+        className={cn(buttonVariants({ variant, size, className }))}
+        ref={ref}
+        {...props}
+      />
+    );
+  },
+);
+Button.displayName = "Button";
+
+export { Button, buttonVariants };
+```
+
+As nocturnal predators, centipedes emerge from damp places at ==night== to avoid dehydration.
