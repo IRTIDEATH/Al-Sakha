@@ -27,6 +27,7 @@
 
 body {
   background: var(--background);
+  font-feature-settings: "ss11";
 }
 
 p {

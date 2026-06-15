@@ -1,8 +1,7 @@
 "use client";
 
 import { motion } from "motion/react";
-import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
+import { memo, useCallback, useEffect, useRef, useState } from "react";
 
 const sparkleSvgs = ["/Aks1.svg", "/Aks2.svg", "/Aks3.svg", "/Aks4.svg"];
 
@@ -31,7 +30,7 @@ function randomSparkle(id: number): SparkleProps {
   };
 }
 
-export const Sparkle = ({
+const Sparkle = memo(function Sparkle({
   x,
   y,
   rotate,
@@ -39,51 +38,60 @@ export const Sparkle = ({
   opacity,
   duration,
   svgIndex,
+  id,
   onComplete,
-}: SparkleProps & { onComplete: () => void }) => (
-  <motion.div
-    initial={{
-      opacity: 0,
-      y: 0,
-      rotate: rotate,
-    }}
-    animate={{
-      opacity: [0, opacity, 0.4, 0],
-      y: -44,
-      rotate: rotate + 360,
-    }}
-    transition={{
-      opacity: { duration: duration },
-      y: { duration: duration },
-      duration: duration,
-      ease: "easeInOut",
-    }}
-    style={{
-      position: "absolute",
-      left: x,
-      top: y,
-      pointerEvents: "none",
-      width: size,
-      height: size,
-      zIndex: 10,
-    }}
-    onAnimationComplete={onComplete}
-  >
-    <Image src={sparkleSvgs[svgIndex]} alt="sparkle" fill draggable={false} />
-  </motion.div>
-);
+}: SparkleProps & { onComplete: (id: number) => void }) {
+  return (
+    <motion.div
+      initial={{
+        opacity: 0,
+        y: 0,
+        rotate,
+      }}
+      animate={{
+        opacity: [0, opacity, 0.4, 0],
+        y: -44,
+        rotate: rotate + 360,
+      }}
+      transition={{
+        opacity: { duration },
+        y: { duration },
+        duration,
+        ease: "easeInOut",
+      }}
+      style={{
+        position: "absolute",
+        left: x,
+        top: y,
+        pointerEvents: "none",
+        width: size,
+        height: size,
+        zIndex: 10,
+        willChange: "transform, opacity",
+      }}
+      onAnimationComplete={() => onComplete(id)}
+    >
+      <img
+        src={sparkleSvgs[svgIndex]}
+        alt=""
+        draggable={false}
+        style={{ width: "100%", height: "100%" }}
+      />
+    </motion.div>
+  );
+});
 
 const SparkleGroup = () => {
   const [sparkles, setSparkles] = useState<SparkleProps[]>([]);
   const sparkleId = useRef(0);
+  const componentId = useRef(Math.floor(Math.random() * 1000));
 
   useEffect(() => {
-    const componentId = Math.floor(Math.random() * 1000);
+    const id = componentId.current;
     const interval = setInterval(() => {
+      sparkleId.current += 1;
+      const newSparkle = randomSparkle(id * 1000 + sparkleId.current);
       setSparkles((prev) => {
-        sparkleId.current += 1;
-        const uniqueId = componentId * 1000 + sparkleId.current;
-        const newSparkle = randomSparkle(uniqueId);
         const next = [...prev, newSparkle];
         return next.length > 20 ? next.slice(-20) : next;
       });
@@ -92,9 +100,9 @@ const SparkleGroup = () => {
     return () => clearInterval(interval);
   }, []);
 
-  const handleComplete = (id: number) => {
+  const handleComplete = useCallback((id: number) => {
     setSparkles((prev) => prev.filter((s) => s.id !== id));
-  };
+  }, []);
 
   return (
     <div
@@ -109,11 +117,7 @@ const SparkleGroup = () => {
       }}
     >
       {sparkles.map((sparkle) => (
-        <Sparkle
-          {...sparkle}
-          key={sparkle.id}
-          onComplete={() => handleComplete(sparkle.id)}
-        />
+        <Sparkle {...sparkle} key={sparkle.id} onComplete={handleComplete} />
       ))}
     </div>
   );

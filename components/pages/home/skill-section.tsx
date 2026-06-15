@@ -13,7 +13,7 @@ const SkillSection = () => {
         transition={{
           bounce: 0,
           type: "spring",
-          duration: 0.3,
+          duration: 0.4,
           from: 50,
         }}
         enableHover

@@ -9,7 +9,7 @@ export const chatLink: ChatLinkInterface[] = [
   {
     label: "Talk with me on Threads",
     icon: "simple-icons:threads",
-    href: "https://www.threads.com/@enderjhass",
+    href: "https://www.threads.com/@irtideath",
     title: "Threads",
   },
   {

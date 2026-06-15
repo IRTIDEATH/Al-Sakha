@@ -1,16 +1,10 @@
+import { GeistMono } from "geist/font/mono";
 import type { Metadata } from "next";
-import { Geist_Mono, Schoolbell, Source_Serif_4 } from "next/font/google";
+import { Schoolbell, Source_Serif_4 } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 import Wrapper from "@/components/layouts/app-layout/wrapper";
 import { Toaster } from "@/components/ui/sonner";
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-  display: "swap",
-  preload: true,
-});
 
 const sourceSerif = Source_Serif_4({
   variable: "--font-source-serif",
@@ -104,7 +98,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistMono.variable} ${schoolBell.variable} ${sourceSerif.variable} ${satoshi.variable} font-geist font-normal text-foreground antialiased`}
+        className={`${GeistMono.variable} ${schoolBell.variable} ${sourceSerif.variable} ${satoshi.variable} font-geist font-normal text-foreground antialiased`}
       >
         <Wrapper>{children}</Wrapper>
         <Toaster
