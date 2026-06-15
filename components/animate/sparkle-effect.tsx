@@ -88,16 +88,43 @@ const SparkleGroup = () => {
 
   useEffect(() => {
     const id = componentId.current;
-    const interval = setInterval(() => {
+
+    function tick() {
       sparkleId.current += 1;
       const newSparkle = randomSparkle(id * 1000 + sparkleId.current);
       setSparkles((prev) => {
         const next = [...prev, newSparkle];
         return next.length > 20 ? next.slice(-20) : next;
       });
-    }, 324);
+    }
 
-    return () => clearInterval(interval);
+    let interval: ReturnType<typeof setInterval> | undefined;
+
+    function start() {
+      interval = setInterval(tick, 324);
+    }
+
+    function stop() {
+      clearInterval(interval);
+      interval = undefined;
+    }
+
+    function onVisibilityChange() {
+      if (document.hidden) {
+        stop();
+        setSparkles([]);
+      } else {
+        start();
+      }
+    }
+
+    onVisibilityChange();
+    document.addEventListener("visibilitychange", onVisibilityChange);
+
+    return () => {
+      stop();
+      document.removeEventListener("visibilitychange", onVisibilityChange);
+    };
   }, []);
 
   const handleComplete = useCallback((id: number) => {
