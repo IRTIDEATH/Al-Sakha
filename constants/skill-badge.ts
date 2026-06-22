@@ -31,12 +31,7 @@ export const skillBadgeIcon: SkillBadgeIconInterface[] = [
     link: "https://git-scm.com",
   },
   {
-    name: "Three.js",
-    icon: "simple-icons:threedotjs",
-    link: "https://threejs.org",
-  },
-  {
-    name: "Tailwind CSS",
+    name: "Tailwind",
     icon: "simple-icons:tailwindcss",
     link: "https://tailwindcss.com",
   },

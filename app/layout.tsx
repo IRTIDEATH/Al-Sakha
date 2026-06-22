@@ -98,6 +98,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
+        suppressHydrationWarning
         className={`${GeistMono.variable} ${schoolBell.variable} ${sourceSerif.variable} ${satoshi.variable} font-geist font-normal text-foreground antialiased`}
       >
         <Wrapper>{children}</Wrapper>
