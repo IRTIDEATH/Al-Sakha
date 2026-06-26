@@ -3,14 +3,7 @@
 import { Icon } from "@iconify/react";
 import Link from "next/link";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import {
-  Fragment,
-  useCallback,
-  useEffect,
-  useMemo,
-  useState,
-  useTransition,
-} from "react";
+import { Fragment, useCallback } from "react";
 import {
   MorphingDialog,
   MorphingDialogClose,
@@ -35,54 +28,28 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { projects } from "@/constants/project";
-
-type Category = string | "all";
+import { cn } from "@/lib/utils";
 
 const CardProjectSecton = () => {
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
-  const categoryParam = searchParams.get("category") || "all";
-
-  const [activeCategory, setActiveCategory] = useState<Category>(categoryParam);
-  const [, startTransition] = useTransition();
-
-  useEffect(() => {
-    setActiveCategory(categoryParam);
-  }, [categoryParam]);
+  const activeCategory = searchParams.get("category") || "all";
 
   const handleTabClick = useCallback(
-    (category: Category) => {
-      setActiveCategory(category);
-
-      const params = new URLSearchParams(searchParams.toString());
-      if (category === "all") {
-        params.delete("category");
-      } else {
-        params.set("category", category);
-      }
-
-      const queryString = params.toString();
-      const newUrl = queryString ? `${pathname}?${queryString}` : pathname;
-
-      startTransition(() => {
-        router.replace(newUrl, {
-          scroll: false,
-        });
-      });
+    (category: string) => {
+      router.replace(
+        category === "all" ? pathname : `${pathname}?category=${category}`,
+        { scroll: false },
+      );
     },
-    [pathname, router, searchParams],
+    [pathname, router],
   );
 
-  const categories = useMemo(() => {
-    const uniqueCategories = [...new Set(projects.map((item) => item.about))];
-    return uniqueCategories.sort();
-  }, []);
-
-  const filteredProjects = useMemo(() => {
-    if (activeCategory === "all") return projects;
-    return projects.filter((item) => item.about === activeCategory);
-  }, [activeCategory]);
+  const filteredProjects =
+    activeCategory === "all"
+      ? projects
+      : projects.filter((item) => item.about === activeCategory);
   return (
     <TooltipProvider delayDuration={100}>
       <section>
@@ -98,34 +65,24 @@ const CardProjectSecton = () => {
             <CarouselPrevious className="static h-[31px] w-9 translate-y-0 border-none bg-foreground text-background" />
             <div className="flex-1 overflow-hidden">
               <CarouselContent className="-ml-2">
-                <CarouselItem className="basis-auto pl-2">
-                  <button
-                    onClick={() => handleTabClick("all")}
-                    className={`cursor-pointer select-none px-4 py-[5px] font-geist text-[14px] transition-colors duration-150 ease-in-out ${
-                      activeCategory === "all"
-                        ? "bg-foreground text-background"
-                        : "bg-suram text-foreground hover:bg-foreground hover:text-background"
-                    }`}
-                  >
-                    all
-                  </button>
-                </CarouselItem>
-                {categories.map((category) => {
-                  return (
-                    <CarouselItem key={category} className="basis-auto pl-4">
-                      <button
-                        onClick={() => handleTabClick(category)}
-                        className={`cursor-pointer select-none px-4 py-[5px] font-geist text-[14px] transition-colors duration-150 ease-in-out ${
-                          activeCategory === category
-                            ? "bg-foreground text-background"
-                            : "bg-suram text-foreground hover:bg-foreground hover:text-background"
-                        }`}
-                      >
-                        {category}
-                      </button>
-                    </CarouselItem>
-                  );
-                })}
+                {[
+                  "all",
+                  ...[...new Set(projects.map((p) => p.about))].sort(),
+                ].map((category) => (
+                  <CarouselItem key={category} className="basis-auto pl-2">
+                    <button
+                      onClick={() => handleTabClick(category)}
+                      className={cn(
+                        "cursor-pointer select-none px-4 py-[5px] font-geist text-[14px] transition-colors duration-150 ease-in-out",
+                        activeCategory === category
+                          ? "bg-foreground text-background"
+                          : "bg-suram text-foreground hover:bg-foreground hover:text-background",
+                      )}
+                    >
+                      {category}
+                    </button>
+                  </CarouselItem>
+                ))}
               </CarouselContent>
             </div>
             <CarouselNext className="static h-[31px] w-9 translate-y-0 border-none bg-foreground text-background" />
@@ -142,8 +99,7 @@ const CardProjectSecton = () => {
                   }}
                 >
                   <MorphingDialogTrigger>
-                    <div className="relative h-40 w-28">
-                      <div className="absolute z-10 h-full w-full bg-suram/70 transition-all duration-400 ease-in-out hover:bg-transparent hover:shadow-shadow" />
+                    <div className="relative h-40 w-28 bg-suram/70 transition-all duration-400 ease-in-out hover:bg-transparent hover:shadow-shadow">
                       <MorphingDialogImage
                         src={item.image}
                         alt={item.name}

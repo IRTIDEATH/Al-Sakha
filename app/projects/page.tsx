@@ -31,7 +31,7 @@ export default function Page() {
   return (
     <main className="mt-12">
       <TitleSection />
-      <Suspense fallback={<div className="h-20 animate-pulse bg-suram/50" />}>
+      <Suspense>
         <CardProjectSecton />
       </Suspense>
       <MoreOnGithubSection />
