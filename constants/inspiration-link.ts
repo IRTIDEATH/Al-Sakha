@@ -1,4 +1,4 @@
-export interface InspirationLinkInterface {
+interface InspirationLinkInterface {
   label: string;
   href: string;
   title: string;

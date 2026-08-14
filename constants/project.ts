@@ -1,6 +1,6 @@
 import type { SkillBadgeIconInterface } from "./skill-badge";
 
-export interface ProjectInterface {
+interface ProjectInterface {
   image: string;
   name: string;
   description: string;

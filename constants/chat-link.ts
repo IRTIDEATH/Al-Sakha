@@ -1,4 +1,4 @@
-export interface ChatLinkInterface {
+interface ChatLinkInterface {
   label: string;
   icon: string;
   href: string;
@@ -19,9 +19,9 @@ export const chatLink: ChatLinkInterface[] = [
     title: "Linkedin",
   },
   {
-    label: "Talk with me on Email",
-    icon: "lucide:mail",
-    href: "mailto:alsakhafatthariq@gmail.com",
-    title: "Email",
+    label: "holopin",
+    icon: "mdi:dinosaur-pixel",
+    href: "https://www.holopin.io/@irtideath#",
+    title: "Holopin",
   },
 ];

@@ -1,5 +1,11 @@
 import { Icon } from "@iconify/react";
 import Link from "next/link";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 import { chatLink } from "@/constants/chat-link";
 
 const ChatmeSection = () => {
@@ -13,8 +19,8 @@ const ChatmeSection = () => {
         </p>
       </div>
       <ul className="flex flex-row gap-2 font-medium text-lg">
-        {chatLink.map((item, index) => (
-          <li className="flex" key={index}>
+        {chatLink.map((item, index) => {
+          const content = (
             <Link
               aria-label={item.label}
               rel="noopener noreferrer"
@@ -24,8 +30,29 @@ const ChatmeSection = () => {
             >
               <Icon className="text-[22px]" icon={item.icon} />
             </Link>
-          </li>
-        ))}
+          );
+
+          if (item.title === "Holopin") {
+            return (
+              <li className="flex" key={index}>
+                <TooltipProvider delayDuration={300}>
+                  <Tooltip>
+                    <TooltipTrigger asChild>{content}</TooltipTrigger>
+                    <TooltipContent>
+                      <p>{item.label}</p>
+                    </TooltipContent>
+                  </Tooltip>
+                </TooltipProvider>
+              </li>
+            );
+          }
+
+          return (
+            <li className="flex" key={index}>
+              {content}
+            </li>
+          );
+        })}
       </ul>
     </section>
   );

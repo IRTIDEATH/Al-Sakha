@@ -1,4 +1,4 @@
-export interface ColorInterface {
+interface ColorInterface {
   name: string;
   class: string;
   hex: string;
