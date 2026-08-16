@@ -60,8 +60,8 @@ const CardProjectSecton = () => {
           }}
           className="mb-6 w-full"
         >
-          <div className="flex items-center gap-2">
-            <CarouselPrevious className="static h-[31px] w-9 translate-y-0 border-none bg-foreground text-background" />
+          <div className="flex items-center gap-1 border border-suram">
+            <CarouselPrevious className="static h-[31px] w-9 translate-y-0 border-none bg-foreground text-background disabled:bg-zeta disabled:text-background disabled:opacity-100" />
             <div className="flex-1 overflow-hidden">
               <CarouselContent className="-ml-2">
                 {[
@@ -84,7 +84,7 @@ const CardProjectSecton = () => {
                 ))}
               </CarouselContent>
             </div>
-            <CarouselNext className="static h-[31px] w-9 translate-y-0 border-none bg-foreground text-background" />
+            <CarouselNext className="static h-[31px] w-9 translate-y-0 border-none bg-foreground text-background disabled:bg-zeta disabled:text-background disabled:opacity-100" />
           </div>
         </Carousel>
         {filteredProjects.map((item, index) => (

@@ -100,7 +100,7 @@ export default async function Page() {
                   ))}
                 </div>
                 <time
-                  className="text-nowrap text-[12px] text-zeta"
+                  className="text-nowrap font-satoshi text-[12px] text-zeta"
                   dateTime={item.frontmatter.date}
                 >
                   {item.frontmatter.date}
