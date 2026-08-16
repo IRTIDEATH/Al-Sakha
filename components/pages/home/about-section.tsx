@@ -16,16 +16,15 @@ const AboutSection = () => {
         or hot <CoffeeText>coffee</CoffeeText> while working and study.
         that&apos;s all about me, thank you.
       </p>
-      <Link
-        href="/about"
-        className="ml-auto whitespace-nowrap text-coffee underline"
-        aria-label="About page"
-      >
-        <span aria-hidden="true" className="font-medium">
-          {"->"}
-        </span>{" "}
-        extended version
-      </Link>
+      <div className="flex">
+        <Link
+          href="/about"
+          className="ml-auto whitespace-nowrap text-[16px] text-coffee underline"
+          aria-label="About page"
+        >
+          <span aria-hidden="true">{"-->"}</span> extended
+        </Link>
+      </div>
     </section>
   );
 };

@@ -55,9 +55,8 @@ const CardProjectSecton = () => {
       <section>
         <Carousel
           opts={{
-            dragFree: true,
-            duration: 25,
-            dragThreshold: 8,
+            duration: 20,
+            skipSnaps: true,
           }}
           className="mb-6 w-full"
         >

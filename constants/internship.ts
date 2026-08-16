@@ -9,8 +9,8 @@ interface InternshipInterface {
 export const internships: InternshipInterface[] = [
   {
     company: "INDI Technology",
-    position: "Fullstack Developer",
-    date: "Sep - Nov 2024",
+    position: "fullstack developer",
+    date: "sep - nov [2024]",
     datetime: "2024-09",
     link: "https://www.linkedin.com/company/inditechno/",
   },

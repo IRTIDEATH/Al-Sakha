@@ -13,13 +13,10 @@ const ServiceSection = () => {
         <CoffeeText>
           <Link
             href="/all-services"
-            className="whitespace-nowrap underline"
+            className="whitespace-nowrap text-[16px] underline"
             aria-label="Explore all services"
           >
-            explore services{" "}
-            <span aria-hidden="true" className="font-medium">
-              {"<--"}
-            </span>
+            explore services <span aria-hidden="true">{"<--"}</span>
           </Link>
         </CoffeeText>
       </p>

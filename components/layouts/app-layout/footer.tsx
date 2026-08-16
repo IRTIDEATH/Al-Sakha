@@ -42,7 +42,7 @@ const Footer = () => {
           </Tooltip>
         </TooltipProvider>
       </div>
-      <div className="px-4 font-medium text-foreground text-xs">
+      <div className="px-4 text-foreground text-xs">
         © 2026 - Irtideath. All rights reserved.
       </div>
     </footer>
