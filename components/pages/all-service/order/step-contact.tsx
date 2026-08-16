@@ -24,8 +24,8 @@ const StepContact = () => {
       id: 3,
       icon: "simple-icons:threads",
       title: "threads",
-      value: "@enderjhass",
-      href: "https://www.threads.com/@enderjhass",
+      value: "@irtideath",
+      href: "https://www.threads.com/@irtideath",
     },
   ];
 
