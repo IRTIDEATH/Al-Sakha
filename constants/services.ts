@@ -25,8 +25,8 @@ export const services: ServiceInterface[] = [
     ],
     technologies: [
       {
-        name: "Next.js",
-        icon: "simple-icons:nextdotjs",
+        name: "Nuxt",
+        icon: "simple-icons:nuxtdotjs",
       },
       {
         name: "Svelte",

@@ -10,7 +10,7 @@ import { chatLink } from "@/constants/chat-link";
 
 const ChatmeSection = () => {
   return (
-    <section className="flex w-full flex-col justify-between gap-4 md:flex-row md:items-end md:gap-11">
+    <section className="flex w-full flex-col justify-between gap-6 md:flex-row md:items-end md:gap-22">
       <div>
         <h2 className="mb-4 font-medium text-2xl">wanna talk?</h2>
         <p className="w-full text-start text-[16px] text-zeta">
@@ -18,7 +18,7 @@ const ChatmeSection = () => {
           me.
         </p>
       </div>
-      <ul className="flex flex-row gap-2 font-medium text-lg">
+      <ul className="flex flex-row gap-3 font-medium text-lg">
         {chatLink.map((item, index) => {
           const content = (
             <Link
@@ -26,7 +26,7 @@ const ChatmeSection = () => {
               rel="noopener noreferrer"
               target="_blank"
               href={item.href}
-              className="border border-foreground bg-foreground px-4 py-1.5 text-background transition-colors duration-150 ease-in-out hover:bg-transparent hover:text-foreground"
+              className="p-1 text-foreground"
             >
               <Icon className="text-[22px]" icon={item.icon} />
             </Link>
