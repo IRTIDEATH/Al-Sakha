@@ -5,11 +5,11 @@
 
 ### Design Philosophy
 
-The *Irtideath* website embraces a philosophy of **warm minimalism**, inspired by the quiet comfort of a cat taking a nap. Its calm color palette—soft grays with coffee-toned accents—creates a soothing, welcoming atmosphere.
+The *Irtideath* embraces a philosophy of warm minimalism, inspired by the quiet comfort of a **cat** taking a nap. its calm color palette—soft grays with coffee-toned accents—creates a soothing, welcoming atmosphere.
 
-Simple typography and generous white space offer visual breathing room, reflecting clarity and peace. The casual, honest writing style builds a sincere connection between the creator and the visitor.
+simple typography and generous white space offer visual breathing room, reflecting clarity and peace. the casual, **honest** writing style builds a sincere connection between the creator and the visitor.
 
-Every element—from color to layout to words—embodies a personality that is humble, open, and introspective. This isn’t just a portfolio—it’s an invitation to quietly get to know someone through design that speaks without shouting.
+every element—from color to layout to words—embodies a personality that is humble, open, and introspective. this isn't just a portfolio—it's an invitation to **quietly** get to know someone through design that speaks without shouting.
 
 ### Tech Stack
 

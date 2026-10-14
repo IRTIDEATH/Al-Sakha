@@ -37,7 +37,6 @@ const Page = () => {
             cool sh*t <span className="inline-block rotate-90">{"->"}</span>
           </span>
         </div>
-        <Divider />
         <AboutSection />
       </main>
       <Divider />

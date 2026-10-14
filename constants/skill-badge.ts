@@ -16,6 +16,11 @@ export const skillBadgeIcon: SkillBadgeIconInterface[] = [
     link: "https://www.typescriptlang.org",
   },
   {
+    name: "Laravel",
+    icon: "simple-icons:laravel",
+    link: "https://laravel.com",
+  },
+  {
     name: "Bun",
     icon: "simple-icons:bun",
     link: "https://bun.sh",
@@ -26,9 +31,9 @@ export const skillBadgeIcon: SkillBadgeIconInterface[] = [
     link: "https://www.postgresql.org",
   },
   {
-    name: "Git",
-    icon: "simple-icons:git",
-    link: "https://git-scm.com",
+    name: "Cloudflare",
+    icon: "simple-icons:cloudflare",
+    link: "https://www.cloudflare.com",
   },
   {
     name: "Tailwind",
@@ -36,13 +41,13 @@ export const skillBadgeIcon: SkillBadgeIconInterface[] = [
     link: "https://tailwindcss.com",
   },
   {
-    name: "Notion",
-    icon: "simple-icons:notion",
-    link: "https://www.notion.com",
-  },
-  {
     name: "Figma",
     icon: "simple-icons:figma",
     link: "https://www.figma.com",
+  },
+  {
+    name: "Obsidian",
+    icon: "simple-icons:obsidian",
+    link: "https://obsidian.md",
   },
 ];

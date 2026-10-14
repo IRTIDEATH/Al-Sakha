@@ -3,7 +3,7 @@ import CoffeeText from "@/components/ui/coffee-text";
 
 const AboutSection = () => {
   return (
-    <section className="mx-auto w-full">
+    <section className="mx-auto mt-12 w-full">
       <h1 className="mb-6 font-medium text-2xl">what about me?</h1>
       <p className="mb-6 text-start text-[16px] text-zeta">
         uh, just an ordinary npc and dumb in math, you can call me al sakha. i{" "}
