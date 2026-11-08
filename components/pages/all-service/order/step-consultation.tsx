@@ -1,7 +1,7 @@
 const StepConsultation = () => {
   return (
     <section className="mt-8">
-      <span className="w-12 font-medium font-satoshi text-[32px] leading-none">
+      <span className="w-12 font-instrument font-medium text-[32px] leading-none">
         03
       </span>
       <h2 className="font-medium text-[24px]">consultation</h2>

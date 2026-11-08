@@ -20,8 +20,7 @@
   --color-suram: var(--suram);
   --font-geist: var(--font-geist-mono);
   --font-schoolbell: var(--font-schoolbell);
-  --font-source: var(--font-source-serif);
-  --font-satoshi: var(--font-satoshi);
+  --font-instrument: var(--font-instrument-sans);
   --shadow-shadow: var(--shadow);
 }
 
@@ -37,7 +36,7 @@ p {
 .style-prose {
   @apply mt-12 max-w-full;
   @apply prose-a:underline;
-  @apply prose-headings:font-satoshi;
+  @apply prose-headings:font-instrument;
   @apply prose-h1:text-[30px] md:prose-h1:text-[38px] prose-h1:font-black prose-h1:mb-16;
   @apply prose-h2:text-[20px] md:prose-h2:text-2xl prose-h2:font-black prose-h2:mt-10 prose-h2:mb-0.5 md:prose-h2:mb-3;
   @apply prose-ul:list-disc prose-ul:pl-8 prose-ul:my-5 md:prose-ul:my-6.5;
@@ -57,7 +56,7 @@ p {
   }
 
   & table {
-    @apply w-full border-collapse my-8 md:my-11 border border-foreground font-satoshi;
+    @apply w-full border-collapse my-8 md:my-11 border border-foreground font-instrument;
     & th {
       @apply border border-foreground bg-suram p-3 font-semibold;
     }

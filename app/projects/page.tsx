@@ -25,6 +25,7 @@ export const metadata: Metadata = {
     "competition projects",
     "freelance projects",
   ],
+  alternates: { canonical: "/projects" },
 };
 
 export default function Page() {

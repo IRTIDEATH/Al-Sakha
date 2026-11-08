@@ -21,7 +21,7 @@ export const MdxImage = ({
         className={cn("", className)}
       />
       {showCaption && (
-        <span className="mt-4 block whitespace-pre-line text-center font-medium font-satoshi text-base text-zeta">
+        <span className="mt-4 block whitespace-pre-line text-center font-instrument font-medium text-base text-zeta">
           {captionText}
         </span>
       )}

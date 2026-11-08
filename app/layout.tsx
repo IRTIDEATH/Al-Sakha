@@ -1,13 +1,12 @@
 import { GeistMono } from "geist/font/mono";
 import type { Metadata } from "next";
-import { Schoolbell, Source_Serif_4 } from "next/font/google";
-import localFont from "next/font/local";
+import { Instrument_Sans, Schoolbell } from "next/font/google";
 import "./globals.css";
 import Wrapper from "@/components/layouts/app-layout/wrapper";
 import { Toaster } from "@/components/ui/sonner";
 
-const sourceSerif = Source_Serif_4({
-  variable: "--font-source-serif",
+const instrumentSans = Instrument_Sans({
+  variable: "--font-instrument-sans",
   subsets: ["latin"],
   style: ["normal", "italic"],
   display: "swap",
@@ -18,24 +17,6 @@ const schoolBell = Schoolbell({
   weight: "400",
   variable: "--font-schoolbell",
   subsets: ["latin"],
-  display: "swap",
-  preload: true,
-});
-
-const satoshi = localFont({
-  src: [
-    {
-      path: "../public/font/satoshi/Satoshi-Variable.woff2",
-      weight: "300 900",
-      style: "normal",
-    },
-    {
-      path: "../public/font/satoshi/Satoshi-VariableItalic.woff2",
-      weight: "300 900",
-      style: "italic",
-    },
-  ],
-  variable: "--font-satoshi",
   display: "swap",
   preload: true,
 });
@@ -99,7 +80,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         suppressHydrationWarning
-        className={`${GeistMono.variable} ${schoolBell.variable} ${sourceSerif.variable} ${satoshi.variable} font-geist font-normal text-foreground antialiased`}
+        className={`${GeistMono.variable} ${schoolBell.variable} ${instrumentSans.variable} font-geist font-normal text-foreground antialiased`}
       >
         <Wrapper>{children}</Wrapper>
         <Toaster

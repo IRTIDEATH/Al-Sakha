@@ -3,7 +3,7 @@ import Link from "next/link";
 const StepSelect = () => {
   return (
     <section>
-      <span className="w-12 font-medium font-satoshi text-[32px] leading-none">
+      <span className="w-12 font-instrument font-medium text-[32px] leading-none">
         01
       </span>
       <h2 className="font-medium text-[24px]">select a service</h2>

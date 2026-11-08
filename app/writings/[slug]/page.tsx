@@ -95,12 +95,12 @@ export default async function Page({
           __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c"),
         }}
       />
-      <main className="style-prose font-source">
+      <main className="style-prose font-instrument">
         <article>{blog.content}</article>
         <ul className="not-prose mt-15 flex list-none flex-wrap items-center gap-2.5">
           {blog.frontmatter.tags.map((item, index) => (
             <li key={index}>
-              <Badge className="font-satoshi" variant={"tag"}>
+              <Badge className="font-instrument" variant={"tag"}>
                 {item}
               </Badge>
             </li>

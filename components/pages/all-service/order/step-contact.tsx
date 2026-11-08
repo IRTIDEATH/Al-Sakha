@@ -31,7 +31,7 @@ const StepContact = () => {
 
   return (
     <section className="mt-8">
-      <span className="font-medium font-satoshi text-[32px] leading-none">
+      <span className="font-instrument font-medium text-[32px] leading-none">
         02
       </span>
       <h2 className="font-medium text-[24px]">contact me</h2>

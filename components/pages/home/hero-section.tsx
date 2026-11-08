@@ -14,7 +14,7 @@ const HeroSection = () => {
   return (
     <section className="bg-foreground px-6 py-8">
       <div className="flex max-w-lg flex-col items-start gap-3">
-        <span className="font-semibold text-5xl text-background">
+        <span className="font-medium text-5xl text-background">
           <Cursor
             attachToParent
             variants={{
