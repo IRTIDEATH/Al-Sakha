@@ -42,32 +42,6 @@ export const projects: ProjectInterface[] = [
     ],
   },
   {
-    image: "/project/inditechimg.webp",
-    name: "INDI Technology",
-    description:
-      "indi tech is a unique and interactive 3D-based company profile website of pt indi technology. created during pre-internship activities.",
-    view: "https://web.indi.tech/",
-    about: "internship",
-    technologies: [
-      {
-        name: "Javascript",
-        icon: "simple-icons:javascript",
-      },
-      {
-        name: "React.js",
-        icon: "simple-icons:react",
-      },
-      {
-        name: "Three.js",
-        icon: "simple-icons:threedotjs",
-      },
-      {
-        name: "Tailwind CSS",
-        icon: "simple-icons:tailwindcss",
-      },
-    ],
-  },
-  {
     image: "/project/zentraimg.webp",
     name: "ZentraHealth",
     description:
@@ -95,36 +69,6 @@ export const projects: ProjectInterface[] = [
       {
         name: "Motion",
         icon: "devicon:motion",
-      },
-    ],
-  },
-  {
-    image: "/project/geoporimg.webp",
-    name: "Geoportal Laut Berkah",
-    description:
-      "an interactive 3D-based platform related to the licensing of marine space utilization in central kalimantan province. created during internship activities.",
-    view: "https://web.geoportal-lautberkah.kalteng.go.id/",
-    about: "internship",
-    technologies: [
-      {
-        name: "Javascript",
-        icon: "simple-icons:javascript",
-      },
-      {
-        name: "React.js",
-        icon: "simple-icons:react",
-      },
-      {
-        name: "Three.js",
-        icon: "simple-icons:threedotjs",
-      },
-      {
-        name: "Tailwind CSS",
-        icon: "simple-icons:tailwindcss",
-      },
-      {
-        name: "GSAP",
-        icon: "simple-icons:gsap",
       },
     ],
   },
