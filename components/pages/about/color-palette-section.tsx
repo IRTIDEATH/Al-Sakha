@@ -5,11 +5,15 @@ import { toast } from "sonner";
 import { colors } from "@/constants/color-palette";
 
 const ColorPaletteSection = () => {
-  const handleCopyColor = (name: string, hex: string) => {
+  const handleCopyColor = (name: string, hex: string, text: string) => {
     navigator.clipboard.writeText(hex);
     toast.success(`color ${name} to clipboard`, {
       description: `code: ${hex}`,
       duration: 3000,
+      style: {
+        background: hex,
+        color: text,
+      },
       icon: (
         <Icon
           icon="clarity:copy-line"
@@ -27,19 +31,23 @@ const ColorPaletteSection = () => {
       <p className="w-full text-start text-[16px]">
         little and convenient. click to copy the color code.
       </p>
-      <ul className="mt-5 w-full text-start text-lg">
+      <div className="mt-5 grid grid-cols-5 overflow-hidden bg-foreground shadow-shadow">
         {colors.map((item, index) => (
-          <li className="flex items-center gap-2" key={index}>
-            <span className={`text-2xl ${item.class}`}>{"-->"}</span>
-            <button
-              onClick={() => handleCopyColor(item.name, item.hex)}
-              className="cursor-pointer text-start decoration-2 hover:underline"
-            >
+          <button
+            key={index}
+            type="button"
+            title={item.name}
+            aria-label={`copy ${item.name} color`}
+            onClick={() => handleCopyColor(item.name, item.hex, item.text)}
+            className="group min-w-0 cursor-pointer"
+          >
+            <span className={`block h-12 w-full ${item.bg}`} />
+            <span className="block truncate px-0.5 py-2 text-center font-schoolbell text-[12px] text-background sm:text-[16px]">
               {item.name}
-            </button>
-          </li>
+            </span>
+          </button>
         ))}
-      </ul>
+      </div>
     </section>
   );
 };

@@ -1,13 +1,24 @@
 interface ColorInterface {
   name: string;
-  class: string;
+  bg: string;
   hex: string;
+  text: string;
 }
 
 export const colors: ColorInterface[] = [
-  { name: "background", class: "text-background", hex: "#F2F2F4" },
-  { name: "foreground", class: "text-foreground", hex: "#2E2E2E" },
-  { name: "coffee", class: "text-coffee", hex: "#8C6053" },
-  { name: "zeta", class: "text-zeta", hex: "#686C6F" },
-  { name: "suram", class: "text-suram", hex: "#E6E8ED" },
+  {
+    name: "background",
+    bg: "bg-background",
+    hex: "#F2F2F4",
+    text: "#2E2E2E",
+  },
+  {
+    name: "foreground",
+    bg: "bg-foreground",
+    hex: "#2E2E2E",
+    text: "#F2F2F4",
+  },
+  { name: "coffee", bg: "bg-coffee", hex: "#8C6053", text: "#F2F2F4" },
+  { name: "zeta", bg: "bg-zeta", hex: "#686C6F", text: "#F2F2F4" },
+  { name: "suram", bg: "bg-suram", hex: "#E6E8ED", text: "#2E2E2E" },
 ];
