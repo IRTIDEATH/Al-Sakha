@@ -131,8 +131,7 @@ export const projects: ProjectInterface[] = [
   {
     image: "/project/zectimg.webp",
     name: "Zect Portfolio",
-    description:
-      "a small organization owned by al sakha, colored by the nord theme, and a layout style similar to the nord theme.",
+    description: "modified nordtheme into a web portfolio called zect.",
     view: "https://zect.vercel.app/",
     github: "https://github.com/IRTIDEATH/Zect",
     about: "personal",
@@ -198,7 +197,7 @@ export const projects: ProjectInterface[] = [
     name: "Teremis",
     view: "https://teremis.pages.dev",
     description:
-      "a web platform for a custom acrylic keychain studio. this website is designed to reflect a clean, modern, and precise brand identity. its primary focus is to make it easy for customers to understand our production services.",
+      "a web platform for a custom acrylic keychain studio. designed to reflect a clean, modern, and precise brand identity. its primary focus is to make it easy for customers to understand our production services.",
     about: "landing page",
     technologies: [
       {

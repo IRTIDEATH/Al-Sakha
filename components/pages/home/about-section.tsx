@@ -22,7 +22,10 @@ const AboutSection = () => {
           className="ml-auto whitespace-nowrap text-[16px] text-coffee underline"
           aria-label="About page"
         >
-          <span aria-hidden="true">{"-->"}</span> extended
+          <span aria-hidden="true" className="font-medium">
+            {"-->"}
+          </span>{" "}
+          extended
         </Link>
       </div>
     </section>
