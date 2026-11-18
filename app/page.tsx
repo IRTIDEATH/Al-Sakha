@@ -34,7 +34,7 @@ const Page = () => {
       />
       <main className="mt-12">
         <HeroSection />
-        <div className="flex select-none items-center justify-between bg-suram py-1 text-[8px] sm:text-[10px]">
+        <div className="mt-2.5 flex select-none items-center justify-between bg-suram py-1 text-[8px] sm:text-[10px]">
           <span className="font-geist">
             <span className="inline-block rotate-90">{"->"}</span> scroll for
           </span>

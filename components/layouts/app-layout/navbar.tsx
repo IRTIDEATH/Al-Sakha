@@ -1,9 +1,10 @@
 "use client";
 
-import { motion } from "motion/react";
+import { motion, useReducedMotion } from "motion/react";
 import dynamic from "next/dynamic";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import {
   Drawer,
@@ -24,6 +25,50 @@ const SparkleGroup = dynamic(
 
 const Navbar = () => {
   const pathname = usePathname();
+  const shouldReduceMotion = useReducedMotion();
+  const navRef = useRef<HTMLDivElement>(null);
+  const [instant, setInstant] = useState(true);
+  const [visible, setVisible] = useState(false);
+  const [hovering, setHovering] = useState(false);
+  const [reticle, setReticle] = useState({
+    x: 0,
+    y: 0,
+    width: 0,
+    height: 0,
+  });
+
+  const showReticle = (element: HTMLAnchorElement) => {
+    const container = navRef.current;
+    if (!container) return;
+
+    const linkRect = element.getBoundingClientRect();
+    const containerRect = container.getBoundingClientRect();
+
+    setInstant(!visible);
+
+    setReticle({
+      x: linkRect.left - containerRect.left - 6,
+      y: linkRect.top - containerRect.top - 2,
+      width: linkRect.width + 12,
+      height: linkRect.height + 4,
+    });
+    setVisible(true);
+  };
+
+  useEffect(() => {
+    const reset = () => {
+      setVisible(false);
+      setHovering(false);
+    };
+
+    document.addEventListener("visibilitychange", reset);
+    window.addEventListener("blur", reset);
+
+    return () => {
+      document.removeEventListener("visibilitychange", reset);
+      window.removeEventListener("blur", reset);
+    };
+  }, []);
 
   return (
     <nav className="flex h-24 w-full items-center justify-between text-foreground">
@@ -31,20 +76,69 @@ const Navbar = () => {
         <span className="font-medium text-[16px]">Irtideath</span>
         <SparkleGroup />
       </div>
-      <div className="hidden items-center md:flex">
-        <ul className="flex items-center gap-5 pr-4 font-geist font-medium text-[14px]">
-          {navigationItems.map((item, index) => (
-            <li key={index}>
+      <div ref={navRef} className="relative hidden items-center md:flex">
+        <ul
+          className="flex items-center gap-5 pr-4 font-geist font-medium text-[14px]"
+          onMouseEnter={() => setHovering(true)}
+          onMouseLeave={() => {
+            setHovering(false);
+            setVisible(false);
+          }}
+        >
+          {navigationItems.map((item) => (
+            <li key={item.href}>
               <Link
-                aria-label="Nav link"
-                className="inline-block align-middle text-zeta decoration-2 hover:underline"
+                className="inline-block align-middle text-zeta"
                 href={item.href}
+                onMouseEnter={(event) => showReticle(event.currentTarget)}
+                onFocus={(event) => {
+                  if (event.currentTarget.matches(":focus-visible")) {
+                    showReticle(event.currentTarget);
+                  }
+                }}
+                onBlur={() => {
+                  if (!hovering) setVisible(false);
+                }}
               >
                 {item.name}
               </Link>
             </li>
           ))}
         </ul>
+        <motion.span
+          aria-hidden="true"
+          initial={false}
+          animate={{
+            x: reticle.x,
+            y: reticle.y,
+            width: reticle.width,
+            height: reticle.height,
+            opacity: visible ? 1 : 0,
+          }}
+          transition={
+            shouldReduceMotion
+              ? { duration: 0 }
+              : {
+                  default: instant
+                    ? { duration: 0 }
+                    : {
+                        type: "spring",
+                        stiffness: 420,
+                        damping: 35,
+                        mass: 0.8,
+                      },
+                  opacity: { duration: 0.2 },
+                }
+          }
+          className="pointer-events-none absolute top-0 left-0 z-10 font-geist text-[14px] text-zeta"
+        >
+          <span className="-left-1 -translate-y-1/2 absolute top-1/2">
+            {"["}
+          </span>
+          <span className="-right-1 -translate-y-1/2 absolute top-1/2">
+            {"]"}
+          </span>
+        </motion.span>
         <span className="bg-foreground px-2 font-bold text-background text-xl shadow-shadow">
           {"<--"}
         </span>
@@ -83,7 +177,7 @@ const Navbar = () => {
                     className="w-full max-w-[300px] font-geist"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    key={index}
+                    key={item.href}
                     transition={{
                       times: [0.6],
                       duration: 0.5,
@@ -97,9 +191,7 @@ const Navbar = () => {
                       size={"classic"}
                       asChild
                     >
-                      <Link href={item.href} aria-label="Nav link">
-                        {item.name}
-                      </Link>
+                      <Link href={item.href}>{item.name}</Link>
                     </Button>
                   </motion.div>
                 );

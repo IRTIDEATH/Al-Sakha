@@ -12,7 +12,7 @@ import dynamic from "next/dynamic";
 
 const HeroSection = () => {
   return (
-    <section className="bg-foreground px-6 py-8">
+    <section className="relative overflow-hidden bg-foreground px-6 py-8">
       <div className="flex max-w-lg flex-col items-start gap-3">
         <span className="font-medium font-schoolbell text-5xl text-background">
           <Cursor
@@ -75,6 +75,13 @@ const HeroSection = () => {
             Z
           </motion.span>
         </span>
+      </div>
+      <div
+        aria-hidden="true"
+        className="absolute inset-y-0 right-12 w-[2px] bg-[repeating-linear-gradient(to_bottom,var(--color-background)_0_8px,transparent_4px_18px)]"
+      >
+        <span className="-top-2 -left-1.75 absolute size-4 rounded-full bg-background" />
+        <span className="-bottom-2 -left-1.75 absolute size-4 rounded-full bg-background" />
       </div>
     </section>
   );
