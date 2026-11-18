@@ -31,20 +31,16 @@ const ColorPaletteSection = () => {
       <p className="w-full text-start text-[16px]">
         little and convenient. click to copy the color code.
       </p>
-      <div className="mt-5 grid grid-cols-5 overflow-hidden bg-foreground shadow-shadow">
+      <div className="mt-5 grid grid-cols-5 overflow-hidden">
         {colors.map((item, index) => (
           <button
             key={index}
             type="button"
-            title={item.name}
             aria-label={`copy ${item.name} color`}
             onClick={() => handleCopyColor(item.name, item.hex, item.text)}
             className="group min-w-0 cursor-pointer"
           >
-            <span className={`block h-12 w-full ${item.bg}`} />
-            <span className="block truncate px-0.5 py-2 text-center font-schoolbell text-[12px] text-background sm:text-[16px]">
-              {item.name}
-            </span>
+            <span className={`block h-14 w-full ${item.bg}`} />
           </button>
         ))}
       </div>
